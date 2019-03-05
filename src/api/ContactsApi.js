@@ -299,7 +299,7 @@
     /**
      * Returns all contacts.
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.groupIds Group id string in uuid format.
+     * @param {Array.<String>} opts.groupIds Optional one or many group id strings in uuid format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot; 
      * @param {module:api/ContactsApi~fetchContactsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContactListEnvelope}
      */

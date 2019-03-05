@@ -263,7 +263,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
 var opts = {
-  'groupIds': ["null"] // [String] | Group id string in uuid format.
+  'groupIds': ["null"] // [String] | Optional one or many group id strings in uuid format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -279,7 +279,7 @@ apiInstance.fetchContacts(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupIds** | [**[String]**](String.md)| Group id string in uuid format. | [optional] 
+ **groupIds** | [**[String]**](String.md)| Optional one or many group id strings in uuid format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot;  | [optional] 
 
 ### Return type
 
