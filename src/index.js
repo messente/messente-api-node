@@ -26,7 +26,7 @@
   'use strict';
 
   /**
-   * _Messente_httpsmessente_com_is_a_global_provider_of_messaging_and_user_verification_services_Use_Messente_API_library_tosend_and_receive_SMS_Viber_and_WhatsApp_messagesblacklist_phone_numbers_to_make_sure_youre_not_sending_any_unwanted_messagesmanage_contacts_and_groups_Messente_builds__tools_httpsmessente_comdocumentation_to_help_organizations_connect_their_services_to_people_anywhere_in_the_world_.<br>
+   * Send and receive SMS, Viber and WhatsApp messages, blacklist phone numbers to make sure you&#39;re not sending any unwanted messages, manage contacts and groups..<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
