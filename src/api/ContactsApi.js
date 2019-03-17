@@ -344,7 +344,7 @@
      */
 
     /**
-     * Remove a contact from a group.
+     * Removes a contact from a group.
      * @param {String} groupId String in uuid format.
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~removeContactFromGroupCallback} callback The callback function, accepting three arguments: error, data, response

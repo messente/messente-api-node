@@ -57,7 +57,7 @@
      */
 
     /**
-     * Retrieves the delivery report for the Omnimessage
+     * Retrieves the delivery report for the Omnimessage.
      * @param {String} omnimessageId UUID of the Omnimessage to for which the delivery report is to be retrieved
      * @param {module:api/DeliveryReportApi~retrieveDeliveryReportCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeliveryReportResponse}
