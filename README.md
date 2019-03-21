@@ -62,8 +62,48 @@ Read the [external getting-started article](https://messente.com/documentation/g
 ## Getting started: sending an omnimessage
 
 ```js
-console.log('Hello!');
-// TODO
+const MessenteApi = require('messente_api');
+
+const defaultClient = MessenteApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: basicAuth
+const basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR_MESSENTE_API_USERNAME';
+basicAuth.password = 'YOUR_MESSENTE_API_PASSWORD';
+
+const api = new MessenteApi.OmnimessageApi();
+
+const viber = MessenteApi.Viber.constructFromObject({
+  text: 'Hello Viber!',
+  sender: 'Messente',
+});
+
+const sms = MessenteApi.SMS.constructFromObject({
+  text: 'Hello SMS!',
+});
+
+const whatsAppText = MessenteApi.WhatsAppText.constructFromObject({
+  body: 'Hello WhatsApp!',
+  preview_url: false,
+});
+
+
+const whatsapp = MessenteApi.WhatsApp.constructFromObject({
+  text: whatsAppText,
+});
+
+const omnimessage = MessenteApi.Omnimessage.constructFromObject({
+  messages: [whatsapp, viber, sms],
+  to: '<phone number in e.164 format',
+});
+
+api.sendOmnimessage(omnimessage, (error, data) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ', data);
+  }
+});
 
 ```
 
