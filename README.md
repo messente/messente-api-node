@@ -7,7 +7,7 @@
 
 ## Installation
 
-Install Messente API library with `TODO`.
+Install Messente API library with `npm install messente_api --save`.
 
 ## Features
 
