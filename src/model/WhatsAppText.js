@@ -43,7 +43,7 @@
    * Constructs a new <code>WhatsAppText</code>.
    * @alias module:model/WhatsAppText
    * @class
-   * @param body {String} Plaintext content for WhatsApp, can contains URLs, emojis and formatting
+   * @param body {String} Plaintext content for WhatsApp, can contain URLs, emojis and formatting
    */
   var exports = function(body) {
     var _this = this;
@@ -78,7 +78,7 @@
    */
   exports.prototype['preview_url'] = true;
   /**
-   * Plaintext content for WhatsApp, can contains URLs, emojis and formatting
+   * Plaintext content for WhatsApp, can contain URLs, emojis and formatting
    * @member {String} body
    */
   exports.prototype['body'] = undefined;
