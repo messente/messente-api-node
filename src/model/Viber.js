@@ -106,7 +106,7 @@
    */
   exports.prototype['image_url'] = undefined;
   /**
-   * URL of the button, must be specified along with ''text'', ''button_text''  and ''image_url'' (optional)
+   * URL of the button, must be specified along with ''text'', ''button_text'' and ''image_url'' (optional)
    * @member {String} button_url
    */
   exports.prototype['button_url'] = undefined;
