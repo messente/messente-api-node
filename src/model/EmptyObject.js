@@ -17,31 +17,31 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ContactFields'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ContactFields'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ContactListEnvelope = factory(root.MessenteApi.ApiClient, root.MessenteApi.ContactFields);
+    root.MessenteApi.EmptyObject = factory(root.MessenteApi.ApiClient);
   }
-}(this, function(ApiClient, ContactFields) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
   /**
-   * The ContactListEnvelope model module.
-   * @module model/ContactListEnvelope
+   * The EmptyObject model module.
+   * @module model/EmptyObject
    * @version 0.0.1
    */
 
   /**
-   * Constructs a new <code>ContactListEnvelope</code>.
-   * @alias module:model/ContactListEnvelope
+   * Constructs a new <code>EmptyObject</code>.
+   * @alias module:model/EmptyObject
    * @class
    */
   var exports = function() {
@@ -50,26 +50,19 @@
   };
 
   /**
-   * Constructs a <code>ContactListEnvelope</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EmptyObject</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ContactListEnvelope} obj Optional instance to populate.
-   * @return {module:model/ContactListEnvelope} The populated <code>ContactListEnvelope</code> instance.
+   * @param {module:model/EmptyObject} obj Optional instance to populate.
+   * @return {module:model/EmptyObject} The populated <code>EmptyObject</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('contacts')) {
-        obj['contacts'] = ApiClient.convertToType(data['contacts'], [ContactFields]);
-      }
     }
     return obj;
   }
 
-  /**
-   * @member {Array.<module:model/ContactFields>} contacts
-   */
-  exports.prototype['contacts'] = undefined;
 
 
 

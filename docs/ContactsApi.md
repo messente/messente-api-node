@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="addContactToGroup"></a>
 # **addContactToGroup**
-> Object addContactToGroup(groupId, phone)
+> EmptyObject addContactToGroup(groupId, phone)
 
 Adds a contact to a group.
 
@@ -24,6 +24,7 @@ Adds a contact to a group.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**EmptyObject**](EmptyObject.md)
 
 ### Authorization
 
@@ -72,6 +73,7 @@ Creates a new contact.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -118,6 +120,7 @@ Deletes a contact.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -164,6 +167,7 @@ Lists a contact.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -210,6 +214,7 @@ Lists groups of a contact.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -256,6 +261,7 @@ Returns all contacts.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -304,6 +310,7 @@ Removes a contact from a group.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -352,6 +359,7 @@ Updates a contact.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';

@@ -20,6 +20,7 @@ Adds a phone number to the blacklist.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -66,6 +67,7 @@ Deletes a phone number from the blacklist.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -112,6 +114,7 @@ Returns all blacklisted phone numbers.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -154,6 +157,7 @@ Checks if a phone number is blacklisted.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';

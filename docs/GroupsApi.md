@@ -21,6 +21,7 @@ Creates a new group with the provided name.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -67,6 +68,7 @@ Deletes a group.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -113,6 +115,7 @@ Lists a group.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -159,6 +162,7 @@ Returns all groups.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
@@ -201,6 +205,7 @@ Updates a group with the provided name.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';

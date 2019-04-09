@@ -17,6 +17,7 @@ Retrieves the delivery report for the Omnimessage.
 ```javascript
 var MessenteApi = require('messente_api');
 var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
 var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';

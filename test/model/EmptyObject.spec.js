@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MessenteApi.FetchBlacklistSuccess();
+    instance = new MessenteApi.EmptyObject();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,17 +50,11 @@
       object[property] = value;
   }
 
-  describe('FetchBlacklistSuccess', function() {
-    it('should create an instance of FetchBlacklistSuccess', function() {
-      // uncomment below and update the code to test FetchBlacklistSuccess
-      //var instance = new MessenteApi.FetchBlacklistSuccess();
-      //expect(instance).to.be.a(MessenteApi.FetchBlacklistSuccess);
-    });
-
-    it('should have the property phoneNumbers (base name: "phoneNumbers")', function() {
-      // uncomment below and update the code to test the property phoneNumbers
-      //var instance = new MessenteApi.FetchBlacklistSuccess();
-      //expect(instance).to.be();
+  describe('EmptyObject', function() {
+    it('should create an instance of EmptyObject', function() {
+      // uncomment below and update the code to test EmptyObject
+      //var instance = new MessenteApi.EmptyObject();
+      //expect(instance).to.be.a(MessenteApi.EmptyObject);
     });
 
   });
