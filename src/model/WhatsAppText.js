@@ -63,7 +63,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('preview_url')) {
         obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'Boolean');
-      }else {
+      } else {
         obj['preview_url'] = true;
       }
       if (data.hasOwnProperty('body')) {

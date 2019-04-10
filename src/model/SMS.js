@@ -79,7 +79,7 @@
       }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
-      }else {
+      } else {
         obj['channel'] = 'sms';
       }
     }
