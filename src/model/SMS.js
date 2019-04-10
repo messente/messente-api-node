@@ -45,11 +45,13 @@
    * @alias module:model/SMS
    * @class
    * @param text {String} Text content of the SMS
+   * @param channel {module:model/SMS.ChannelEnum} 
    */
-  var exports = function(text) {
+  var exports = function(text, channel) {
     var _this = this;
 
     _this['text'] = text;
+    _this['channel'] = channel;
   };
 
   /**
