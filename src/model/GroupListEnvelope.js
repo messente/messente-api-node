@@ -61,7 +61,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('groups')) {
         obj['groups'] = ApiClient.convertToType(data['groups'], [GroupResponseFields]);
-      }
+      } 
     }
     return obj;
   }

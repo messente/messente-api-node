@@ -67,13 +67,13 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('title')) {
         obj['title'] = ErrorTitlePhonebook.constructFromObject(data['title']);
-      }
+      } 
       if (data.hasOwnProperty('detail')) {
         obj['detail'] = ApiClient.convertToType(data['detail'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('code')) {
         obj['code'] = ErrorCodePhonebook.constructFromObject(data['code']);
-      }
+      } 
     }
     return obj;
   }

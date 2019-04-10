@@ -67,16 +67,16 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('createdOn')) {
         obj['createdOn'] = ApiClient.convertToType(data['createdOn'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('contactsCount')) {
         obj['contactsCount'] = ApiClient.convertToType(data['contactsCount'], 'Number');
-      }
+      } 
     }
     return obj;
   }

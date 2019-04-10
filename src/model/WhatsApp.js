@@ -62,24 +62,26 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('sender')) {
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('validity')) {
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
-      }
+      } 
       if (data.hasOwnProperty('text')) {
         obj['text'] = WhatsAppText.constructFromObject(data['text']);
-      }
+      } 
       if (data.hasOwnProperty('image')) {
         obj['image'] = WhatsAppImage.constructFromObject(data['image']);
-      }
+      } 
       if (data.hasOwnProperty('document')) {
         obj['document'] = WhatsAppDocument.constructFromObject(data['document']);
-      }
+      } 
       if (data.hasOwnProperty('audio')) {
         obj['audio'] = WhatsAppAudio.constructFromObject(data['audio']);
-      }
+      } 
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
+      } else {
+        obj['channel'] = 'whatsapp';
       }
     }
     return obj;

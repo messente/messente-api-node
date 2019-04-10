@@ -61,22 +61,22 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('status')) {
         obj['status'] = Status.constructFromObject(data['status']);
-      }
+      } 
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = Channel.constructFromObject(data['channel']);
-      }
+      } 
       if (data.hasOwnProperty('message_id')) {
         obj['message_id'] = ApiClient.convertToType(data['message_id'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('error')) {
         obj['error'] = ApiClient.convertToType(data['error'], 'String');
-      }
+      } 
       if (data.hasOwnProperty('err')) {
         obj['err'] = ErrorCodeOmnichannelMachine.constructFromObject(data['err']);
-      }
+      } 
       if (data.hasOwnProperty('timestamp')) {
         obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'Date');
-      }
+      } 
     }
     return obj;
   }

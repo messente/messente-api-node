@@ -61,7 +61,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('phoneNumbers')) {
         obj['phoneNumbers'] = ApiClient.convertToType(data['phoneNumbers'], ['String']);
-      }
+      } 
     }
     return obj;
   }

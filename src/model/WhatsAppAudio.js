@@ -63,7 +63,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('content')) {
         obj['content'] = ApiClient.convertToType(data['content'], 'String');
-      }
+      } 
     }
     return obj;
   }

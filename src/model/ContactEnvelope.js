@@ -61,7 +61,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('contact')) {
         obj['contact'] = ContactFields.constructFromObject(data['contact']);
-      }
+      } 
     }
     return obj;
   }

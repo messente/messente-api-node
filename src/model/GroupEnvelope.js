@@ -61,7 +61,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('group')) {
         obj['group'] = GroupResponseFields.constructFromObject(data['group']);
-      }
+      } 
     }
     return obj;
   }
