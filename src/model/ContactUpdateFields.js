@@ -61,31 +61,31 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('firstName')) {
         obj['firstName'] = ApiClient.convertToType(data['firstName'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('lastName')) {
         obj['lastName'] = ApiClient.convertToType(data['lastName'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('company')) {
         obj['company'] = ApiClient.convertToType(data['company'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('title')) {
         obj['title'] = ApiClient.convertToType(data['title'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('custom')) {
         obj['custom'] = ApiClient.convertToType(data['custom'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('custom2')) {
         obj['custom2'] = ApiClient.convertToType(data['custom2'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('custom3')) {
         obj['custom3'] = ApiClient.convertToType(data['custom3'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('custom4')) {
         obj['custom4'] = ApiClient.convertToType(data['custom4'], 'String');
-      } 
+      }
     }
     return obj;
   }

@@ -67,13 +67,13 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('message_id')) {
         obj['message_id'] = ApiClient.convertToType(data['message_id'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = Channel.constructFromObject(data['channel']);
-      } 
+      }
       if (data.hasOwnProperty('sender')) {
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
-      } 
+      }
     }
     return obj;
   }

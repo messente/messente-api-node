@@ -61,7 +61,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('contacts')) {
         obj['contacts'] = ApiClient.convertToType(data['contacts'], [ContactFields]);
-      } 
+      }
     }
     return obj;
   }

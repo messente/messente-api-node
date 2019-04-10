@@ -65,16 +65,16 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('to')) {
         obj['to'] = ApiClient.convertToType(data['to'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('messages')) {
         obj['messages'] = ApiClient.convertToType(data['messages'], [Object]);
-      } 
+      }
       if (data.hasOwnProperty('dlr_url')) {
         obj['dlr_url'] = ApiClient.convertToType(data['dlr_url'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('time_to_send')) {
         obj['time_to_send'] = ApiClient.convertToType(data['time_to_send'], 'Date');
-      } 
+      }
     }
     return obj;
   }

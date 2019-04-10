@@ -67,13 +67,13 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('statuses')) {
         obj['statuses'] = ApiClient.convertToType(data['statuses'], [DeliveryResult]);
-      } 
+      }
       if (data.hasOwnProperty('to')) {
         obj['to'] = ApiClient.convertToType(data['to'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('omnimessage_id')) {
         obj['omnimessage_id'] = ApiClient.convertToType(data['omnimessage_id'], 'String');
-      } 
+      }
     }
     return obj;
   }

@@ -63,7 +63,7 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('errors')) {
         obj['errors'] = ApiClient.convertToType(data['errors'], [ErrorItemOmnichannel]);
-      } 
+      }
     }
     return obj;
   }

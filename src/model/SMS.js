@@ -64,22 +64,22 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('text')) {
         obj['text'] = ApiClient.convertToType(data['text'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('sender')) {
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('validity')) {
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
-      } 
+      }
       if (data.hasOwnProperty('autoconvert')) {
         obj['autoconvert'] = ApiClient.convertToType(data['autoconvert'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('udh')) {
         obj['udh'] = ApiClient.convertToType(data['udh'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
-      } else {
+      }else {
         obj['channel'] = 'sms';
       }
     }

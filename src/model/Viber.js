@@ -62,25 +62,25 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('sender')) {
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('validity')) {
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
-      } 
+      }
       if (data.hasOwnProperty('text')) {
         obj['text'] = ApiClient.convertToType(data['text'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('image_url')) {
         obj['image_url'] = ApiClient.convertToType(data['image_url'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('button_url')) {
         obj['button_url'] = ApiClient.convertToType(data['button_url'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('button_text')) {
         obj['button_text'] = ApiClient.convertToType(data['button_text'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
-      } else {
+      }else {
         obj['channel'] = 'viber';
       }
     }

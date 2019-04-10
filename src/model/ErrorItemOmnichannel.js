@@ -69,16 +69,16 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('title')) {
         obj['title'] = ErrorTitleOmnichannel.constructFromObject(data['title']);
-      } 
+      }
       if (data.hasOwnProperty('detail')) {
         obj['detail'] = ApiClient.convertToType(data['detail'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('code')) {
         obj['code'] = ErrorCodeOmnichannel.constructFromObject(data['code']);
-      } 
+      }
       if (data.hasOwnProperty('source')) {
         obj['source'] = ApiClient.convertToType(data['source'], 'String');
-      } 
+      }
     }
     return obj;
   }

@@ -63,10 +63,10 @@
       obj = obj || new exports();
       if (data.hasOwnProperty('caption')) {
         obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
-      } 
+      }
       if (data.hasOwnProperty('content')) {
         obj['content'] = ApiClient.convertToType(data['content'], 'String');
-      } 
+      }
     }
     return obj;
   }
