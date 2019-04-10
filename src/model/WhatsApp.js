@@ -113,8 +113,9 @@
   exports.prototype['audio'] = undefined;
   /**
    * @member {module:model/WhatsApp.ChannelEnum} channel
+   * @default 'whatsapp'
    */
-  exports.prototype['channel'] = undefined;
+  exports.prototype['channel'] = 'whatsapp';
 
 
   /**

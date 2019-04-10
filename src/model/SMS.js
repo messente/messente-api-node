@@ -111,8 +111,9 @@
   exports.prototype['udh'] = undefined;
   /**
    * @member {module:model/SMS.ChannelEnum} channel
+   * @default 'sms'
    */
-  exports.prototype['channel'] = undefined;
+  exports.prototype['channel'] = 'sms';
 
 
   /**

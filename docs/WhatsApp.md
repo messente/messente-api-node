@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **image** | [**WhatsAppImage**](WhatsAppImage.md) |  | [optional] 
 **document** | [**WhatsAppDocument**](WhatsAppDocument.md) |  | [optional] 
 **audio** | [**WhatsAppAudio**](WhatsAppAudio.md) |  | [optional] 
-**channel** | **String** |  | [optional] 
+**channel** | **String** |  | [optional] [default to &#39;whatsapp&#39;]
 
 
 <a name="ChannelEnum"></a>

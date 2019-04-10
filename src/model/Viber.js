@@ -117,8 +117,9 @@
   exports.prototype['button_text'] = undefined;
   /**
    * @member {module:model/Viber.ChannelEnum} channel
+   * @default 'viber'
    */
-  exports.prototype['channel'] = undefined;
+  exports.prototype['channel'] = 'viber';
 
 
   /**
