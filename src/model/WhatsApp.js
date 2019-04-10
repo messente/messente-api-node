@@ -44,12 +44,10 @@
    * WhatsApp message content.   Only one of \&quot;text\&quot;, \&quot;image\&quot;, \&quot;document\&quot; or \&quot;audio\&quot; can be provided.
    * @alias module:model/WhatsApp
    * @class
-   * @param channel {module:model/WhatsApp.ChannelEnum} 
    */
-  var exports = function(channel) {
+  var exports = function() {
     var _this = this;
 
-    _this['channel'] = channel;
   };
 
   /**

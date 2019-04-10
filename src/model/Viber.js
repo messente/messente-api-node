@@ -44,12 +44,10 @@
    * Viber message content
    * @alias module:model/Viber
    * @class
-   * @param channel {module:model/Viber.ChannelEnum} 
    */
-  var exports = function(channel) {
+  var exports = function() {
     var _this = this;
 
-    _this['channel'] = channel;
   };
 
   /**
