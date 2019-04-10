@@ -116,11 +116,22 @@
    */
   exports.prototype['button_text'] = undefined;
   /**
-   * @member {String} channel
-   * @default 'viber'
+   * @member {module:model/Viber.ChannelEnum} channel
    */
-  exports.prototype['channel'] = 'viber';
+  exports.prototype['channel'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>channel</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ChannelEnum = {
+    /**
+     * value: "viber"
+     * @const
+     */
+    "viber": "viber"  };
 
 
   return exports;

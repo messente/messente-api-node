@@ -9,6 +9,15 @@ Name | Type | Description | Notes
 **imageUrl** | **String** | URL for the embedded image.    Valid combinations:    1) image_url,    2) text, image_url, button_url, button_text | [optional] 
 **buttonUrl** | **String** | URL of the button, must be specified along with &#39;&#39;text&#39;&#39;, &#39;&#39;button_text&#39;&#39; and &#39;&#39;image_url&#39;&#39; (optional) | [optional] 
 **buttonText** | **String** | Must be specified along with &#39;&#39;text&#39;&#39;, &#39;&#39;button_url&#39;&#39;, &#39;&#39;button_text&#39;&#39;, &#39;&#39;image_url&#39;&#39; (optional) | [optional] 
-**channel** | **String** |  | [optional] [default to &#39;viber&#39;]
+**channel** | **String** |  | [optional] 
+
+
+<a name="ChannelEnum"></a>
+## Enum: ChannelEnum
+
+
+* `viber` (value: `"viber"`)
+
+
 
 

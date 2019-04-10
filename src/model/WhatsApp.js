@@ -112,11 +112,22 @@
    */
   exports.prototype['audio'] = undefined;
   /**
-   * @member {String} channel
-   * @default 'whatsapp'
+   * @member {module:model/WhatsApp.ChannelEnum} channel
    */
-  exports.prototype['channel'] = 'whatsapp';
+  exports.prototype['channel'] = undefined;
 
+
+  /**
+   * Allowed values for the <code>channel</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ChannelEnum = {
+    /**
+     * value: "whatsapp"
+     * @const
+     */
+    "whatsapp": "whatsapp"  };
 
 
   return exports;

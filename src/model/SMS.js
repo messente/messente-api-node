@@ -110,10 +110,9 @@
    */
   exports.prototype['udh'] = undefined;
   /**
-   * @member {String} channel
-   * @default 'sms'
+   * @member {module:model/SMS.ChannelEnum} channel
    */
-  exports.prototype['channel'] = 'sms';
+  exports.prototype['channel'] = undefined;
 
 
   /**
@@ -137,6 +136,18 @@
      * @const
      */
     "off": "off"  };
+
+  /**
+   * Allowed values for the <code>channel</code> property.
+   * @enum {String}
+   * @readonly
+   */
+  exports.ChannelEnum = {
+    /**
+     * value: "sms"
+     * @const
+     */
+    "sms": "sms"  };
 
 
   return exports;
