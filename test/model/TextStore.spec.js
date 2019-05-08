@@ -31,7 +31,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MessenteApi.Omnimessage();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,41 +49,11 @@
       object[property] = value;
   }
 
-  describe('Omnimessage', function() {
-    it('should create an instance of Omnimessage', function() {
-      // uncomment below and update the code to test Omnimessage
-      //var instance = new MessenteApi.Omnimessage();
-      //expect(instance).to.be.a(MessenteApi.Omnimessage);
-    });
-
-    it('should have the property to (base name: "to")', function() {
-      // uncomment below and update the code to test the property to
-      //var instance = new MessenteApi.Omnimessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property messages (base name: "messages")', function() {
-      // uncomment below and update the code to test the property messages
-      //var instance = new MessenteApi.Omnimessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dlrUrl (base name: "dlr_url")', function() {
-      // uncomment below and update the code to test the property dlrUrl
-      //var instance = new MessenteApi.Omnimessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property textStore (base name: "text_store")', function() {
-      // uncomment below and update the code to test the property textStore
-      //var instance = new MessenteApi.Omnimessage();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property timeToSend (base name: "time_to_send")', function() {
-      // uncomment below and update the code to test the property timeToSend
-      //var instance = new MessenteApi.Omnimessage();
-      //expect(instance).to.be();
+  describe('TextStore', function() {
+    it('should create an instance of TextStore', function() {
+      // uncomment below and update the code to test TextStore
+      //var instance = new MessenteApi.TextStore();
+      //expect(instance).to.be.a(MessenteApi.TextStore);
     });
 
   });

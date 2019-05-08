@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/TextStore'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./TextStore'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.Omnimessage = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.Omnimessage = factory(root.MessenteApi.ApiClient, root.MessenteApi.TextStore);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, TextStore) {
   'use strict';
 
 
@@ -72,6 +72,9 @@
       if (data.hasOwnProperty('dlr_url')) {
         obj['dlr_url'] = ApiClient.convertToType(data['dlr_url'], 'String');
       }
+      if (data.hasOwnProperty('text_store')) {
+        obj['text_store'] = TextStore.constructFromObject(data['text_store']);
+      }
       if (data.hasOwnProperty('time_to_send')) {
         obj['time_to_send'] = ApiClient.convertToType(data['time_to_send'], 'Date');
       }
@@ -94,7 +97,11 @@
    */
   exports.prototype['dlr_url'] = undefined;
   /**
-   * Optional parameter for sending messages at some specific time in the future.   Time must be specified in the 8601 format.   If no timezone is specified, then the timezone is assumed to be UTC.    Examples:    * Time specified with timezone: 2018-06-22T09:05:07+00:00 Time specified in UTC: 2018-06-22T09:05:07Z   * Time specified without timezone: 2018-06-22T09:05 (equivalent to 2018-06-22T09:05+00:00)
+   * @member {module:model/TextStore} text_store
+   */
+  exports.prototype['text_store'] = undefined;
+  /**
+   * Optional parameter for sending messages at some specific time in the future.   Time must be specified in the ISO-8601 format.   If no timezone is specified, then the timezone is assumed to be UTC.    Examples:    * Time specified with timezone: 2018-06-22T09:05:07+00:00 Time specified in UTC: 2018-06-22T09:05:07Z   * Time specified without timezone: 2018-06-22T09:05 (equivalent to 2018-06-22T09:05+00:00)
    * @member {Date} time_to_send
    */
   exports.prototype['time_to_send'] = undefined;
