@@ -26,83 +26,38 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ErrorCodeOmnichannelMachine = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.TextStore = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
   /**
-   * Enum class ErrorCodeOmnichannelMachine.
+   * Enum class TextStore.
    * @enum {}
    * @readonly
    */
   var exports = {
     /**
-     * value: 0
+     * value: "nostore"
      * @const
      */
-    "0": 0,
+    "nostore": "nostore",
     /**
-     * value: 1
+     * value: "plaintext"
      * @const
      */
-    "1": 1,
+    "plaintext": "plaintext",
     /**
-     * value: 2
+     * value: "sha256"
      * @const
      */
-    "2": 2,
-    /**
-     * value: 3
-     * @const
-     */
-    "3": 3,
-    /**
-     * value: 4
-     * @const
-     */
-    "4": 4,
-    /**
-     * value: 5
-     * @const
-     */
-    "5": 5,
-    /**
-     * value: 6
-     * @const
-     */
-    "6": 6,
-    /**
-     * value: 7
-     * @const
-     */
-    "7": 7,
-    /**
-     * value: 8
-     * @const
-     */
-    "8": 8,
-    /**
-     * value: 9
-     * @const
-     */
-    "9": 9,
-    /**
-     * value: 10
-     * @const
-     */
-    "10": 10,
-    /**
-     * value: 999
-     * @const
-     */
-    "999": 999  };
+    "sha256": "sha256"  };
 
   /**
-   * Returns a <code>ErrorCodeOmnichannelMachine</code> enum value from a Javascript object name.
+   * Returns a <code>TextStore</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/ErrorCodeOmnichannelMachine} The enum <code>ErrorCodeOmnichannelMachine</code> value.
+   * @return {module:model/TextStore} The enum <code>TextStore</code> value.
    */
   exports.constructFromObject = function(object) {
     return object;

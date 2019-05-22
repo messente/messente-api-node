@@ -31,7 +31,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new MessenteApi.NumberToBlacklist();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,17 +49,11 @@
       object[property] = value;
   }
 
-  describe('NumberToBlacklist', function() {
-    it('should create an instance of NumberToBlacklist', function() {
-      // uncomment below and update the code to test NumberToBlacklist
-      //var instance = new MessenteApi.NumberToBlacklist();
-      //expect(instance).to.be.a(MessenteApi.NumberToBlacklist);
-    });
-
-    it('should have the property phoneNumber (base name: "phoneNumber")', function() {
-      // uncomment below and update the code to test the property phoneNumber
-      //var instance = new MessenteApi.NumberToBlacklist();
-      //expect(instance).to.be();
+  describe('TextStore', function() {
+    it('should create an instance of TextStore', function() {
+      // uncomment below and update the code to test TextStore
+      //var instance = new MessenteApi.TextStore();
+      //expect(instance).to.be.a(MessenteApi.TextStore);
     });
 
   });
