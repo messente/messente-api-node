@@ -34,7 +34,7 @@
   /**
    * Omnimessage service.
    * @module api/OmnimessageApi
-   * @version 1.0.1
+   * @version 1.0.2
    */
 
   /**

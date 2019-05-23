@@ -36,7 +36,7 @@
   /**
    * The GroupEnvelope model module.
    * @module model/GroupEnvelope
-   * @version 1.0.1
+   * @version 1.0.2
    */
 
   /**

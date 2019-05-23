@@ -34,7 +34,7 @@
   /**
    * Blacklist service.
    * @module api/BlacklistApi
-   * @version 1.0.1
+   * @version 1.0.2
    */
 
   /**

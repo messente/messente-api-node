@@ -36,7 +36,7 @@
   /**
    * The GroupResponseFields model module.
    * @module model/GroupResponseFields
-   * @version 1.0.1
+   * @version 1.0.2
    */
 
   /**
