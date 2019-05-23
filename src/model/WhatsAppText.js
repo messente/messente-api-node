@@ -36,7 +36,7 @@
   /**
    * The WhatsAppText model module.
    * @module model/WhatsAppText
-   * @version 1.0.1
+   * @version 1.0.2
    */
 
   /**
