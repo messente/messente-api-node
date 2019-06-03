@@ -85,7 +85,7 @@
 
       var authNames = ['basicAuth'];
       var contentTypes = [];
-      var accepts = ['*/*'];
+      var accepts = ['application/json'];
       var returnType = DeliveryReportResponse;
 
       return this.apiClient.callApi(
