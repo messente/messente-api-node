@@ -31,7 +31,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format.
 var phone = "phone_example"; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
@@ -47,7 +47,7 @@ apiInstance.addContactToGroup(groupId, phone, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format. | 
  **phone** | **String**| A phone number | 
 
 ### Return type
@@ -269,7 +269,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
 var opts = {
-  'groupIds': ["null"] // [String] | Optional one or many group id strings in uuid format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
+  'groupIds': ["null"] // [String] | Optional one or many group id strings in UUID format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -285,7 +285,7 @@ apiInstance.fetchContacts(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupIds** | [**[String]**](String.md)| Optional one or many group id strings in uuid format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot;  | [optional] 
+ **groupIds** | [**[String]**](String.md)| Optional one or many group id strings in UUID format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot;  | [optional] 
 
 ### Return type
 
@@ -317,7 +317,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format.
 var phone = "phone_example"; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
@@ -333,7 +333,7 @@ apiInstance.removeContactFromGroup(groupId, phone, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format. | 
  **phone** | **String**| A phone number | 
 
 ### Return type

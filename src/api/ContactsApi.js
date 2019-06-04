@@ -58,7 +58,7 @@
 
     /**
      * Adds a contact to a group
-     * @param {String} groupId String in uuid format.
+     * @param {String} groupId String in UUID format.
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~addContactToGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmptyObject}
@@ -299,7 +299,7 @@
     /**
      * Returns all contacts
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.groupIds Optional one or many group id strings in uuid format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot; 
+     * @param {Array.<String>} opts.groupIds Optional one or many group id strings in UUID format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot; 
      * @param {module:api/ContactsApi~fetchContactsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContactListEnvelope}
      */
@@ -345,7 +345,7 @@
 
     /**
      * Removes a contact from a group
-     * @param {String} groupId String in uuid format.
+     * @param {String} groupId String in UUID format.
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~removeContactFromGroupCallback} callback The callback function, accepting three arguments: error, data, response
      */

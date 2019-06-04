@@ -43,7 +43,7 @@
    * Constructs a new <code>GroupResponseFields</code>.
    * @alias module:model/GroupResponseFields
    * @class
-   * @param id {String} Id string in uuid format
+   * @param id {String} Id string in UUID format
    * @param name {String} 
    * @param contactsCount {Number} 
    */
@@ -82,7 +82,7 @@
   }
 
   /**
-   * Id string in uuid format
+   * Id string in UUID format
    * @member {String} id
    */
   exports.prototype['id'] = undefined;

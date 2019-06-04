@@ -75,7 +75,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format.
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -90,7 +90,7 @@ apiInstance.deleteGroup(groupId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format. | 
 
 ### Return type
 
@@ -122,7 +122,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format.
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -137,7 +137,7 @@ apiInstance.fetchGroup(groupId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format. | 
 
 ### Return type
 
@@ -212,7 +212,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format.
 var groupName = new MessenteApi.GroupName(); // GroupName | 
 var callback = function(error, data, response) {
   if (error) {
@@ -228,7 +228,7 @@ apiInstance.updateGroup(groupId, groupName, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format. | 
  **groupName** | [**GroupName**](GroupName.md)|  | 
 
 ### Return type
