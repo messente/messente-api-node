@@ -57,7 +57,7 @@
      */
 
     /**
-     * Creates a new group with the provided name.
+     * Creates a new group with the provided name
      * @param {module:model/GroupName} groupName 
      * @param {module:api/GroupsApi~createGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}
@@ -103,7 +103,7 @@
      */
 
     /**
-     * Deletes a group.
+     * Deletes a group
      * @param {String} groupId String in uuid format.
      * @param {module:api/GroupsApi~deleteGroupCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -149,7 +149,7 @@
      */
 
     /**
-     * Lists a group.
+     * Lists a group
      * @param {String} groupId String in uuid format.
      * @param {module:api/GroupsApi~fetchGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}
@@ -196,7 +196,7 @@
      */
 
     /**
-     * Returns all groups.
+     * Returns all groups
      * @param {module:api/GroupsApi~fetchGroupsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupListEnvelope}
      */
@@ -236,7 +236,7 @@
      */
 
     /**
-     * Updates a group with the provided name.
+     * Updates a group with the provided name
      * @param {String} groupId String in uuid format.
      * @param {module:model/GroupName} groupName 
      * @param {module:api/GroupsApi~updateGroupCallback} callback The callback function, accepting three arguments: error, data, response

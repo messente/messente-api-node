@@ -57,7 +57,7 @@
      */
 
     /**
-     * Adds a phone number to the blacklist.
+     * Adds a phone number to the blacklist
      * @param {module:model/NumberToBlacklist} numberToBlacklist Phone number to be blacklisted
      * @param {module:api/BlacklistApi~addToBlacklistCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -102,7 +102,7 @@
      */
 
     /**
-     * Deletes a phone number from the blacklist.
+     * Deletes a phone number from the blacklist
      * @param {String} phone A phone number
      * @param {module:api/BlacklistApi~deleteFromBlacklistCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -148,7 +148,7 @@
      */
 
     /**
-     * Returns all blacklisted phone numbers.
+     * Returns all blacklisted phone numbers
      * @param {module:api/BlacklistApi~fetchBlacklistCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/FetchBlacklistSuccess}
      */
@@ -188,7 +188,7 @@
      */
 
     /**
-     * Checks if a phone number is blacklisted.
+     * Checks if a phone number is blacklisted
      * @param {String} phone A phone number
      * @param {module:api/BlacklistApi~isBlacklistedCallback} callback The callback function, accepting three arguments: error, data, response
      */

@@ -4,18 +4,18 @@ All URIs are relative to *https://api.messente.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createGroup**](GroupsApi.md#createGroup) | **POST** /groups | Creates a new group with the provided name.
-[**deleteGroup**](GroupsApi.md#deleteGroup) | **DELETE** /groups/{groupId} | Deletes a group.
-[**fetchGroup**](GroupsApi.md#fetchGroup) | **GET** /groups/{groupId} | Lists a group.
-[**fetchGroups**](GroupsApi.md#fetchGroups) | **GET** /groups | Returns all groups.
-[**updateGroup**](GroupsApi.md#updateGroup) | **PUT** /groups/{groupId} | Updates a group with the provided name.
+[**createGroup**](GroupsApi.md#createGroup) | **POST** /groups | Creates a new group with the provided name
+[**deleteGroup**](GroupsApi.md#deleteGroup) | **DELETE** /groups/{groupId} | Deletes a group
+[**fetchGroup**](GroupsApi.md#fetchGroup) | **GET** /groups/{groupId} | Lists a group
+[**fetchGroups**](GroupsApi.md#fetchGroups) | **GET** /groups | Returns all groups
+[**updateGroup**](GroupsApi.md#updateGroup) | **PUT** /groups/{groupId} | Updates a group with the provided name
 
 
 <a name="createGroup"></a>
 # **createGroup**
 > GroupEnvelope createGroup(groupName)
 
-Creates a new group with the provided name.
+Creates a new group with the provided name
 
 ### Example
 ```javascript
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 # **deleteGroup**
 > deleteGroup(groupId)
 
-Deletes a group.
+Deletes a group
 
 ### Example
 ```javascript
@@ -109,7 +109,7 @@ null (empty response body)
 # **fetchGroup**
 > GroupEnvelope fetchGroup(groupId)
 
-Lists a group.
+Lists a group
 
 ### Example
 ```javascript
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 # **fetchGroups**
 > GroupListEnvelope fetchGroups()
 
-Returns all groups.
+Returns all groups
 
 ### Example
 ```javascript
@@ -199,7 +199,7 @@ This endpoint does not need any parameter.
 # **updateGroup**
 > GroupEnvelope updateGroup(groupId, groupName)
 
-Updates a group with the provided name.
+Updates a group with the provided name
 
 ### Example
 ```javascript

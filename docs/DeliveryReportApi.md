@@ -4,14 +4,14 @@ All URIs are relative to *https://api.messente.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieveDeliveryReport**](DeliveryReportApi.md#retrieveDeliveryReport) | **GET** /omnimessage/{omnimessageId}/status | Retrieves the delivery report for the Omnimessage.
+[**retrieveDeliveryReport**](DeliveryReportApi.md#retrieveDeliveryReport) | **GET** /omnimessage/{omnimessageId}/status | Retrieves the delivery report for the Omnimessage
 
 
 <a name="retrieveDeliveryReport"></a>
 # **retrieveDeliveryReport**
 > DeliveryReportResponse retrieveDeliveryReport(omnimessageId)
 
-Retrieves the delivery report for the Omnimessage.
+Retrieves the delivery report for the Omnimessage
 
 ### Example
 ```javascript

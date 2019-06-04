@@ -57,7 +57,7 @@
      */
 
     /**
-     * Cancels a scheduled Omnimessage.
+     * Cancels a scheduled Omnimessage
      * @param {String} omnimessageId UUID of the scheduled Omnimessage to be cancelled
      * @param {module:api/OmnimessageApi~cancelScheduledMessageCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -103,7 +103,7 @@
      */
 
     /**
-     * Sends an Omnimessage.
+     * Sends an Omnimessage
      * @param {module:model/Omnimessage} omnimessage Omnimessage to be sent
      * @param {module:api/OmnimessageApi~sendOmnimessageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/OmniMessageCreateSuccessResponse}

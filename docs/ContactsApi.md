@@ -4,21 +4,21 @@ All URIs are relative to *https://api.messente.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addContactToGroup**](ContactsApi.md#addContactToGroup) | **POST** /groups/{groupId}/contacts/{phone} | Adds a contact to a group.
-[**createContact**](ContactsApi.md#createContact) | **POST** /contacts | Creates a new contact.
-[**deleteContact**](ContactsApi.md#deleteContact) | **DELETE** /contacts/{phone} | Deletes a contact.
-[**fetchContact**](ContactsApi.md#fetchContact) | **GET** /contacts/{phone} | Lists a contact.
-[**fetchContactGroups**](ContactsApi.md#fetchContactGroups) | **GET** /contacts/{phone}/groups | Lists groups of a contact.
-[**fetchContacts**](ContactsApi.md#fetchContacts) | **GET** /contacts | Returns all contacts.
-[**removeContactFromGroup**](ContactsApi.md#removeContactFromGroup) | **DELETE** /groups/{groupId}/contacts/{phone} | Removes a contact from a group.
-[**updateContact**](ContactsApi.md#updateContact) | **PATCH** /contacts/{phone} | Updates a contact.
+[**addContactToGroup**](ContactsApi.md#addContactToGroup) | **POST** /groups/{groupId}/contacts/{phone} | Adds a contact to a group
+[**createContact**](ContactsApi.md#createContact) | **POST** /contacts | Creates a new contact
+[**deleteContact**](ContactsApi.md#deleteContact) | **DELETE** /contacts/{phone} | Deletes a contact
+[**fetchContact**](ContactsApi.md#fetchContact) | **GET** /contacts/{phone} | Lists a contact
+[**fetchContactGroups**](ContactsApi.md#fetchContactGroups) | **GET** /contacts/{phone}/groups | Lists groups of a contact
+[**fetchContacts**](ContactsApi.md#fetchContacts) | **GET** /contacts | Returns all contacts
+[**removeContactFromGroup**](ContactsApi.md#removeContactFromGroup) | **DELETE** /groups/{groupId}/contacts/{phone} | Removes a contact from a group
+[**updateContact**](ContactsApi.md#updateContact) | **PATCH** /contacts/{phone} | Updates a contact
 
 
 <a name="addContactToGroup"></a>
 # **addContactToGroup**
 > EmptyObject addContactToGroup(groupId, phone)
 
-Adds a contact to a group.
+Adds a contact to a group
 
 ### Example
 ```javascript
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 # **createContact**
 > ContactEnvelope createContact(contactFields)
 
-Creates a new contact.
+Creates a new contact
 
 ### Example
 ```javascript
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 # **deleteContact**
 > deleteContact(phone)
 
-Deletes a contact.
+Deletes a contact
 
 ### Example
 ```javascript
@@ -161,7 +161,7 @@ null (empty response body)
 # **fetchContact**
 > ContactEnvelope fetchContact(phone)
 
-Lists a contact.
+Lists a contact
 
 ### Example
 ```javascript
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 # **fetchContactGroups**
 > GroupListEnvelope fetchContactGroups(phone)
 
-Lists groups of a contact.
+Lists groups of a contact
 
 ### Example
 ```javascript
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 # **fetchContacts**
 > ContactListEnvelope fetchContacts(opts)
 
-Returns all contacts.
+Returns all contacts
 
 ### Example
 ```javascript
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 # **removeContactFromGroup**
 > removeContactFromGroup(groupId, phone)
 
-Removes a contact from a group.
+Removes a contact from a group
 
 ### Example
 ```javascript
@@ -353,7 +353,7 @@ null (empty response body)
 # **updateContact**
 > ContactEnvelope updateContact(phone, contactUpdateFields)
 
-Updates a contact.
+Updates a contact
 
 ### Example
 ```javascript
