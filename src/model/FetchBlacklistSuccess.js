@@ -67,6 +67,7 @@
   }
 
   /**
+   * Array of unique phone numbers
    * @member {Array.<String>} phoneNumbers
    */
   exports.prototype['phoneNumbers'] = undefined;
