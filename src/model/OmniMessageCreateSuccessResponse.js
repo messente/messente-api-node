@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>OmniMessageCreateSuccessResponse</code>.
+   * A container for a response received after successfully created omnimessage
    * @alias module:model/OmniMessageCreateSuccessResponse
    * @class
    * @param messages {Array.<module:model/MessageResult>} List of messages that compose the omnimessage

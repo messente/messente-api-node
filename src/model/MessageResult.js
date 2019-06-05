@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>MessageResult</code>.
+   * A message part of an omnimessage
    * @alias module:model/MessageResult
    * @class
    * @param messageId {String} Unique identifier for the message

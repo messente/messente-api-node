@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>ErrorItemPhonebook</code>.
+   * A container for Phonebook API error
    * @alias module:model/ErrorItemPhonebook
    * @class
    * @param title {module:model/ErrorTitlePhonebook} 

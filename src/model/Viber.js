@@ -118,6 +118,7 @@
    */
   exports.prototype['button_text'] = undefined;
   /**
+   * The channel used to deliver the message
    * @member {module:model/Viber.ChannelEnum} channel
    * @default 'viber'
    */

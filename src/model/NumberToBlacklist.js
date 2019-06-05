@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>NumberToBlacklist</code>.
+   * A container for a soon-to-be blacklisted number
    * @alias module:model/NumberToBlacklist
    * @class
    * @param phoneNumber {String} Phone number in e.164 format

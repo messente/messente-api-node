@@ -41,9 +41,10 @@
 
   /**
    * Constructs a new <code>DeliveryReportResponse</code>.
+   * A container for successful delivery report response
    * @alias module:model/DeliveryReportResponse
    * @class
-   * @param statuses {Array.<module:model/DeliveryResult>} Contains the delivery reports for each channnel, ordered by send order
+   * @param statuses {Array.<module:model/DeliveryResult>} Contains the delivery reports for each channel, ordered by send order
    * @param to {String} Phone number in e.164 format
    * @param omnimessageId {String} Unique identifier for the omnimessage
    */
@@ -79,7 +80,7 @@
   }
 
   /**
-   * Contains the delivery reports for each channnel, ordered by send order
+   * Contains the delivery reports for each channel, ordered by send order
    * @member {Array.<module:model/DeliveryResult>} statuses
    */
   exports.prototype['statuses'] = undefined;

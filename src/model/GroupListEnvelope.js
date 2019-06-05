@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>GroupListEnvelope</code>.
+   * A container for groups
    * @alias module:model/GroupListEnvelope
    * @class
    */
@@ -67,6 +68,7 @@
   }
 
   /**
+   * An array of groups
    * @member {Array.<module:model/GroupResponseFields>} groups
    */
   exports.prototype['groups'] = undefined;

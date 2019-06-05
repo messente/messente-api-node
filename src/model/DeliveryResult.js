@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>DeliveryResult</code>.
+   * A delivery report
    * @alias module:model/DeliveryResult
    * @class
    */

@@ -114,6 +114,7 @@
    */
   exports.prototype['audio'] = undefined;
   /**
+   * The channel used to deliver the message
    * @member {module:model/WhatsApp.ChannelEnum} channel
    * @default 'whatsapp'
    */

@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>WhatsAppDocument</code>.
+   * A document
    * @alias module:model/WhatsAppDocument
    * @class
    * @param content {String} Base64-encoded image

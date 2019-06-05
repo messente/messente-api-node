@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>ContactEnvelope</code>.
+   * A container for a contact
    * @alias module:model/ContactEnvelope
    * @class
    */

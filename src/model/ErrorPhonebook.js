@@ -41,9 +41,10 @@
 
   /**
    * Constructs a new <code>ErrorPhonebook</code>.
+   * A container for errors
    * @alias module:model/ErrorPhonebook
    * @class
-   * @param errors {Array.<module:model/ErrorItemPhonebook>} 
+   * @param errors {Array.<module:model/ErrorItemPhonebook>} An array of errors
    */
   var exports = function(errors) {
     var _this = this;
@@ -69,6 +70,7 @@
   }
 
   /**
+   * An array of errors
    * @member {Array.<module:model/ErrorItemPhonebook>} errors
    */
   exports.prototype['errors'] = undefined;

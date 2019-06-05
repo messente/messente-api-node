@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>ContactListEnvelope</code>.
+   * A container for contacts
    * @alias module:model/ContactListEnvelope
    * @class
    */
@@ -67,6 +68,7 @@
   }
 
   /**
+   * An array of contacts
    * @member {Array.<module:model/ContactFields>} contacts
    */
   exports.prototype['contacts'] = undefined;

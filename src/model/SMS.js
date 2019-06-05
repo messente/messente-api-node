@@ -112,6 +112,7 @@
    */
   exports.prototype['udh'] = undefined;
   /**
+   * The channel used to deliver the message
    * @member {module:model/SMS.ChannelEnum} channel
    * @default 'sms'
    */

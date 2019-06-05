@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>FetchBlacklistSuccess</code>.
+   * A container for blacklisted numbers
    * @alias module:model/FetchBlacklistSuccess
    * @class
    */

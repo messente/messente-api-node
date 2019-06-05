@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>ContactFields</code>.
+   * A container for fields of a contact
    * @alias module:model/ContactFields
    * @class
    * @param phoneNumber {String} Phone number in e.164 format
@@ -101,38 +102,47 @@
    */
   exports.prototype['phoneNumber'] = undefined;
   /**
+   * The contact's email
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
   /**
+   * The contact's first name
    * @member {String} firstName
    */
   exports.prototype['firstName'] = undefined;
   /**
+   * The contact's last name
    * @member {String} lastName
    */
   exports.prototype['lastName'] = undefined;
   /**
+   * The contact's company
    * @member {String} company
    */
   exports.prototype['company'] = undefined;
   /**
+   * The contact's title
    * @member {String} title
    */
   exports.prototype['title'] = undefined;
   /**
+   * The first custom field
    * @member {String} custom
    */
   exports.prototype['custom'] = undefined;
   /**
+   * The second custom field
    * @member {String} custom2
    */
   exports.prototype['custom2'] = undefined;
   /**
+   * The third custom field
    * @member {String} custom3
    */
   exports.prototype['custom3'] = undefined;
   /**
+   * The fourth custom field
    * @member {String} custom4
    */
   exports.prototype['custom4'] = undefined;

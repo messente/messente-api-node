@@ -41,9 +41,10 @@
 
   /**
    * Constructs a new <code>GroupName</code>.
+   * A group name container
    * @alias module:model/GroupName
    * @class
-   * @param name {String} 
+   * @param name {String} The name of the group
    */
   var exports = function(name) {
     var _this = this;
@@ -69,6 +70,7 @@
   }
 
   /**
+   * The name of the group
    * @member {String} name
    */
   exports.prototype['name'] = undefined;

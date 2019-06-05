@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>WhatsAppAudio</code>.
+   * A sound
    * @alias module:model/WhatsAppAudio
    * @class
    * @param content {String} Base64-encoded audio

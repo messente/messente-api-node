@@ -41,9 +41,10 @@
 
   /**
    * Constructs a new <code>ErrorOmnichannel</code>.
+   * A container for errors
    * @alias module:model/ErrorOmnichannel
    * @class
-   * @param errors {Array.<module:model/ErrorItemOmnichannel>} 
+   * @param errors {Array.<module:model/ErrorItemOmnichannel>} An array of errors
    */
   var exports = function(errors) {
     var _this = this;
@@ -69,6 +70,7 @@
   }
 
   /**
+   * An array of errors
    * @member {Array.<module:model/ErrorItemOmnichannel>} errors
    */
   exports.prototype['errors'] = undefined;

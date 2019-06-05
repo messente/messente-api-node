@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>WhatsAppImage</code>.
+   * An image
    * @alias module:model/WhatsAppImage
    * @class
    * @param content {String} Base64-encoded image

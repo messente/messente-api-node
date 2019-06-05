@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>ErrorItemOmnichannel</code>.
+   * A container for Omnichannel API error
    * @alias module:model/ErrorItemOmnichannel
    * @class
    * @param title {module:model/ErrorTitleOmnichannel} 

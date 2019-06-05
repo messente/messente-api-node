@@ -41,10 +41,11 @@
 
   /**
    * Constructs a new <code>Omnimessage</code>.
+   * An omnimessage
    * @alias module:model/Omnimessage
    * @class
    * @param to {String} Phone number in e.164 format
-   * @param messages {Array.<Object>} 
+   * @param messages {Array.<Object>} An array of messages
    */
   var exports = function(to, messages) {
     var _this = this;
@@ -88,6 +89,7 @@
    */
   exports.prototype['to'] = undefined;
   /**
+   * An array of messages
    * @member {Array.<Object>} messages
    */
   exports.prototype['messages'] = undefined;

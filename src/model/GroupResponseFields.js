@@ -41,11 +41,12 @@
 
   /**
    * Constructs a new <code>GroupResponseFields</code>.
+   * A container for fields of a group
    * @alias module:model/GroupResponseFields
    * @class
    * @param id {String} Id string in UUID format
-   * @param name {String} 
-   * @param contactsCount {Number} 
+   * @param name {String} The name of the group
+   * @param contactsCount {Number} The count of contacts in the group
    */
   var exports = function(id, name, contactsCount) {
     var _this = this;
@@ -87,15 +88,17 @@
    */
   exports.prototype['id'] = undefined;
   /**
+   * The name of the group
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
-   * Format %Y-%m-%dT%H:%M:%S.%fZ
+   * When the group was created
    * @member {String} createdOn
    */
   exports.prototype['createdOn'] = undefined;
   /**
+   * The count of contacts in the group
    * @member {Number} contactsCount
    */
   exports.prototype['contactsCount'] = undefined;

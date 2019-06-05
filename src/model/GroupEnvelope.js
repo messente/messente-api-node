@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>GroupEnvelope</code>.
+   * A container for a group
    * @alias module:model/GroupEnvelope
    * @class
    */
