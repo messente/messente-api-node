@@ -58,7 +58,7 @@
 
     /**
      * Cancels a scheduled Omnimessage
-     * @param {String} omnimessageId UUID of the scheduled Omnimessage to be cancelled
+     * @param {String} omnimessageId UUID of the scheduled omnimessage to be cancelled
      * @param {module:api/OmnimessageApi~cancelScheduledMessageCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.cancelScheduledMessage = function(omnimessageId, callback) {

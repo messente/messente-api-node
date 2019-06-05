@@ -25,7 +25,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.OmnimessageApi();
-var omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled Omnimessage to be cancelled
+var omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled omnimessage to be cancelled
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -40,7 +40,7 @@ apiInstance.cancelScheduledMessage(omnimessageId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **omnimessageId** | **String**| UUID of the scheduled Omnimessage to be cancelled | 
+ **omnimessageId** | **String**| UUID of the scheduled omnimessage to be cancelled | 
 
 ### Return type
 

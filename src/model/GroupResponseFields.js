@@ -91,7 +91,7 @@
    */
   exports.prototype['name'] = undefined;
   /**
-   * format %Y-%m-%dT%H:%M:%S.%fZ
+   * Format %Y-%m-%dT%H:%M:%S.%fZ
    * @member {String} createdOn
    */
   exports.prototype['createdOn'] = undefined;

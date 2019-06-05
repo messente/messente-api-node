@@ -43,9 +43,9 @@
    * Constructs a new <code>OmniMessageCreateSuccessResponse</code>.
    * @alias module:model/OmniMessageCreateSuccessResponse
    * @class
-   * @param messages {Array.<module:model/MessageResult>} List of messages that compose the Omnimessage
+   * @param messages {Array.<module:model/MessageResult>} List of messages that compose the omnimessage
    * @param to {String} Phone number in e.164 format
-   * @param omnimessageId {String} Unique identifier for the Omnimessage
+   * @param omnimessageId {String} Unique identifier for the omnimessage
    */
   var exports = function(messages, to, omnimessageId) {
     var _this = this;
@@ -79,7 +79,7 @@
   }
 
   /**
-   * List of messages that compose the Omnimessage
+   * List of messages that compose the omnimessage
    * @member {Array.<module:model/MessageResult>} messages
    */
   exports.prototype['messages'] = undefined;
@@ -89,7 +89,7 @@
    */
   exports.prototype['to'] = undefined;
   /**
-   * Unique identifier for the Omnimessage
+   * Unique identifier for the omnimessage
    * @member {String} omnimessage_id
    */
   exports.prototype['omnimessage_id'] = undefined;

@@ -95,7 +95,7 @@
    */
   exports.prototype['message_id'] = undefined;
   /**
-   * Human-readable description of what went wrong, *null* in case of success or if the messages has not been processed yet
+   * Human-readable description of what went wrong, *null* in case of success or if the message has not been processed yet
    * @member {String} error
    */
   exports.prototype['error'] = undefined;

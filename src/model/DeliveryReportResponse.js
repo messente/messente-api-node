@@ -45,7 +45,7 @@
    * @class
    * @param statuses {Array.<module:model/DeliveryResult>} Contains the delivery reports for each channnel, ordered by send order
    * @param to {String} Phone number in e.164 format
-   * @param omnimessageId {String} Unique identifier for the Omnimessage
+   * @param omnimessageId {String} Unique identifier for the omnimessage
    */
   var exports = function(statuses, to, omnimessageId) {
     var _this = this;
@@ -89,7 +89,7 @@
    */
   exports.prototype['to'] = undefined;
   /**
-   * Unique identifier for the Omnimessage
+   * Unique identifier for the omnimessage
    * @member {String} omnimessage_id
    */
   exports.prototype['omnimessage_id'] = undefined;
