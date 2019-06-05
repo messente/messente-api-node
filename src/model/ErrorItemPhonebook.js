@@ -45,7 +45,7 @@
    * @alias module:model/ErrorItemPhonebook
    * @class
    * @param title {module:model/ErrorTitlePhonebook} 
-   * @param detail {String} Free form more detailed description of the error.
+   * @param detail {String} Free form more detailed description of the error
    * @param code {module:model/ErrorCodePhonebook} 
    */
   var exports = function(title, detail, code) {
@@ -84,7 +84,7 @@
    */
   exports.prototype['title'] = undefined;
   /**
-   * Free form more detailed description of the error.
+   * Free form more detailed description of the error
    * @member {String} detail
    */
   exports.prototype['detail'] = undefined;

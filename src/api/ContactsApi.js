@@ -58,7 +58,7 @@
 
     /**
      * Adds a contact to a group
-     * @param {String} groupId String in UUID format.
+     * @param {String} groupId String in UUID format
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~addContactToGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmptyObject}
@@ -345,7 +345,7 @@
 
     /**
      * Removes a contact from a group
-     * @param {String} groupId String in UUID format.
+     * @param {String} groupId String in UUID format
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~removeContactFromGroupCallback} callback The callback function, accepting three arguments: error, data, response
      */

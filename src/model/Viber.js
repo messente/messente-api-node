@@ -103,7 +103,7 @@
    */
   exports.prototype['text'] = undefined;
   /**
-   * URL for the embedded image.    Valid combinations:    1) image_url,    2) text, image_url, button_url, button_text
+   * URL for the embedded image    Valid combinations:    1) image_url,    2) text, image_url, button_url, button_text
    * @member {String} image_url
    */
   exports.prototype['image_url'] = undefined;

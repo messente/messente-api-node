@@ -75,7 +75,7 @@
   }
 
   /**
-   * Whether to display link preview if the message contains a hyperlink.
+   * Whether to display link preview if the message contains a hyperlink
    * @member {Boolean} preview_url
    * @default true
    */

@@ -31,7 +31,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var groupId = "groupId_example"; // String | String in UUID format.
+var groupId = "groupId_example"; // String | String in UUID format
 var phone = "phone_example"; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
@@ -47,7 +47,7 @@ apiInstance.addContactToGroup(groupId, phone, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in UUID format. | 
+ **groupId** | **String**| String in UUID format | 
  **phone** | **String**| A phone number | 
 
 ### Return type
@@ -317,7 +317,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var groupId = "groupId_example"; // String | String in UUID format.
+var groupId = "groupId_example"; // String | String in UUID format
 var phone = "phone_example"; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
@@ -333,7 +333,7 @@ apiInstance.removeContactFromGroup(groupId, phone, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in UUID format. | 
+ **groupId** | **String**| String in UUID format | 
  **phone** | **String**| A phone number | 
 
 ### Return type

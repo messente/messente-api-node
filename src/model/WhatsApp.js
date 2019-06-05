@@ -41,7 +41,7 @@
 
   /**
    * Constructs a new <code>WhatsApp</code>.
-   * WhatsApp message content.   Only one of \&quot;text\&quot;, \&quot;image\&quot;, \&quot;document\&quot; or \&quot;audio\&quot; can be provided.
+   * WhatsApp message content.   Only one of \&quot;text\&quot;, \&quot;image\&quot;, \&quot;document\&quot; or \&quot;audio\&quot; can be provided
    * @alias module:model/WhatsApp
    * @class
    */

@@ -104,7 +104,7 @@
 
     /**
      * Deletes a group
-     * @param {String} groupId String in UUID format.
+     * @param {String} groupId String in UUID format
      * @param {module:api/GroupsApi~deleteGroupCallback} callback The callback function, accepting three arguments: error, data, response
      */
     this.deleteGroup = function(groupId, callback) {
@@ -150,7 +150,7 @@
 
     /**
      * Lists a group
-     * @param {String} groupId String in UUID format.
+     * @param {String} groupId String in UUID format
      * @param {module:api/GroupsApi~fetchGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}
      */
@@ -237,7 +237,7 @@
 
     /**
      * Updates a group with the provided name
-     * @param {String} groupId String in UUID format.
+     * @param {String} groupId String in UUID format
      * @param {module:model/GroupName} groupName 
      * @param {module:api/GroupsApi~updateGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}

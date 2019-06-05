@@ -45,7 +45,7 @@
    * @alias module:model/ErrorItemOmnichannel
    * @class
    * @param title {module:model/ErrorTitleOmnichannel} 
-   * @param detail {String} Free form more detailed description of the error.
+   * @param detail {String} Free form more detailed description of the error
    * @param code {module:model/ErrorCodeOmnichannel} 
    * @param source {String} Describes which field is causing the issue in the payload, null for non 400 status code responses
    */
@@ -89,7 +89,7 @@
    */
   exports.prototype['title'] = undefined;
   /**
-   * Free form more detailed description of the error.
+   * Free form more detailed description of the error
    * @member {String} detail
    */
   exports.prototype['detail'] = undefined;
