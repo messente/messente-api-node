@@ -77,6 +77,9 @@
       if (data.hasOwnProperty('company')) {
         obj['company'] = ApiClient.convertToType(data['company'], 'String');
       }
+      if (data.hasOwnProperty('title')) {
+        obj['title'] = ApiClient.convertToType(data['title'], 'String');
+      }
       if (data.hasOwnProperty('custom')) {
         obj['custom'] = ApiClient.convertToType(data['custom'], 'String');
       }
@@ -118,6 +121,11 @@
    * @member {String} company
    */
   exports.prototype['company'] = undefined;
+  /**
+   * The title of the contact
+   * @member {String} title
+   */
+  exports.prototype['title'] = undefined;
   /**
    * The first custom field
    * @member {String} custom
