@@ -87,12 +87,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
-      //var instance = new MessenteApi.ContactFields();
-      //expect(instance).to.be();
-    });
-
     it('should have the property custom (base name: "custom")', function() {
       // uncomment below and update the code to test the property custom
       //var instance = new MessenteApi.ContactFields();

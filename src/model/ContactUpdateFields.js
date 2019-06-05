@@ -72,9 +72,6 @@
       if (data.hasOwnProperty('company')) {
         obj['company'] = ApiClient.convertToType(data['company'], 'String');
       }
-      if (data.hasOwnProperty('title')) {
-        obj['title'] = ApiClient.convertToType(data['title'], 'String');
-      }
       if (data.hasOwnProperty('custom')) {
         obj['custom'] = ApiClient.convertToType(data['custom'], 'String');
       }
@@ -92,30 +89,25 @@
   }
 
   /**
-   * The contact's email
+   * The email of the contact
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
   /**
-   * The contact's first name
+   * The first name of the contact
    * @member {String} firstName
    */
   exports.prototype['firstName'] = undefined;
   /**
-   * The contact's last name
+   * The last name of the contact
    * @member {String} lastName
    */
   exports.prototype['lastName'] = undefined;
   /**
-   * The contact's company
+   * The company of the contact
    * @member {String} company
    */
   exports.prototype['company'] = undefined;
-  /**
-   * The contact's title
-   * @member {String} title
-   */
-  exports.prototype['title'] = undefined;
   /**
    * The first custom field
    * @member {String} custom
