@@ -133,7 +133,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/blacklist/{phone}', 'DELETE',
+        '/phonebook/blacklist/{phone}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -219,7 +219,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/blacklist/{phone}', 'GET',
+        '/phonebook/blacklist/{phone}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -96,7 +96,7 @@
       var returnType = EmptyObject;
 
       return this.apiClient.callApi(
-        '/groups/{groupId}/contacts/{phone}', 'POST',
+        '/phonebook/groups/{groupId}/contacts/{phone}', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -142,7 +142,7 @@
       var returnType = ContactEnvelope;
 
       return this.apiClient.callApi(
-        '/contacts', 'POST',
+        '/phonebook/contacts', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -188,7 +188,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/contacts/{phone}', 'DELETE',
+        '/phonebook/contacts/{phone}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -235,7 +235,7 @@
       var returnType = ContactEnvelope;
 
       return this.apiClient.callApi(
-        '/contacts/{phone}', 'GET',
+        '/phonebook/contacts/{phone}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -282,7 +282,7 @@
       var returnType = GroupListEnvelope;
 
       return this.apiClient.callApi(
-        '/contacts/{phone}/groups', 'GET',
+        '/phonebook/contacts/{phone}/groups', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -329,7 +329,7 @@
       var returnType = ContactListEnvelope;
 
       return this.apiClient.callApi(
-        '/contacts', 'GET',
+        '/phonebook/contacts', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -382,7 +382,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/groups/{groupId}/contacts/{phone}', 'DELETE',
+        '/phonebook/groups/{groupId}/contacts/{phone}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -435,7 +435,7 @@
       var returnType = ContactEnvelope;
 
       return this.apiClient.callApi(
-        '/contacts/{phone}', 'PATCH',
+        '/phonebook/contacts/{phone}', 'PATCH',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

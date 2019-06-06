@@ -88,7 +88,7 @@
       var returnType = GroupEnvelope;
 
       return this.apiClient.callApi(
-        '/groups', 'POST',
+        '/phonebook/groups', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -134,7 +134,7 @@
       var returnType = null;
 
       return this.apiClient.callApi(
-        '/groups/{groupId}', 'DELETE',
+        '/phonebook/groups/{groupId}', 'DELETE',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -181,7 +181,7 @@
       var returnType = GroupEnvelope;
 
       return this.apiClient.callApi(
-        '/groups/{groupId}', 'GET',
+        '/phonebook/groups/{groupId}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -221,7 +221,7 @@
       var returnType = GroupListEnvelope;
 
       return this.apiClient.callApi(
-        '/groups', 'GET',
+        '/phonebook/groups', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -274,7 +274,7 @@
       var returnType = GroupEnvelope;
 
       return this.apiClient.callApi(
-        '/groups/{groupId}', 'PUT',
+        '/phonebook/groups/{groupId}', 'PUT',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
