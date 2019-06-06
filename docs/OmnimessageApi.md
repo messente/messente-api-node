@@ -4,15 +4,15 @@ All URIs are relative to *https://api.messente.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancelScheduledMessage**](OmnimessageApi.md#cancelScheduledMessage) | **DELETE** /omnimessage/{omnimessageId} | Cancels a scheduled Omnimessage.
-[**sendOmnimessage**](OmnimessageApi.md#sendOmnimessage) | **POST** /omnimessage | Sends an Omnimessage.
+[**cancelScheduledMessage**](OmnimessageApi.md#cancelScheduledMessage) | **DELETE** /omnimessage/{omnimessageId} | Cancels a scheduled Omnimessage
+[**sendOmnimessage**](OmnimessageApi.md#sendOmnimessage) | **POST** /omnimessage | Sends an Omnimessage
 
 
 <a name="cancelScheduledMessage"></a>
 # **cancelScheduledMessage**
 > cancelScheduledMessage(omnimessageId)
 
-Cancels a scheduled Omnimessage.
+Cancels a scheduled Omnimessage
 
 ### Example
 ```javascript
@@ -25,7 +25,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.OmnimessageApi();
-var omnimessageId = null; // String | UUID of the scheduled Omnimessage to be cancelled
+var omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled omnimessage to be cancelled
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -40,7 +40,7 @@ apiInstance.cancelScheduledMessage(omnimessageId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **omnimessageId** | [**String**](.md)| UUID of the scheduled Omnimessage to be cancelled | 
+ **omnimessageId** | **String**| UUID of the scheduled omnimessage to be cancelled | 
 
 ### Return type
 
@@ -59,7 +59,7 @@ null (empty response body)
 # **sendOmnimessage**
 > OmniMessageCreateSuccessResponse sendOmnimessage(omnimessage)
 
-Sends an Omnimessage.
+Sends an Omnimessage
 
 ### Example
 ```javascript

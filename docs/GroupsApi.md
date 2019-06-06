@@ -4,18 +4,18 @@ All URIs are relative to *https://api.messente.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createGroup**](GroupsApi.md#createGroup) | **POST** /groups | Creates a new group with the provided name.
-[**deleteGroup**](GroupsApi.md#deleteGroup) | **DELETE** /groups/{groupId} | Deletes a group.
-[**fetchGroup**](GroupsApi.md#fetchGroup) | **GET** /groups/{groupId} | Lists a group.
-[**fetchGroups**](GroupsApi.md#fetchGroups) | **GET** /groups | Returns all groups.
-[**updateGroup**](GroupsApi.md#updateGroup) | **PUT** /groups/{groupId} | Updates a group with the provided name.
+[**createGroup**](GroupsApi.md#createGroup) | **POST** /phonebook/groups | Creates a new group with the provided name
+[**deleteGroup**](GroupsApi.md#deleteGroup) | **DELETE** /phonebook/groups/{groupId} | Deletes a group
+[**fetchGroup**](GroupsApi.md#fetchGroup) | **GET** /phonebook/groups/{groupId} | Lists a group
+[**fetchGroups**](GroupsApi.md#fetchGroups) | **GET** /phonebook/groups | Returns all groups
+[**updateGroup**](GroupsApi.md#updateGroup) | **PUT** /phonebook/groups/{groupId} | Updates a group with the provided name
 
 
 <a name="createGroup"></a>
 # **createGroup**
 > GroupEnvelope createGroup(groupName)
 
-Creates a new group with the provided name.
+Creates a new group with the provided name
 
 ### Example
 ```javascript
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 # **deleteGroup**
 > deleteGroup(groupId)
 
-Deletes a group.
+Deletes a group
 
 ### Example
 ```javascript
@@ -75,7 +75,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -90,7 +90,7 @@ apiInstance.deleteGroup(groupId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format | 
 
 ### Return type
 
@@ -109,7 +109,7 @@ null (empty response body)
 # **fetchGroup**
 > GroupEnvelope fetchGroup(groupId)
 
-Lists a group.
+Lists a group
 
 ### Example
 ```javascript
@@ -122,7 +122,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -137,7 +137,7 @@ apiInstance.fetchGroup(groupId, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format | 
 
 ### Return type
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 # **fetchGroups**
 > GroupListEnvelope fetchGroups()
 
-Returns all groups.
+Returns all groups
 
 ### Example
 ```javascript
@@ -199,7 +199,7 @@ This endpoint does not need any parameter.
 # **updateGroup**
 > GroupEnvelope updateGroup(groupId, groupName)
 
-Updates a group with the provided name.
+Updates a group with the provided name
 
 ### Example
 ```javascript
@@ -212,7 +212,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = "groupId_example"; // String | String in uuid format.
+var groupId = "groupId_example"; // String | String in UUID format
 var groupName = new MessenteApi.GroupName(); // GroupName | 
 var callback = function(error, data, response) {
   if (error) {
@@ -228,7 +228,7 @@ apiInstance.updateGroup(groupId, groupName, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in uuid format. | 
+ **groupId** | **String**| String in UUID format | 
  **groupName** | [**GroupName**](GroupName.md)|  | 
 
 ### Return type

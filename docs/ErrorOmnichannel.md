@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | [**[ErrorItemOmnichannel]**](ErrorItemOmnichannel.md) |  | 
+**errors** | [**[ErrorItemOmnichannel]**](ErrorItemOmnichannel.md) | An array of errors | 
 
 
