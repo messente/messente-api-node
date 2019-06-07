@@ -109,7 +109,7 @@ api.sendOmnimessage(omnimessage, (error, data) => {
 
 ## License
 
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ## Terms
 
