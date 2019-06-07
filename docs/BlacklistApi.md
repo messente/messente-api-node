@@ -27,7 +27,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.BlacklistApi();
-var numberToBlacklist = new MessenteApi.NumberToBlacklist(); // NumberToBlacklist | Phone number to be blacklisted
+var numberToBlacklist = {"phoneNumber":"+37251000000"}; // NumberToBlacklist | Phone number to be blacklisted
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -74,7 +74,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.BlacklistApi();
-var phone = "phone_example"; // String | A phone number
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -164,7 +164,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.BlacklistApi();
-var phone = "phone_example"; // String | A phone number
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
