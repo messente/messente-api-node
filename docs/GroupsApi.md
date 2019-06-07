@@ -28,7 +28,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupName = new MessenteApi.GroupName(); // GroupName | 
+var groupName = {"name":"Any name"}; // GroupName | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -213,7 +213,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
 var groupId = "groupId_example"; // String | String in UUID format
-var groupName = new MessenteApi.GroupName(); // GroupName | 
+var groupName = {"name":"Any name"}; // GroupName | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
