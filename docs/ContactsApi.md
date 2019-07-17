@@ -22,25 +22,24 @@ Adds a contact to a group
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
-var phone = +37251000000; // String | A phone number
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+let phone = +37251000000; // String | A phone number
+apiInstance.addContactToGroup(groupId, phone, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.addContactToGroup(groupId, phone, callback);
+});
 ```
 
 ### Parameters
@@ -71,24 +70,23 @@ Creates a new contact
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var contactFields = {"phoneNumber":"+37251000000","email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactFields | 
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let contactFields = {"phoneNumber":"+37251000000","email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactFields | 
+apiInstance.createContact(contactFields, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.createContact(contactFields, callback);
+});
 ```
 
 ### Parameters
@@ -118,24 +116,23 @@ Deletes a contact
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var phone = +37251000000; // String | A phone number
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let phone = +37251000000; // String | A phone number
+apiInstance.deleteContact(phone, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.deleteContact(phone, callback);
+});
 ```
 
 ### Parameters
@@ -165,24 +162,23 @@ Lists a contact
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var phone = +37251000000; // String | A phone number
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let phone = +37251000000; // String | A phone number
+apiInstance.fetchContact(phone, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.fetchContact(phone, callback);
+});
 ```
 
 ### Parameters
@@ -212,24 +208,23 @@ Lists groups of a contact
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var phone = +37251000000; // String | A phone number
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let phone = +37251000000; // String | A phone number
+apiInstance.fetchContactGroups(phone, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.fetchContactGroups(phone, callback);
+});
 ```
 
 ### Parameters
@@ -259,26 +254,25 @@ Returns all contacts
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var opts = {
+let apiInstance = new MessenteApi.ContactsApi();
+let opts = {
   'groupIds': ["5792a02a-e5c2-422b-a0a0-0ae65d814663","4792a02a-e5c2-422b-a0a0-0ae65d814662"] // [String] | Optional one or many group id strings in UUID format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
 };
-var callback = function(error, data, response) {
+apiInstance.fetchContacts(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.fetchContacts(opts, callback);
+});
 ```
 
 ### Parameters
@@ -308,25 +302,24 @@ Removes a contact from a group
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
-var phone = +37251000000; // String | A phone number
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+let phone = +37251000000; // String | A phone number
+apiInstance.removeContactFromGroup(groupId, phone, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-};
-apiInstance.removeContactFromGroup(groupId, phone, callback);
+});
 ```
 
 ### Parameters
@@ -357,25 +350,24 @@ Updates a contact
 
 ### Example
 ```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.ContactsApi();
-var phone = +37251000000; // String | A phone number
-var contactUpdateFields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactUpdateFields | 
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.ContactsApi();
+let phone = +37251000000; // String | A phone number
+let contactUpdateFields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactUpdateFields | 
+apiInstance.updateContact(phone, contactUpdateFields, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.updateContact(phone, contactUpdateFields, callback);
+});
 ```
 
 ### Parameters
