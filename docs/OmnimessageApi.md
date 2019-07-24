@@ -16,23 +16,24 @@ Cancels a scheduled Omnimessage
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.OmnimessageApi();
-let omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled omnimessage to be cancelled
-apiInstance.cancelScheduledMessage(omnimessageId, (error, data, response) => {
+var apiInstance = new MessenteApi.OmnimessageApi();
+var omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled omnimessage to be cancelled
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.cancelScheduledMessage(omnimessageId, callback);
 ```
 
 ### Parameters
@@ -62,23 +63,24 @@ Sends an Omnimessage
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.OmnimessageApi();
-let omnimessage = new MessenteApi.Omnimessage(); // Omnimessage | Omnimessage to be sent
-apiInstance.sendOmnimessage(omnimessage, (error, data, response) => {
+var apiInstance = new MessenteApi.OmnimessageApi();
+var omnimessage = new MessenteApi.Omnimessage(); // Omnimessage | Omnimessage to be sent
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sendOmnimessage(omnimessage, callback);
 ```
 
 ### Parameters

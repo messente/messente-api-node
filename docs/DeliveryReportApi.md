@@ -15,23 +15,24 @@ Retrieves the delivery report for the Omnimessage
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.DeliveryReportApi();
-let omnimessageId = "omnimessageId_example"; // String | UUID of the omnimessage to for which the delivery report is to be retrieved
-apiInstance.retrieveDeliveryReport(omnimessageId, (error, data, response) => {
+var apiInstance = new MessenteApi.DeliveryReportApi();
+var omnimessageId = "omnimessageId_example"; // String | UUID of the omnimessage to for which the delivery report is to be retrieved
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.retrieveDeliveryReport(omnimessageId, callback);
 ```
 
 ### Parameters

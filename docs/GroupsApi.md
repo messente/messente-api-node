@@ -19,23 +19,24 @@ Creates a new group with the provided name
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupName = {"name":"Any group name"}; // GroupName | 
-apiInstance.createGroup(groupName, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupName = {"name":"Any group name"}; // GroupName | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.createGroup(groupName, callback);
 ```
 
 ### Parameters
@@ -65,23 +66,24 @@ Deletes a group
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
-apiInstance.deleteGroup(groupId, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.deleteGroup(groupId, callback);
 ```
 
 ### Parameters
@@ -111,23 +113,24 @@ Lists a group
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
-apiInstance.fetchGroup(groupId, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.fetchGroup(groupId, callback);
 ```
 
 ### Parameters
@@ -157,22 +160,23 @@ Returns all groups
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-apiInstance.fetchGroups((error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.fetchGroups(callback);
 ```
 
 ### Parameters
@@ -199,24 +203,25 @@ Updates a group with the provided name
 
 ### Example
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
 
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
-let groupName = {"name":"Any group name"}; // GroupName | 
-apiInstance.updateGroup(groupId, groupName, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var groupName = {"name":"Any group name"}; // GroupName | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.updateGroup(groupId, groupName, callback);
 ```
 
 ### Parameters
