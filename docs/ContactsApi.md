@@ -31,8 +31,8 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var groupId = "groupId_example"; // String | String in UUID format
-var phone = "phone_example"; // String | A phone number
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -80,7 +80,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var contactFields = new MessenteApi.ContactFields(); // ContactFields | 
+var contactFields = {"phoneNumber":"+37251000000","email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactFields | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -127,7 +127,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var phone = "phone_example"; // String | A phone number
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -174,7 +174,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var phone = "phone_example"; // String | A phone number
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -221,7 +221,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var phone = "phone_example"; // String | A phone number
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -269,7 +269,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
 var opts = {
-  'groupIds': ["null"] // [String] | Optional one or many group id strings in UUID format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
+  'groupIds': ["5792a02a-e5c2-422b-a0a0-0ae65d814663","4792a02a-e5c2-422b-a0a0-0ae65d814662"] // [String] | Optional one or many group id strings in UUID format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -317,8 +317,8 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var groupId = "groupId_example"; // String | String in UUID format
-var phone = "phone_example"; // String | A phone number
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -366,8 +366,8 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var phone = "phone_example"; // String | A phone number
-var contactUpdateFields = new MessenteApi.ContactUpdateFields(); // ContactUpdateFields | 
+var phone = +37251000000; // String | A phone number
+var contactUpdateFields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactUpdateFields | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);

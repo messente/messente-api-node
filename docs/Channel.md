@@ -9,4 +9,6 @@
 
 * `whatsapp` (value: `"whatsapp"`)
 
+* `telegram` (value: `"telegram"`)
+
 

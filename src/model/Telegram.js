@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.SMS = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.Telegram = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,63 +34,59 @@
 
 
   /**
-   * The SMS model module.
-   * @module model/SMS
+   * The Telegram model module.
+   * @module model/Telegram
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>SMS</code>.
-   * SMS message content
-   * @alias module:model/SMS
+   * Constructs a new <code>Telegram</code>.
+   * Telegram message content
+   * @alias module:model/Telegram
    * @class
-   * @param text {String} Text content of the SMS
    */
-  var exports = function(text) {
+  var exports = function() {
     var _this = this;
 
-    _this['text'] = text;
   };
 
   /**
-   * Constructs a <code>SMS</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Telegram</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SMS} obj Optional instance to populate.
-   * @return {module:model/SMS} The populated <code>SMS</code> instance.
+   * @param {module:model/Telegram} obj Optional instance to populate.
+   * @return {module:model/Telegram} The populated <code>Telegram</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('text')) {
-        obj['text'] = ApiClient.convertToType(data['text'], 'String');
-      }
       if (data.hasOwnProperty('sender')) {
         obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
       }
       if (data.hasOwnProperty('validity')) {
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
       }
-      if (data.hasOwnProperty('autoconvert')) {
-        obj['autoconvert'] = ApiClient.convertToType(data['autoconvert'], 'String');
+      if (data.hasOwnProperty('text')) {
+        obj['text'] = ApiClient.convertToType(data['text'], 'String');
       }
-      if (data.hasOwnProperty('udh')) {
-        obj['udh'] = ApiClient.convertToType(data['udh'], 'String');
+      if (data.hasOwnProperty('image_url')) {
+        obj['image_url'] = ApiClient.convertToType(data['image_url'], 'String');
+      }
+      if (data.hasOwnProperty('document_url')) {
+        obj['document_url'] = ApiClient.convertToType(data['document_url'], 'String');
+      }
+      if (data.hasOwnProperty('audio_url')) {
+        obj['audio_url'] = ApiClient.convertToType(data['audio_url'], 'String');
       }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
       } else {
-        obj['channel'] = 'sms';
+        obj['channel'] = 'telegram';
       }
     }
     return obj;
   }
 
-  /**
-   * Text content of the SMS
-   * @member {String} text
-   */
-  exports.prototype['text'] = undefined;
   /**
    * Phone number or alphanumeric sender name
    * @member {String} sender
@@ -102,44 +98,32 @@
    */
   exports.prototype['validity'] = undefined;
   /**
-   * Defines how non-GSM characters will be treated:    - \"on\" Use replacement settings from the account's [API Auto Replace settings page](https://dashboard.messente.com/api-settings/auto-replace) (default)   - \"full\" All non GSM 03.38 characters will be replaced with suitable alternatives   - \"off\" Message content is not modified in any way
-   * @member {module:model/SMS.AutoconvertEnum} autoconvert
+   * Plaintext content for Telegram
+   * @member {String} text
    */
-  exports.prototype['autoconvert'] = undefined;
+  exports.prototype['text'] = undefined;
   /**
-   * hex-encoded string containing SMS UDH
-   * @member {String} udh
+   * URL for the embedded image. Mutually exclusive with \"document_url\" and \"audio_url\"
+   * @member {String} image_url
    */
-  exports.prototype['udh'] = undefined;
+  exports.prototype['image_url'] = undefined;
+  /**
+   * URL for the embedded image. Mutually exclusive with \"audio_url\" and \"image_url\"
+   * @member {String} document_url
+   */
+  exports.prototype['document_url'] = undefined;
+  /**
+   * URL for the embedded image. Mutually exclusive with \"document_url\" and \"image_url\"
+   * @member {String} audio_url
+   */
+  exports.prototype['audio_url'] = undefined;
   /**
    * The channel used to deliver the message
-   * @member {module:model/SMS.ChannelEnum} channel
-   * @default 'sms'
+   * @member {module:model/Telegram.ChannelEnum} channel
+   * @default 'telegram'
    */
-  exports.prototype['channel'] = 'sms';
+  exports.prototype['channel'] = 'telegram';
 
-
-  /**
-   * Allowed values for the <code>autoconvert</code> property.
-   * @enum {String}
-   * @readonly
-   */
-  exports.AutoconvertEnum = {
-    /**
-     * value: "full"
-     * @const
-     */
-    "full": "full",
-    /**
-     * value: "on"
-     * @const
-     */
-    "on": "on",
-    /**
-     * value: "off"
-     * @const
-     */
-    "off": "off"  };
 
   /**
    * Allowed values for the <code>channel</code> property.
@@ -148,10 +132,10 @@
    */
   exports.ChannelEnum = {
     /**
-     * value: "sms"
+     * value: "telegram"
      * @const
      */
-    "sms": "sms"  };
+    "telegram": "telegram"  };
 
 
   return exports;
