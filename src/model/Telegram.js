@@ -17,32 +17,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/WhatsAppAudio', 'model/WhatsAppDocument', 'model/WhatsAppImage', 'model/WhatsAppText'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./WhatsAppAudio'), require('./WhatsAppDocument'), require('./WhatsAppImage'), require('./WhatsAppText'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsApp = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppAudio, root.MessenteApi.WhatsAppDocument, root.MessenteApi.WhatsAppImage, root.MessenteApi.WhatsAppText);
+    root.MessenteApi.Telegram = factory(root.MessenteApi.ApiClient);
   }
-}(this, function(ApiClient, WhatsAppAudio, WhatsAppDocument, WhatsAppImage, WhatsAppText) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
   /**
-   * The WhatsApp model module.
-   * @module model/WhatsApp
+   * The Telegram model module.
+   * @module model/Telegram
    * @version 1.0.3
    */
 
   /**
-   * Constructs a new <code>WhatsApp</code>.
-   * WhatsApp message content.   Only one of \&quot;text\&quot;, \&quot;image\&quot;, \&quot;document\&quot; or \&quot;audio\&quot; can be provided
-   * @alias module:model/WhatsApp
+   * Constructs a new <code>Telegram</code>.
+   * Telegram message content
+   * @alias module:model/Telegram
    * @class
    */
   var exports = function() {
@@ -51,11 +51,11 @@
   };
 
   /**
-   * Constructs a <code>WhatsApp</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Telegram</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsApp} obj Optional instance to populate.
-   * @return {module:model/WhatsApp} The populated <code>WhatsApp</code> instance.
+   * @param {module:model/Telegram} obj Optional instance to populate.
+   * @return {module:model/Telegram} The populated <code>Telegram</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -67,21 +67,21 @@
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
       }
       if (data.hasOwnProperty('text')) {
-        obj['text'] = WhatsAppText.constructFromObject(data['text']);
+        obj['text'] = ApiClient.convertToType(data['text'], 'String');
       }
-      if (data.hasOwnProperty('image')) {
-        obj['image'] = WhatsAppImage.constructFromObject(data['image']);
+      if (data.hasOwnProperty('image_url')) {
+        obj['image_url'] = ApiClient.convertToType(data['image_url'], 'String');
       }
-      if (data.hasOwnProperty('document')) {
-        obj['document'] = WhatsAppDocument.constructFromObject(data['document']);
+      if (data.hasOwnProperty('document_url')) {
+        obj['document_url'] = ApiClient.convertToType(data['document_url'], 'String');
       }
-      if (data.hasOwnProperty('audio')) {
-        obj['audio'] = WhatsAppAudio.constructFromObject(data['audio']);
+      if (data.hasOwnProperty('audio_url')) {
+        obj['audio_url'] = ApiClient.convertToType(data['audio_url'], 'String');
       }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
       } else {
-        obj['channel'] = 'whatsapp';
+        obj['channel'] = 'telegram';
       }
     }
     return obj;
@@ -93,32 +93,36 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * After how many minutes this channel is   considered as failed and the next channel is attempted
+   * After how many minutes this channel is considered as failed and the next channel is attempted
    * @member {Number} validity
    */
   exports.prototype['validity'] = undefined;
   /**
-   * @member {module:model/WhatsAppText} text
+   * Plaintext content for Telegram
+   * @member {String} text
    */
   exports.prototype['text'] = undefined;
   /**
-   * @member {module:model/WhatsAppImage} image
+   * URL for the embedded image. Mutually exclusive with \"document_url\" and \"audio_url\"
+   * @member {String} image_url
    */
-  exports.prototype['image'] = undefined;
+  exports.prototype['image_url'] = undefined;
   /**
-   * @member {module:model/WhatsAppDocument} document
+   * URL for the embedded image. Mutually exclusive with \"audio_url\" and \"image_url\"
+   * @member {String} document_url
    */
-  exports.prototype['document'] = undefined;
+  exports.prototype['document_url'] = undefined;
   /**
-   * @member {module:model/WhatsAppAudio} audio
+   * URL for the embedded image. Mutually exclusive with \"document_url\" and \"image_url\"
+   * @member {String} audio_url
    */
-  exports.prototype['audio'] = undefined;
+  exports.prototype['audio_url'] = undefined;
   /**
    * The channel used to deliver the message
-   * @member {module:model/WhatsApp.ChannelEnum} channel
-   * @default 'whatsapp'
+   * @member {module:model/Telegram.ChannelEnum} channel
+   * @default 'telegram'
    */
-  exports.prototype['channel'] = 'whatsapp';
+  exports.prototype['channel'] = 'telegram';
 
 
   /**
@@ -128,10 +132,10 @@
    */
   exports.ChannelEnum = {
     /**
-     * value: "whatsapp"
+     * value: "telegram"
      * @const
      */
-    "whatsapp": "whatsapp"  };
+    "telegram": "telegram"  };
 
 
   return exports;
