@@ -4,14 +4,14 @@ All URIs are relative to *https://api.messente.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**syncNumberLookup**](NumberLookupApi.md#syncNumberLookup) | **POST** /hlr/sync | Requests info about a phone number
+[**syncNumberLookup**](NumberLookupApi.md#syncNumberLookup) | **POST** /hlr/sync | Requests info about phone numbers
 
 
 <a name="syncNumberLookup"></a>
 # **syncNumberLookup**
 > SyncNumberLookupSuccess syncNumberLookup(syncNumberLookup)
 
-Requests info about a phone number
+Requests info about phone numbers
 
 ### Example
 ```javascript
@@ -24,7 +24,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.NumberLookupApi();
-var syncNumberLookup = {"numbers":["+37251000000","+37251000001"]}; // SyncNumberLookup | Numbers to lookup
+var syncNumberLookup = {"numbers":["+37251000000","+37251000001"]}; // SyncNumberLookup | Numbers for lookup
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -39,7 +39,7 @@ apiInstance.syncNumberLookup(syncNumberLookup, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **syncNumberLookup** | [**SyncNumberLookup**](SyncNumberLookup.md)| Numbers to lookup | 
+ **syncNumberLookup** | [**SyncNumberLookup**](SyncNumberLookup.md)| Numbers for lookup | 
 
 ### Return type
 

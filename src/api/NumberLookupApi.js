@@ -57,8 +57,8 @@
      */
 
     /**
-     * Requests info about a phone number
-     * @param {module:model/SyncNumberLookup} syncNumberLookup Numbers to lookup
+     * Requests info about phone numbers
+     * @param {module:model/SyncNumberLookup} syncNumberLookup Numbers for lookup
      * @param {module:api/NumberLookupApi~syncNumberLookupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SyncNumberLookupSuccess}
      */
