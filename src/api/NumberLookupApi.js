@@ -17,29 +17,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DeliveryReportResponse', 'model/ErrorOmnichannel'], factory);
+    define(['ApiClient', 'model/ErrorNumberLookup', 'model/SyncNumberLookup', 'model/SyncNumberLookupSuccess'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DeliveryReportResponse'), require('../model/ErrorOmnichannel'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorNumberLookup'), require('../model/SyncNumberLookup'), require('../model/SyncNumberLookupSuccess'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.DeliveryReportApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.DeliveryReportResponse, root.MessenteApi.ErrorOmnichannel);
+    root.MessenteApi.NumberLookupApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.ErrorNumberLookup, root.MessenteApi.SyncNumberLookup, root.MessenteApi.SyncNumberLookupSuccess);
   }
-}(this, function(ApiClient, DeliveryReportResponse, ErrorOmnichannel) {
+}(this, function(ApiClient, ErrorNumberLookup, SyncNumberLookup, SyncNumberLookupSuccess) {
   'use strict';
 
   /**
-   * DeliveryReport service.
-   * @module api/DeliveryReportApi
+   * NumberLookup service.
+   * @module api/NumberLookupApi
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new DeliveryReportApi. 
-   * @alias module:api/DeliveryReportApi
+   * Constructs a new NumberLookupApi. 
+   * @alias module:api/NumberLookupApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -49,30 +49,29 @@
 
 
     /**
-     * Callback function to receive the result of the retrieveDeliveryReport operation.
-     * @callback module:api/DeliveryReportApi~retrieveDeliveryReportCallback
+     * Callback function to receive the result of the syncNumberLookup operation.
+     * @callback module:api/NumberLookupApi~syncNumberLookupCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/DeliveryReportResponse} data The data returned by the service call.
+     * @param {module:model/SyncNumberLookupSuccess} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Retrieves the delivery report for the Omnimessage
-     * @param {String} omnimessageId UUID of the omnimessage to for which the delivery report is to be retrieved
-     * @param {module:api/DeliveryReportApi~retrieveDeliveryReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DeliveryReportResponse}
+     * Requests info about a phone number
+     * @param {module:model/SyncNumberLookup} syncNumberLookup Numbers to lookup
+     * @param {module:api/NumberLookupApi~syncNumberLookupCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/SyncNumberLookupSuccess}
      */
-    this.retrieveDeliveryReport = function(omnimessageId, callback) {
-      var postBody = null;
+    this.syncNumberLookup = function(syncNumberLookup, callback) {
+      var postBody = syncNumberLookup;
 
-      // verify the required parameter 'omnimessageId' is set
-      if (omnimessageId === undefined || omnimessageId === null) {
-        throw new Error("Missing the required parameter 'omnimessageId' when calling retrieveDeliveryReport");
+      // verify the required parameter 'syncNumberLookup' is set
+      if (syncNumberLookup === undefined || syncNumberLookup === null) {
+        throw new Error("Missing the required parameter 'syncNumberLookup' when calling syncNumberLookup");
       }
 
 
       var pathParams = {
-        'omnimessageId': omnimessageId
       };
       var queryParams = {
       };
@@ -84,12 +83,12 @@
       };
 
       var authNames = ['basicAuth'];
-      var contentTypes = [];
+      var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = DeliveryReportResponse;
+      var returnType = SyncNumberLookupSuccess;
 
       return this.apiClient.callApi(
-        '/omnimessage/{omnimessageId}/status', 'GET',
+        '/hlr/sync', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

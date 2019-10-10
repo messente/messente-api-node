@@ -17,34 +17,34 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorItemPhonebook'], factory);
+    define(['ApiClient', 'model/ErrorItemNumberLookup'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ErrorItemPhonebook'));
+    module.exports = factory(require('../ApiClient'), require('./ErrorItemNumberLookup'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ErrorPhonebook = factory(root.MessenteApi.ApiClient, root.MessenteApi.ErrorItemPhonebook);
+    root.MessenteApi.ErrorNumberLookup = factory(root.MessenteApi.ApiClient, root.MessenteApi.ErrorItemNumberLookup);
   }
-}(this, function(ApiClient, ErrorItemPhonebook) {
+}(this, function(ApiClient, ErrorItemNumberLookup) {
   'use strict';
 
 
 
   /**
-   * The ErrorPhonebook model module.
-   * @module model/ErrorPhonebook
+   * The ErrorNumberLookup model module.
+   * @module model/ErrorNumberLookup
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>ErrorPhonebook</code>.
+   * Constructs a new <code>ErrorNumberLookup</code>.
    * A container for errors
-   * @alias module:model/ErrorPhonebook
+   * @alias module:model/ErrorNumberLookup
    * @class
-   * @param errors {Array.<module:model/ErrorItemPhonebook>} An array of errors
+   * @param errors {Array.<module:model/ErrorItemNumberLookup>} An array of errors
    */
   var exports = function(errors) {
     var _this = this;
@@ -53,17 +53,17 @@
   };
 
   /**
-   * Constructs a <code>ErrorPhonebook</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ErrorNumberLookup</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ErrorPhonebook} obj Optional instance to populate.
-   * @return {module:model/ErrorPhonebook} The populated <code>ErrorPhonebook</code> instance.
+   * @param {module:model/ErrorNumberLookup} obj Optional instance to populate.
+   * @return {module:model/ErrorNumberLookup} The populated <code>ErrorNumberLookup</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('errors')) {
-        obj['errors'] = ApiClient.convertToType(data['errors'], [ErrorItemPhonebook]);
+        obj['errors'] = ApiClient.convertToType(data['errors'], [ErrorItemNumberLookup]);
       }
     }
     return obj;
@@ -71,7 +71,7 @@
 
   /**
    * An array of errors
-   * @member {Array.<module:model/ErrorItemPhonebook>} errors
+   * @member {Array.<module:model/ErrorItemNumberLookup>} errors
    */
   exports.prototype['errors'] = undefined;
 
