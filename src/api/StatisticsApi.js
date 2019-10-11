@@ -57,7 +57,7 @@
      */
 
     /**
-     * Requests statistcs reports for each country
+     * Requests statistics reports for each country
      * @param {module:model/StatisticsReportSettings} statisticsReportSettings Settings for statistics report
      * @param {module:api/StatisticsApi~createStatisticsReportCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/StatisticsReportSuccess}
