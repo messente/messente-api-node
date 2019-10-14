@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorNumberLookup', 'model/SyncNumberLookup', 'model/SyncNumberLookupSuccess'], factory);
+    define(['ApiClient', 'model/ErrorNumberLookup', 'model/NumbersToInvestigate', 'model/SyncNumberLookupSuccess'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorNumberLookup'), require('../model/SyncNumberLookup'), require('../model/SyncNumberLookupSuccess'));
+    module.exports = factory(require('../ApiClient'), require('../model/ErrorNumberLookup'), require('../model/NumbersToInvestigate'), require('../model/SyncNumberLookupSuccess'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.NumberLookupApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.ErrorNumberLookup, root.MessenteApi.SyncNumberLookup, root.MessenteApi.SyncNumberLookupSuccess);
+    root.MessenteApi.NumberLookupApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.ErrorNumberLookup, root.MessenteApi.NumbersToInvestigate, root.MessenteApi.SyncNumberLookupSuccess);
   }
-}(this, function(ApiClient, ErrorNumberLookup, SyncNumberLookup, SyncNumberLookupSuccess) {
+}(this, function(ApiClient, ErrorNumberLookup, NumbersToInvestigate, SyncNumberLookupSuccess) {
   'use strict';
 
   /**
@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the syncNumberLookup operation.
-     * @callback module:api/NumberLookupApi~syncNumberLookupCallback
+     * Callback function to receive the result of the fetchInfo operation.
+     * @callback module:api/NumberLookupApi~fetchInfoCallback
      * @param {String} error Error message, if any.
      * @param {module:model/SyncNumberLookupSuccess} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -58,16 +58,16 @@
 
     /**
      * Requests info about phone numbers
-     * @param {module:model/SyncNumberLookup} syncNumberLookup Numbers for lookup
-     * @param {module:api/NumberLookupApi~syncNumberLookupCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/NumbersToInvestigate} numbersToInvestigate Numbers for lookup
+     * @param {module:api/NumberLookupApi~fetchInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SyncNumberLookupSuccess}
      */
-    this.syncNumberLookup = function(syncNumberLookup, callback) {
-      var postBody = syncNumberLookup;
+    this.fetchInfo = function(numbersToInvestigate, callback) {
+      var postBody = numbersToInvestigate;
 
-      // verify the required parameter 'syncNumberLookup' is set
-      if (syncNumberLookup === undefined || syncNumberLookup === null) {
-        throw new Error("Missing the required parameter 'syncNumberLookup' when calling syncNumberLookup");
+      // verify the required parameter 'numbersToInvestigate' is set
+      if (numbersToInvestigate === undefined || numbersToInvestigate === null) {
+        throw new Error("Missing the required parameter 'numbersToInvestigate' when calling fetchInfo");
       }
 
 

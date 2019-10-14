@@ -1,4 +1,4 @@
-# MessenteApi.SyncNumberLookup
+# MessenteApi.NumbersToInvestigate
 
 ## Properties
 Name | Type | Description | Notes

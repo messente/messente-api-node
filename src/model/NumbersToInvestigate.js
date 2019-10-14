@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.SyncNumberLookup = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.NumbersToInvestigate = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The SyncNumberLookup model module.
-   * @module model/SyncNumberLookup
+   * The NumbersToInvestigate model module.
+   * @module model/NumbersToInvestigate
    * @version 1.1.0
    */
 
   /**
-   * Constructs a new <code>SyncNumberLookup</code>.
+   * Constructs a new <code>NumbersToInvestigate</code>.
    * A container for phone numbers
-   * @alias module:model/SyncNumberLookup
+   * @alias module:model/NumbersToInvestigate
    * @class
    * @param numbers {Array.<String>} Array of phone numbers
    */
@@ -53,11 +53,11 @@
   };
 
   /**
-   * Constructs a <code>SyncNumberLookup</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>NumbersToInvestigate</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/SyncNumberLookup} obj Optional instance to populate.
-   * @return {module:model/SyncNumberLookup} The populated <code>SyncNumberLookup</code> instance.
+   * @param {module:model/NumbersToInvestigate} obj Optional instance to populate.
+   * @return {module:model/NumbersToInvestigate} The populated <code>NumbersToInvestigate</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
