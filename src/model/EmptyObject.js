@@ -41,7 +41,7 @@
 
   /**
    * Constructs a new <code>EmptyObject</code>.
-   * An object containing no properties
+   * Response object without attributes
    * @alias module:model/EmptyObject
    * @class
    */

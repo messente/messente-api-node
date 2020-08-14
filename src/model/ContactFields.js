@@ -92,6 +92,9 @@
       if (data.hasOwnProperty('custom4')) {
         obj['custom4'] = ApiClient.convertToType(data['custom4'], 'String');
       }
+      if (data.hasOwnProperty('scheduledDeletionDate')) {
+        obj['scheduledDeletionDate'] = ApiClient.convertToType(data['scheduledDeletionDate'], 'Date');
+      }
     }
     return obj;
   }
@@ -146,6 +149,11 @@
    * @member {String} custom4
    */
   exports.prototype['custom4'] = undefined;
+  /**
+   * The date on which the contact is going to be deleted
+   * @member {Date} scheduledDeletionDate
+   */
+  exports.prototype['scheduledDeletionDate'] = undefined;
 
 
 

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ErrorOmnichannel', 'model/OmniMessageCreateSuccessResponse', 'model/Omnimessage'], factory);
+    define(['ApiClient', 'model/EmptyObject', 'model/ErrorOmnichannel', 'model/OmniMessageCreateSuccessResponse', 'model/Omnimessage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ErrorOmnichannel'), require('../model/OmniMessageCreateSuccessResponse'), require('../model/Omnimessage'));
+    module.exports = factory(require('../ApiClient'), require('../model/EmptyObject'), require('../model/ErrorOmnichannel'), require('../model/OmniMessageCreateSuccessResponse'), require('../model/Omnimessage'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.OmnimessageApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.ErrorOmnichannel, root.MessenteApi.OmniMessageCreateSuccessResponse, root.MessenteApi.Omnimessage);
+    root.MessenteApi.OmnimessageApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.EmptyObject, root.MessenteApi.ErrorOmnichannel, root.MessenteApi.OmniMessageCreateSuccessResponse, root.MessenteApi.Omnimessage);
   }
-}(this, function(ApiClient, ErrorOmnichannel, OmniMessageCreateSuccessResponse, Omnimessage) {
+}(this, function(ApiClient, EmptyObject, ErrorOmnichannel, OmniMessageCreateSuccessResponse, Omnimessage) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
      * Callback function to receive the result of the cancelScheduledMessage operation.
      * @callback module:api/OmnimessageApi~cancelScheduledMessageCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/EmptyObject} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -60,6 +60,7 @@
      * Cancels a scheduled Omnimessage
      * @param {String} omnimessageId UUID of the scheduled omnimessage to be cancelled
      * @param {module:api/OmnimessageApi~cancelScheduledMessageCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/EmptyObject}
      */
     this.cancelScheduledMessage = function(omnimessageId, callback) {
       var postBody = null;
@@ -85,7 +86,7 @@
       var authNames = ['basicAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = null;
+      var returnType = EmptyObject;
 
       return this.apiClient.callApi(
         '/omnimessage/{omnimessageId}', 'DELETE',
