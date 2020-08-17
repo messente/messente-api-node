@@ -150,7 +150,7 @@
    */
   exports.prototype['custom4'] = undefined;
   /**
-   * The date on which the contact is going to be deleted
+   * The date on which the contact is going to be deletedbecause it has not belonged to a group for 30 days
    * @member {Date} scheduledDeletionDate
    */
   exports.prototype['scheduledDeletionDate'] = undefined;

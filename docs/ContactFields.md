@@ -13,6 +13,6 @@ Name | Type | Description | Notes
 **custom2** | **String** | The second custom field | [optional] 
 **custom3** | **String** | The third custom field | [optional] 
 **custom4** | **String** | The fourth custom field | [optional] 
-**scheduledDeletionDate** | **Date** | The date on which the contact is going to be deleted | [optional] 
+**scheduledDeletionDate** | **Date** | The date on which the contact is going to be deletedbecause it has not belonged to a group for 30 days | [optional] 
 
 
