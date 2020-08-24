@@ -88,7 +88,7 @@
    */
   exports.prototype['end_date'] = undefined;
   /**
-   * Optional list of message types (sms, viber, whatsapp, hlr)
+   * Optional list of message types (sms, viber, whatsapp, hlr, telegram)
    * @member {Array.<String>} message_types
    */
   exports.prototype['message_types'] = undefined;
