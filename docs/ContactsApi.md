@@ -367,7 +367,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
 var phone = +37251000000; // String | A phone number
-var contactUpdateFields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four","scheduledDeletionDate":"2020-08-31"}; // ContactUpdateFields | 
+var contactUpdateFields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactUpdateFields | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
