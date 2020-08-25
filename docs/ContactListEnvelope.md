@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**contacts** | [**[ContactFields]**](ContactFields.md) | An array of contacts | [optional] 
+**contacts** | [**[ContactResponseFields]**](ContactResponseFields.md) | An array of contacts | [optional] 
 
 

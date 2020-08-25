@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ContactFields'], factory);
+    define(['ApiClient', 'model/ContactResponseFields'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ContactFields'));
+    module.exports = factory(require('../ApiClient'), require('./ContactResponseFields'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ContactListEnvelope = factory(root.MessenteApi.ApiClient, root.MessenteApi.ContactFields);
+    root.MessenteApi.ContactListEnvelope = factory(root.MessenteApi.ApiClient, root.MessenteApi.ContactResponseFields);
   }
-}(this, function(ApiClient, ContactFields) {
+}(this, function(ApiClient, ContactResponseFields) {
   'use strict';
 
 
@@ -61,7 +61,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('contacts')) {
-        obj['contacts'] = ApiClient.convertToType(data['contacts'], [ContactFields]);
+        obj['contacts'] = ApiClient.convertToType(data['contacts'], [ContactResponseFields]);
       }
     }
     return obj;
@@ -69,7 +69,7 @@
 
   /**
    * An array of contacts
-   * @member {Array.<module:model/ContactFields>} contacts
+   * @member {Array.<module:model/ContactResponseFields>} contacts
    */
   exports.prototype['contacts'] = undefined;
 

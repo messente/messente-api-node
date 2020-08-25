@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ContactFields = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.ContactResponseFields = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,30 +34,28 @@
 
 
   /**
-   * The ContactFields model module.
-   * @module model/ContactFields
+   * The ContactResponseFields model module.
+   * @module model/ContactResponseFields
    * @version 1.3.0
    */
 
   /**
-   * Constructs a new <code>ContactFields</code>.
-   * A container for fields of a request body of a contact
-   * @alias module:model/ContactFields
+   * Constructs a new <code>ContactResponseFields</code>.
+   * A container for response fields of a contact
+   * @alias module:model/ContactResponseFields
    * @class
-   * @param phoneNumber {String} Phone number in e.164 format
    */
-  var exports = function(phoneNumber) {
+  var exports = function() {
     var _this = this;
 
-    _this['phoneNumber'] = phoneNumber;
   };
 
   /**
-   * Constructs a <code>ContactFields</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ContactResponseFields</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ContactFields} obj Optional instance to populate.
-   * @return {module:model/ContactFields} The populated <code>ContactFields</code> instance.
+   * @param {module:model/ContactResponseFields} obj Optional instance to populate.
+   * @return {module:model/ContactResponseFields} The populated <code>ContactResponseFields</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -91,6 +89,9 @@
       }
       if (data.hasOwnProperty('custom4')) {
         obj['custom4'] = ApiClient.convertToType(data['custom4'], 'String');
+      }
+      if (data.hasOwnProperty('scheduledDeletionDate')) {
+        obj['scheduledDeletionDate'] = ApiClient.convertToType(data['scheduledDeletionDate'], 'Date');
       }
     }
     return obj;
@@ -146,6 +147,11 @@
    * @member {String} custom4
    */
   exports.prototype['custom4'] = undefined;
+  /**
+   * The date in ISO 8601 format, YYYY-MM-DD,  on which the contact is going to be deleted  because it has not belonged to a group for 30 days
+   * @member {Date} scheduledDeletionDate
+   */
+  exports.prototype['scheduledDeletionDate'] = undefined;
 
 
 
