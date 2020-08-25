@@ -36,7 +36,7 @@
   /**
    * The MessageResult model module.
    * @module model/MessageResult
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The WhatsAppImage model module.
    * @module model/WhatsAppImage
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**

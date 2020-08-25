@@ -36,7 +36,7 @@
   /**
    * The NumbersToInvestigate model module.
    * @module model/NumbersToInvestigate
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**

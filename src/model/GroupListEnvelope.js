@@ -36,7 +36,7 @@
   /**
    * The GroupListEnvelope model module.
    * @module model/GroupListEnvelope
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**
