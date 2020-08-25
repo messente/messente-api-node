@@ -36,7 +36,7 @@
   /**
    * The SyncNumberLookupSuccess model module.
    * @module model/SyncNumberLookupSuccess
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**

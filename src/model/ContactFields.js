@@ -36,12 +36,12 @@
   /**
    * The ContactFields model module.
    * @module model/ContactFields
-   * @version 1.3.0
+   * @version 1.3.1
    */
 
   /**
    * Constructs a new <code>ContactFields</code>.
-   * A container for fields of a contact
+   * A container for fields of a request body of a contact
    * @alias module:model/ContactFields
    * @class
    * @param phoneNumber {String} Phone number in e.164 format
@@ -91,9 +91,6 @@
       }
       if (data.hasOwnProperty('custom4')) {
         obj['custom4'] = ApiClient.convertToType(data['custom4'], 'String');
-      }
-      if (data.hasOwnProperty('scheduledDeletionDate')) {
-        obj['scheduledDeletionDate'] = ApiClient.convertToType(data['scheduledDeletionDate'], 'Date');
       }
     }
     return obj;
@@ -149,11 +146,6 @@
    * @member {String} custom4
    */
   exports.prototype['custom4'] = undefined;
-  /**
-   * The date in ISO 8601 format, YYYY-MM-DD,  on which the contact is going to be deleted  because it has not belonged to a group for 30 days
-   * @member {Date} scheduledDeletionDate
-   */
-  exports.prototype['scheduledDeletionDate'] = undefined;
 
 
 
