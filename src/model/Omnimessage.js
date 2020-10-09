@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/TextStore'], factory);
+    define(['ApiClient', 'model/Priority', 'model/TextStore'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TextStore'));
+    module.exports = factory(require('../ApiClient'), require('./Priority'), require('./TextStore'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.Omnimessage = factory(root.MessenteApi.ApiClient, root.MessenteApi.TextStore);
+    root.MessenteApi.Omnimessage = factory(root.MessenteApi.ApiClient, root.MessenteApi.Priority, root.MessenteApi.TextStore);
   }
-}(this, function(ApiClient, TextStore) {
+}(this, function(ApiClient, Priority, TextStore) {
   'use strict';
 
 
@@ -79,6 +79,9 @@
       if (data.hasOwnProperty('time_to_send')) {
         obj['time_to_send'] = ApiClient.convertToType(data['time_to_send'], 'Date');
       }
+      if (data.hasOwnProperty('priority')) {
+        obj['priority'] = Priority.constructFromObject(data['priority']);
+      }
     }
     return obj;
   }
@@ -107,6 +110,10 @@
    * @member {Date} time_to_send
    */
   exports.prototype['time_to_send'] = undefined;
+  /**
+   * @member {module:model/Priority} priority
+   */
+  exports.prototype['priority'] = undefined;
 
 
 
