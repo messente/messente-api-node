@@ -26,78 +26,38 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.Status = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.Priority = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
   /**
-   * Enum class Status.
+   * Enum class Priority.
    * @enum {}
    * @readonly
    */
   var exports = {
     /**
-     * value: "ACK"
+     * value: "low"
      * @const
      */
-    "ACK": "ACK",
+    "low": "low",
     /**
-     * value: "DELIVRD"
+     * value: "regular"
      * @const
      */
-    "DELIVRD": "DELIVRD",
+    "regular": "regular",
     /**
-     * value: "UNDELIV"
+     * value: "high"
      * @const
      */
-    "UNDELIV": "UNDELIV",
-    /**
-     * value: "FAILED"
-     * @const
-     */
-    "FAILED": "FAILED",
-    /**
-     * value: "UNKNOWN"
-     * @const
-     */
-    "UNKNOWN": "UNKNOWN",
-    /**
-     * value: "ACCEPTD"
-     * @const
-     */
-    "ACCEPTD": "ACCEPTD",
-    /**
-     * value: "REJECTD"
-     * @const
-     */
-    "REJECTD": "REJECTD",
-    /**
-     * value: "DELETED"
-     * @const
-     */
-    "DELETED": "DELETED",
-    /**
-     * value: "EXPIRED"
-     * @const
-     */
-    "EXPIRED": "EXPIRED",
-    /**
-     * value: "NACK"
-     * @const
-     */
-    "NACK": "NACK",
-    /**
-     * value: "SEEN"
-     * @const
-     */
-    "SEEN": "SEEN"  };
+    "high": "high"  };
 
   /**
-   * Returns a <code>Status</code> enum value from a Javascript object name.
+   * Returns a <code>Priority</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/Status} The enum <code>Status</code> value.
+   * @return {module:model/Priority} The enum <code>Priority</code> value.
    */
   exports.constructFromObject = function(object) {
     return object;
