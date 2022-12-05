@@ -71,9 +71,6 @@
       if (data.hasOwnProperty('validity')) {
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
       }
-      if (data.hasOwnProperty('ttl')) {
-        obj['ttl'] = ApiClient.convertToType(data['ttl'], 'Number');
-      }
       if (data.hasOwnProperty('autoconvert')) {
         obj['autoconvert'] = ApiClient.convertToType(data['autoconvert'], 'String');
       }
@@ -100,15 +97,10 @@
    */
   exports.prototype['sender'] = undefined;
   /**
-   * After how many minutes this channel is considered as failed and the next channel is attempted.                     Only one of \"ttl\" and \"validity\" can be used.
+   * After how many minutes this channel is considered as failed and the next channel is attempted
    * @member {Number} validity
    */
   exports.prototype['validity'] = undefined;
-  /**
-   * After how many seconds this channel is considered as failed and the next channel is attempted.                     Only one of \"ttl\" and \"validity\" can be used.
-   * @member {Number} ttl
-   */
-  exports.prototype['ttl'] = undefined;
   /**
    * Defines how non-GSM characters will be treated:    - \"on\" Use replacement settings from the account's [API Auto Replace settings page](https://dashboard.messente.com/api-settings/auto-replace) (default)   - \"full\" All non GSM 03.38 characters will be replaced with suitable alternatives   - \"off\" Message content is not modified in any way
    * @member {module:model/SMS.AutoconvertEnum} autoconvert

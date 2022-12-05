@@ -66,9 +66,6 @@
       if (data.hasOwnProperty('validity')) {
         obj['validity'] = ApiClient.convertToType(data['validity'], 'Number');
       }
-      if (data.hasOwnProperty('ttl')) {
-        obj['ttl'] = ApiClient.convertToType(data['ttl'], 'Number');
-      }
       if (data.hasOwnProperty('text')) {
         obj['text'] = WhatsAppText.constructFromObject(data['text']);
       }
@@ -100,11 +97,6 @@
    * @member {Number} validity
    */
   exports.prototype['validity'] = undefined;
-  /**
-   * After how many seconds this channel is considered as failed and the next channel is attempted.       Only one of \"ttl\" and \"validity\" can be used.
-   * @member {Number} ttl
-   */
-  exports.prototype['ttl'] = undefined;
   /**
    * @member {module:model/WhatsAppText} text
    */
