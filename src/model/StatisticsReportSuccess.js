@@ -36,7 +36,7 @@
   /**
    * The StatisticsReportSuccess model module.
    * @module model/StatisticsReportSuccess
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**

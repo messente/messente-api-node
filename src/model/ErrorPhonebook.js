@@ -36,7 +36,7 @@
   /**
    * The ErrorPhonebook model module.
    * @module model/ErrorPhonebook
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**

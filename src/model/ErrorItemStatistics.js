@@ -36,7 +36,7 @@
   /**
    * The ErrorItemStatistics model module.
    * @module model/ErrorItemStatistics
-   * @version 1.4.0
+   * @version 1.4.1
    */
 
   /**
