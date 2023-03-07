@@ -36,7 +36,7 @@
   /**
    * The OmniMessageCreateSuccessResponse model module.
    * @module model/OmniMessageCreateSuccessResponse
-   * @version 1.4.1
+   * @version 1.5.0
    */
 
   /**

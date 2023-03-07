@@ -36,7 +36,7 @@
   /**
    * The FetchBlacklistSuccess model module.
    * @module model/FetchBlacklistSuccess
-   * @version 1.4.1
+   * @version 1.5.0
    */
 
   /**

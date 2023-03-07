@@ -36,7 +36,7 @@
   /**
    * The ContactEnvelope model module.
    * @module model/ContactEnvelope
-   * @version 1.4.1
+   * @version 1.5.0
    */
 
   /**
