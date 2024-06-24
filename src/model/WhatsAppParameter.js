@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppDocument = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppParameter = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,54 +34,54 @@
 
 
   /**
-   * The WhatsAppDocument model module.
-   * @module model/WhatsAppDocument
+   * The WhatsAppParameter model module.
+   * @module model/WhatsAppParameter
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppDocument</code>.
-   * A document
-   * @alias module:model/WhatsAppDocument
+   * Constructs a new <code>WhatsAppParameter</code>.
+   * Whatsapp component parameter
+   * @alias module:model/WhatsAppParameter
    * @class
-   * @param content {String} Base64-encoded image
+   * @param type {String} Type of the parameter
    */
-  var exports = function(content) {
+  var exports = function(type) {
     var _this = this;
 
-    _this['content'] = content;
+    _this['type'] = type;
   };
 
   /**
-   * Constructs a <code>WhatsAppDocument</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppParameter</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppDocument} obj Optional instance to populate.
-   * @return {module:model/WhatsAppDocument} The populated <code>WhatsAppDocument</code> instance.
+   * @param {module:model/WhatsAppParameter} obj Optional instance to populate.
+   * @return {module:model/WhatsAppParameter} The populated <code>WhatsAppParameter</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('caption')) {
-        obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('text')) {
+        obj['text'] = ApiClient.convertToType(data['text'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Description for the document
-   * @member {String} caption
+   * Type of the parameter
+   * @member {String} type
    */
-  exports.prototype['caption'] = undefined;
+  exports.prototype['type'] = undefined;
   /**
-   * Base64-encoded image
-   * @member {String} content
+   * A text
+   * @member {String} text
    */
-  exports.prototype['content'] = undefined;
+  exports.prototype['text'] = undefined;
 
 
 

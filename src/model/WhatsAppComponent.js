@@ -17,74 +17,71 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/WhatsAppParameter'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./WhatsAppParameter'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppText = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppComponent = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppParameter);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, WhatsAppParameter) {
   'use strict';
 
 
 
   /**
-   * The WhatsAppText model module.
-   * @module model/WhatsAppText
+   * The WhatsAppComponent model module.
+   * @module model/WhatsAppComponent
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppText</code>.
-   * A text
-   * @alias module:model/WhatsAppText
+   * Constructs a new <code>WhatsAppComponent</code>.
+   * Whatsapp template component
+   * @alias module:model/WhatsAppComponent
    * @class
-   * @param body {String} Plaintext content for WhatsApp, can contain URLs, emojis and formatting
+   * @param type {String} Type of the component
    */
-  var exports = function(body) {
+  var exports = function(type) {
     var _this = this;
 
-    _this['body'] = body;
+    _this['type'] = type;
   };
 
   /**
-   * Constructs a <code>WhatsAppText</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppComponent</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppText} obj Optional instance to populate.
-   * @return {module:model/WhatsAppText} The populated <code>WhatsAppText</code> instance.
+   * @param {module:model/WhatsAppComponent} obj Optional instance to populate.
+   * @return {module:model/WhatsAppComponent} The populated <code>WhatsAppComponent</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('preview_url')) {
-        obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'Boolean');
-      } else {
-        obj['preview_url'] = true;
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = ApiClient.convertToType(data['type'], 'String');
       }
-      if (data.hasOwnProperty('body')) {
-        obj['body'] = ApiClient.convertToType(data['body'], 'String');
+      if (data.hasOwnProperty('parameters')) {
+        obj['parameters'] = ApiClient.convertToType(data['parameters'], [WhatsAppParameter]);
       }
     }
     return obj;
   }
 
   /**
-   * Whether to display link preview if the message contains a hyperlink
-   * @member {Boolean} preview_url
-   * @default true
+   * Type of the component
+   * @member {String} type
    */
-  exports.prototype['preview_url'] = true;
+  exports.prototype['type'] = undefined;
   /**
-   * Plaintext content for WhatsApp, can contain URLs, emojis and formatting
-   * @member {String} body
+   * List of parameters for the component
+   * @member {Array.<module:model/WhatsAppParameter>} parameters
    */
-  exports.prototype['body'] = undefined;
+  exports.prototype['parameters'] = undefined;
 
 
 

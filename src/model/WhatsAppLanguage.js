@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppImage = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppLanguage = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,54 +34,54 @@
 
 
   /**
-   * The WhatsAppImage model module.
-   * @module model/WhatsAppImage
+   * The WhatsAppLanguage model module.
+   * @module model/WhatsAppLanguage
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppImage</code>.
-   * An image
-   * @alias module:model/WhatsAppImage
+   * Constructs a new <code>WhatsAppLanguage</code>.
+   * Whatsapp template language
+   * @alias module:model/WhatsAppLanguage
    * @class
-   * @param content {String} Base64-encoded image
+   * @param code {String} Language code
    */
-  var exports = function(content) {
+  var exports = function(code) {
     var _this = this;
 
-    _this['content'] = content;
+    _this['code'] = code;
   };
 
   /**
-   * Constructs a <code>WhatsAppImage</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppLanguage</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppImage} obj Optional instance to populate.
-   * @return {module:model/WhatsAppImage} The populated <code>WhatsAppImage</code> instance.
+   * @param {module:model/WhatsAppLanguage} obj Optional instance to populate.
+   * @return {module:model/WhatsAppLanguage} The populated <code>WhatsAppLanguage</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('caption')) {
-        obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
+      if (data.hasOwnProperty('code')) {
+        obj['code'] = ApiClient.convertToType(data['code'], 'String');
       }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('policy')) {
+        obj['policy'] = ApiClient.convertToType(data['policy'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Description for the image
-   * @member {String} caption
+   * Language code
+   * @member {String} code
    */
-  exports.prototype['caption'] = undefined;
+  exports.prototype['code'] = undefined;
   /**
-   * Base64-encoded image
-   * @member {String} content
+   * Language policy
+   * @member {String} policy
    */
-  exports.prototype['content'] = undefined;
+  exports.prototype['policy'] = undefined;
 
 
 

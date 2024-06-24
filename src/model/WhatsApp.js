@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/WhatsAppAudio', 'model/WhatsAppDocument', 'model/WhatsAppImage', 'model/WhatsAppText'], factory);
+    define(['ApiClient', 'model/WhatsAppTemplate'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./WhatsAppAudio'), require('./WhatsAppDocument'), require('./WhatsAppImage'), require('./WhatsAppText'));
+    module.exports = factory(require('../ApiClient'), require('./WhatsAppTemplate'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsApp = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppAudio, root.MessenteApi.WhatsAppDocument, root.MessenteApi.WhatsAppImage, root.MessenteApi.WhatsAppText);
+    root.MessenteApi.WhatsApp = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppTemplate);
   }
-}(this, function(ApiClient, WhatsAppAudio, WhatsAppDocument, WhatsAppImage, WhatsAppText) {
+}(this, function(ApiClient, WhatsAppTemplate) {
   'use strict';
 
 
@@ -69,17 +69,8 @@
       if (data.hasOwnProperty('ttl')) {
         obj['ttl'] = ApiClient.convertToType(data['ttl'], 'Number');
       }
-      if (data.hasOwnProperty('text')) {
-        obj['text'] = WhatsAppText.constructFromObject(data['text']);
-      }
-      if (data.hasOwnProperty('image')) {
-        obj['image'] = WhatsAppImage.constructFromObject(data['image']);
-      }
-      if (data.hasOwnProperty('document')) {
-        obj['document'] = WhatsAppDocument.constructFromObject(data['document']);
-      }
-      if (data.hasOwnProperty('audio')) {
-        obj['audio'] = WhatsAppAudio.constructFromObject(data['audio']);
+      if (data.hasOwnProperty('template')) {
+        obj['template'] = WhatsAppTemplate.constructFromObject(data['template']);
       }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
@@ -106,21 +97,9 @@
    */
   exports.prototype['ttl'] = undefined;
   /**
-   * @member {module:model/WhatsAppText} text
+   * @member {module:model/WhatsAppTemplate} template
    */
-  exports.prototype['text'] = undefined;
-  /**
-   * @member {module:model/WhatsAppImage} image
-   */
-  exports.prototype['image'] = undefined;
-  /**
-   * @member {module:model/WhatsAppDocument} document
-   */
-  exports.prototype['document'] = undefined;
-  /**
-   * @member {module:model/WhatsAppAudio} audio
-   */
-  exports.prototype['audio'] = undefined;
+  exports.prototype['template'] = undefined;
   /**
    * The channel used to deliver the message
    * @member {module:model/WhatsApp.ChannelEnum} channel
