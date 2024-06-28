@@ -1,6 +1,7 @@
 # MessenteApi.WhatsAppLanguage
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Language code | 

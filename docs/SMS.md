@@ -1,6 +1,7 @@
 # MessenteApi.SMS
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **text** | **String** | Text content of the SMS | 
@@ -12,7 +13,7 @@ Name | Type | Description | Notes
 **channel** | **String** | The channel used to deliver the message | [optional] [default to &#39;sms&#39;]
 
 
-<a name="AutoconvertEnum"></a>
+
 ## Enum: AutoconvertEnum
 
 
@@ -25,7 +26,7 @@ Name | Type | Description | Notes
 
 
 
-<a name="ChannelEnum"></a>
+
 ## Enum: ChannelEnum
 
 

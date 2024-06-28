@@ -1,7 +1,7 @@
 # Messente API Library
 
 - Messente API version: 2.0.0
-- NPM package version: 1.5.0
+- NPM package version: 2.0.0
 
 [Messente](https://messente.com) is a global provider of messaging and user verification services.  * Send and receive SMS, Viber, WhatsApp and Telegram messages. * Manage contacts and groups. * Fetch detailed info about phone numbers. * Blacklist phone numbers to make sure you&#39;re not sending any unwanted messages.  Messente builds [tools](https://messente.com/documentation) to help organizations connect their services to people anywhere in the world.
 
@@ -90,19 +90,22 @@ const sms = MessenteApi.SMS.constructFromObject({
   text: 'Hello SMS!',
 });
 
-const whatsAppText = MessenteApi.WhatsAppText.constructFromObject({
-  body: 'Hello WhatsApp!',
-  preview_url: false,
+const whatsAppParameters = [MessenteApi.WhatsAppParameter.constructFromObject({type: 'text', text: 'hello whatsapp'})];
+const whatsAppComponent = MessenteApi.WhatsAppComponent.constructFromObject({type: 'body', parameters: whatsAppParameters});
+const whatsAppTemplate = MessenteApi.WhatsAppTemplate.constructFromObject({
+  name: '<template_name>',
+  language: new MessenteApi.WhatsAppLanguage(code='<language_code>'),
+  components: [whatsAppComponent],
 });
 
-
 const whatsapp = MessenteApi.WhatsApp.constructFromObject({
-  text: whatsAppText,
+  sender: "<sender name (optional)>",
+  template: whatsAppTemplate,
 });
 
 const omnimessage = MessenteApi.Omnimessage.constructFromObject({
   messages: [whatsapp, viber, sms],
-  to: '<phone number in e.164 format',
+  to: '<recipient_phone_number>',
 });
 
 api.sendOmnimessage(omnimessage, (error, data) => {

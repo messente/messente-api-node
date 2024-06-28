@@ -1,9 +1,10 @@
 # MessenteApi.SyncNumberLookupResult
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_number** | **String** | Phone number in e.164 format | 
+**number** | **String** | Phone number in e.164 format | 
 **roaming** | **Boolean** | Indicates if a number is roaming | [optional] 
 **ported** | **Boolean** | Indicates if a number is ported | [optional] 
 **roamingNetwork** | [**MobileNetwork**](MobileNetwork.md) |  | [optional] 
@@ -14,7 +15,7 @@ Name | Type | Description | Notes
 **error** | **Object** | Indicates if any error occurred while handling the request | [optional] 
 
 
-<a name="StatusEnum"></a>
+
 ## Enum: StatusEnum
 
 

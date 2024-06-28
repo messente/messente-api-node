@@ -1,6 +1,7 @@
 # MessenteApi.Viber
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **sender** | **String** | Phone number or alphanumeric sender name | [optional] 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 **channel** | **String** | The channel used to deliver the message | [optional] [default to &#39;viber&#39;]
 
 
-<a name="ChannelEnum"></a>
+
 ## Enum: ChannelEnum
 
 
