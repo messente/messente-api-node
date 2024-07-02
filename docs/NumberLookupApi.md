@@ -7,35 +7,36 @@ Method | HTTP request | Description
 [**fetchInfo**](NumberLookupApi.md#fetchInfo) | **POST** /hlr/sync | Requests info about phone numbers
 
 
-<a name="fetchInfo"></a>
-# **fetchInfo**
+
+## fetchInfo
+
 > SyncNumberLookupSuccess fetchInfo(numbersToInvestigate)
 
 Requests info about phone numbers
 
 ### Example
-```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
 
+```javascript
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.NumberLookupApi();
-var numbersToInvestigate = {"numbers":["+37251000000","+37251000001"]}; // NumbersToInvestigate | Numbers for lookup
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.NumberLookupApi();
+let numbersToInvestigate = {"numbers":["+37251000000","+37251000001"]}; // NumbersToInvestigate | Numbers for lookup
+apiInstance.fetchInfo(numbersToInvestigate, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.fetchInfo(numbersToInvestigate, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -51,6 +52,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

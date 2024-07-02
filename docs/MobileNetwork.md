@@ -1,6 +1,7 @@
 # MessenteApi.MobileNetwork
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **mccmnc** | **String** | Mobile country and mobile network code | [optional] 
