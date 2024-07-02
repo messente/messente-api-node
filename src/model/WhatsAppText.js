@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.NumberToBlacklist = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppText = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,57 @@
 
 
   /**
-   * The NumberToBlacklist model module.
-   * @module model/NumberToBlacklist
+   * The WhatsAppText model module.
+   * @module model/WhatsAppText
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>NumberToBlacklist</code>.
-   * A container for a soon-to-be blacklisted number
-   * @alias module:model/NumberToBlacklist
+   * Constructs a new <code>WhatsAppText</code>.
+   * A text
+   * @alias module:model/WhatsAppText
    * @class
-   * @param phoneNumber {String} Phone number in e.164 format
+   * @param body {String} Plaintext content for WhatsApp, can contain URLs, emojis and formatting
    */
-  var exports = function(phoneNumber) {
+  var exports = function(body) {
     var _this = this;
 
-    _this['phoneNumber'] = phoneNumber;
+    _this['body'] = body;
   };
 
   /**
-   * Constructs a <code>NumberToBlacklist</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppText</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/NumberToBlacklist} obj Optional instance to populate.
-   * @return {module:model/NumberToBlacklist} The populated <code>NumberToBlacklist</code> instance.
+   * @param {module:model/WhatsAppText} obj Optional instance to populate.
+   * @return {module:model/WhatsAppText} The populated <code>WhatsAppText</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('phoneNumber')) {
-        obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'String');
+      if (data.hasOwnProperty('preview_url')) {
+        obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'Boolean');
+      } else {
+        obj['preview_url'] = true;
+      }
+      if (data.hasOwnProperty('body')) {
+        obj['body'] = ApiClient.convertToType(data['body'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Phone number in e.164 format
-   * @member {String} phoneNumber
+   * Whether to display link preview if the message contains a hyperlink
+   * @member {Boolean} preview_url
+   * @default true
    */
-  exports.prototype['phoneNumber'] = undefined;
+  exports.prototype['preview_url'] = true;
+  /**
+   * Plaintext content for WhatsApp, can contain URLs, emojis and formatting
+   * @member {String} body
+   */
+  exports.prototype['body'] = undefined;
 
 
 

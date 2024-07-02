@@ -1,9 +1,8 @@
-# MessenteApi.WhatsAppDatetime
+# MessenteApi.WhatsAppAudio
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fallbackValue** | **String** | Default text. | 
+**content** | **String** | Base64-encoded audio | 
 
 

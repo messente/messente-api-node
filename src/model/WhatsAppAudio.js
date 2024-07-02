@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.NumberToBlacklist = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppAudio = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,46 @@
 
 
   /**
-   * The NumberToBlacklist model module.
-   * @module model/NumberToBlacklist
+   * The WhatsAppAudio model module.
+   * @module model/WhatsAppAudio
    * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>NumberToBlacklist</code>.
-   * A container for a soon-to-be blacklisted number
-   * @alias module:model/NumberToBlacklist
+   * Constructs a new <code>WhatsAppAudio</code>.
+   * A sound
+   * @alias module:model/WhatsAppAudio
    * @class
-   * @param phoneNumber {String} Phone number in e.164 format
+   * @param content {String} Base64-encoded audio
    */
-  var exports = function(phoneNumber) {
+  var exports = function(content) {
     var _this = this;
 
-    _this['phoneNumber'] = phoneNumber;
+    _this['content'] = content;
   };
 
   /**
-   * Constructs a <code>NumberToBlacklist</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppAudio</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/NumberToBlacklist} obj Optional instance to populate.
-   * @return {module:model/NumberToBlacklist} The populated <code>NumberToBlacklist</code> instance.
+   * @param {module:model/WhatsAppAudio} obj Optional instance to populate.
+   * @return {module:model/WhatsAppAudio} The populated <code>WhatsAppAudio</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('phoneNumber')) {
-        obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'String');
+      if (data.hasOwnProperty('content')) {
+        obj['content'] = ApiClient.convertToType(data['content'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Phone number in e.164 format
-   * @member {String} phoneNumber
+   * Base64-encoded audio
+   * @member {String} content
    */
-  exports.prototype['phoneNumber'] = undefined;
+  exports.prototype['content'] = undefined;
 
 
 

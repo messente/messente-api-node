@@ -1,7 +1,6 @@
 # MessenteApi.ErrorItemOmnichannel
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | [**ErrorTitleOmnichannel**](ErrorTitleOmnichannel.md) |  | 

@@ -11,36 +11,35 @@ Method | HTTP request | Description
 [**updateGroup**](GroupsApi.md#updateGroup) | **PUT** /phonebook/groups/{groupId} | Updates a group with the provided name
 
 
-
-## createGroup
-
+<a name="createGroup"></a>
+# **createGroup**
 > GroupEnvelope createGroup(groupName)
 
 Creates a new group with the provided name
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupName = {"name":"Any group name"}; // GroupName | 
-apiInstance.createGroup(groupName, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupName = {"name":"Any group name"}; // GroupName | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.createGroup(groupName, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -56,39 +55,38 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## deleteGroup
-
+<a name="deleteGroup"></a>
+# **deleteGroup**
 > deleteGroup(groupId)
 
 Deletes a group
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupId = "5792a02a-e5c2-422b-a0a0-0ae65d814663"; // String | String in UUID format
-apiInstance.deleteGroup(groupId, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.deleteGroup(groupId, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -104,39 +102,38 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
-
-## fetchGroup
-
+<a name="fetchGroup"></a>
+# **fetchGroup**
 > GroupEnvelope fetchGroup(groupId)
 
 Lists a group
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupId = "5792a02a-e5c2-422b-a0a0-0ae65d814663"; // String | String in UUID format
-apiInstance.fetchGroup(groupId, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.fetchGroup(groupId, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -152,38 +149,37 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
-
-## fetchGroups
-
+<a name="fetchGroups"></a>
+# **fetchGroups**
 > GroupListEnvelope fetchGroups()
 
 Returns all groups
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-apiInstance.fetchGroups((error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.fetchGroups(callback);
 ```
 
 ### Parameters
-
 This endpoint does not need any parameter.
 
 ### Return type
@@ -196,40 +192,39 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
-
-## updateGroup
-
+<a name="updateGroup"></a>
+# **updateGroup**
 > GroupEnvelope updateGroup(groupId, groupName)
 
 Updates a group with the provided name
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.GroupsApi();
-let groupId = "5792a02a-e5c2-422b-a0a0-0ae65d814663"; // String | String in UUID format
-let groupName = {"name":"Any group name"}; // GroupName | 
-apiInstance.updateGroup(groupId, groupName, (error, data, response) => {
+var apiInstance = new MessenteApi.GroupsApi();
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var groupName = {"name":"Any group name"}; // GroupName | 
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.updateGroup(groupId, groupName, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -246,6 +241,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

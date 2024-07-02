@@ -1,7 +1,6 @@
 # MessenteApi.GroupResponseFields
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Id string in UUID format | 
