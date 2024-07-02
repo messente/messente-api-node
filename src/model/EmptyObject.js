@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.NumbersToInvestigate = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.EmptyObject = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,36 @@
 
 
   /**
-   * The NumbersToInvestigate model module.
-   * @module model/NumbersToInvestigate
+   * The EmptyObject model module.
+   * @module model/EmptyObject
    * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>NumbersToInvestigate</code>.
-   * A container for phone numbers
-   * @alias module:model/NumbersToInvestigate
+   * Constructs a new <code>EmptyObject</code>.
+   * An object containing no properties
+   * @alias module:model/EmptyObject
    * @class
-   * @param numbers {Array.<String>} A list of phone numbers. Max 10 numbers per request
    */
-  var exports = function(numbers) {
+  var exports = function() {
     var _this = this;
 
-    _this['numbers'] = numbers;
   };
 
   /**
-   * Constructs a <code>NumbersToInvestigate</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EmptyObject</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/NumbersToInvestigate} obj Optional instance to populate.
-   * @return {module:model/NumbersToInvestigate} The populated <code>NumbersToInvestigate</code> instance.
+   * @param {module:model/EmptyObject} obj Optional instance to populate.
+   * @return {module:model/EmptyObject} The populated <code>EmptyObject</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('numbers')) {
-        obj['numbers'] = ApiClient.convertToType(data['numbers'], ['String']);
-      }
     }
     return obj;
   }
 
-  /**
-   * A list of phone numbers. Max 10 numbers per request
-   * @member {Array.<String>} numbers
-   */
-  exports.prototype['numbers'] = undefined;
 
 
 

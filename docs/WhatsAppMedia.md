@@ -1,7 +1,6 @@
 # MessenteApi.WhatsAppMedia
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The media object ID. Do not use this field when message type is set to text. | [optional] 
