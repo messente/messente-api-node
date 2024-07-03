@@ -5,6 +5,7 @@ All URIs are relative to *https://api.messente.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancelScheduledMessage**](OmnimessageApi.md#cancelScheduledMessage) | **DELETE** /omnimessage/{omnimessageId} | Cancels a scheduled Omnimessage
+[**sendBulkOmnimessage**](OmnimessageApi.md#sendBulkOmnimessage) | **POST** /omnimessages | Sends a bulk Omnimessage
 [**sendOmnimessage**](OmnimessageApi.md#sendOmnimessage) | **POST** /omnimessage | Sends an Omnimessage
 
 
@@ -53,6 +54,53 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+<a name="sendBulkOmnimessage"></a>
+# **sendBulkOmnimessage**
+> BulkOmniMessageCreateSuccessResponse sendBulkOmnimessage(bulkOmnimessage)
+
+Sends a bulk Omnimessage
+
+### Example
+```javascript
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
+// Configure HTTP basic authorization: basicAuth
+var basicAuth = defaultClient.authentications['basicAuth'];
+basicAuth.username = 'YOUR USERNAME';
+basicAuth.password = 'YOUR PASSWORD';
+
+var apiInstance = new MessenteApi.OmnimessageApi();
+var bulkOmnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.sendBulkOmnimessage(bulkOmnimessage, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bulkOmnimessage** | [**BulkOmnimessage**](BulkOmnimessage.md)| Bulk Omnimessage to be sent | 
+
+### Return type
+
+[**BulkOmniMessageCreateSuccessResponse**](BulkOmniMessageCreateSuccessResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="sendOmnimessage"></a>
