@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/OmniMessageCreateSuccessResponse'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./OmniMessageCreateSuccessResponse'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.BulkOmniMessageCreateSuccessResponse = factory(root.MessenteApi.ApiClient, root.MessenteApi.OmniMessageCreateSuccessResponse);
+    root.MessenteApi.BulkOmniMessageCreateSuccessResponse = factory(root.MessenteApi.ApiClient);
   }
-}(this, function(ApiClient, OmniMessageCreateSuccessResponse) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -44,7 +44,7 @@
    * Response received after successfully created bulk omnimessage.
    * @alias module:model/BulkOmniMessageCreateSuccessResponse
    * @class
-   * @param messages {Array.<module:model/OmniMessageCreateSuccessResponse>} List of responses for each Omnimessage.
+   * @param messages {Array.<Object>} List of responses for each Omnimessage.
    */
   var exports = function(messages) {
     var _this = this;
@@ -63,7 +63,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('messages')) {
-        obj['messages'] = ApiClient.convertToType(data['messages'], [OmniMessageCreateSuccessResponse]);
+        obj['messages'] = ApiClient.convertToType(data['messages'], [Object]);
       }
     }
     return obj;
@@ -71,7 +71,7 @@
 
   /**
    * List of responses for each Omnimessage.
-   * @member {Array.<module:model/OmniMessageCreateSuccessResponse>} messages
+   * @member {Array.<Object>} messages
    */
   exports.prototype['messages'] = undefined;
 
