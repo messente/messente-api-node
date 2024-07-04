@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BulkOmniMessageCreateSuccessResponse', 'model/BulkOmnimessage', 'model/EmptyObject', 'model/ErrorOmnichannel', 'model/OmniMessageCreateSuccessResponse', 'model/Omnimessage'], factory);
+    define(['ApiClient', 'model/EmptyObject', 'model/ErrorOmnichannel', 'model/OmniMessageCreateSuccessResponse', 'model/Omnimessage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/BulkOmniMessageCreateSuccessResponse'), require('../model/BulkOmnimessage'), require('../model/EmptyObject'), require('../model/ErrorOmnichannel'), require('../model/OmniMessageCreateSuccessResponse'), require('../model/Omnimessage'));
+    module.exports = factory(require('../ApiClient'), require('../model/EmptyObject'), require('../model/ErrorOmnichannel'), require('../model/OmniMessageCreateSuccessResponse'), require('../model/Omnimessage'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.OmnimessageApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.BulkOmniMessageCreateSuccessResponse, root.MessenteApi.BulkOmnimessage, root.MessenteApi.EmptyObject, root.MessenteApi.ErrorOmnichannel, root.MessenteApi.OmniMessageCreateSuccessResponse, root.MessenteApi.Omnimessage);
+    root.MessenteApi.OmnimessageApi = factory(root.MessenteApi.ApiClient, root.MessenteApi.EmptyObject, root.MessenteApi.ErrorOmnichannel, root.MessenteApi.OmniMessageCreateSuccessResponse, root.MessenteApi.Omnimessage);
   }
-}(this, function(ApiClient, BulkOmniMessageCreateSuccessResponse, BulkOmnimessage, EmptyObject, ErrorOmnichannel, OmniMessageCreateSuccessResponse, Omnimessage) {
+}(this, function(ApiClient, EmptyObject, ErrorOmnichannel, OmniMessageCreateSuccessResponse, Omnimessage) {
   'use strict';
 
   /**
@@ -90,52 +90,6 @@
 
       return this.apiClient.callApi(
         '/omnimessage/{omnimessageId}', 'DELETE',
-        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the sendBulkOmnimessage operation.
-     * @callback module:api/OmnimessageApi~sendBulkOmnimessageCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BulkOmniMessageCreateSuccessResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Sends a bulk Omnimessage
-     * @param {module:model/BulkOmnimessage} bulkOmnimessage Bulk Omnimessage to be sent
-     * @param {module:api/OmnimessageApi~sendBulkOmnimessageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BulkOmniMessageCreateSuccessResponse}
-     */
-    this.sendBulkOmnimessage = function(bulkOmnimessage, callback) {
-      var postBody = bulkOmnimessage;
-
-      // verify the required parameter 'bulkOmnimessage' is set
-      if (bulkOmnimessage === undefined || bulkOmnimessage === null) {
-        throw new Error("Missing the required parameter 'bulkOmnimessage' when calling sendBulkOmnimessage");
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-      };
-      var collectionQueryParams = {
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = ['basicAuth'];
-      var contentTypes = ['application/json'];
-      var accepts = ['application/json'];
-      var returnType = BulkOmniMessageCreateSuccessResponse;
-
-      return this.apiClient.callApi(
-        '/omnimessages', 'POST',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -44,7 +44,7 @@
    * Response received after successfully created bulk omnimessage.
    * @alias module:model/BulkOmniMessageCreateSuccessResponse
    * @class
-   * @param messages {Array.<Object>} List of responses for each Omnimessage.
+   * @param messages {Array.<Object>} List of responses for each Omnimessage in the bulk. These can be errors or successful responses
    */
   var exports = function(messages) {
     var _this = this;
@@ -70,7 +70,7 @@
   }
 
   /**
-   * List of responses for each Omnimessage.
+   * List of responses for each Omnimessage in the bulk. These can be errors or successful responses
    * @member {Array.<Object>} messages
    */
   exports.prototype['messages'] = undefined;
