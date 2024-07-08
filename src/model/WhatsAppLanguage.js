@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppText = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppLanguage = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,57 +34,54 @@
 
 
   /**
-   * The WhatsAppText model module.
-   * @module model/WhatsAppText
-   * @version 1.5.0
+   * The WhatsAppLanguage model module.
+   * @module model/WhatsAppLanguage
+   * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppText</code>.
-   * A text
-   * @alias module:model/WhatsAppText
+   * Constructs a new <code>WhatsAppLanguage</code>.
+   * Whatsapp template language
+   * @alias module:model/WhatsAppLanguage
    * @class
-   * @param body {String} Plaintext content for WhatsApp, can contain URLs, emojis and formatting
+   * @param code {String} Language code
    */
-  var exports = function(body) {
+  var exports = function(code) {
     var _this = this;
 
-    _this['body'] = body;
+    _this['code'] = code;
   };
 
   /**
-   * Constructs a <code>WhatsAppText</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppLanguage</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppText} obj Optional instance to populate.
-   * @return {module:model/WhatsAppText} The populated <code>WhatsAppText</code> instance.
+   * @param {module:model/WhatsAppLanguage} obj Optional instance to populate.
+   * @return {module:model/WhatsAppLanguage} The populated <code>WhatsAppLanguage</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('preview_url')) {
-        obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'Boolean');
-      } else {
-        obj['preview_url'] = true;
+      if (data.hasOwnProperty('code')) {
+        obj['code'] = ApiClient.convertToType(data['code'], 'String');
       }
-      if (data.hasOwnProperty('body')) {
-        obj['body'] = ApiClient.convertToType(data['body'], 'String');
+      if (data.hasOwnProperty('policy')) {
+        obj['policy'] = ApiClient.convertToType(data['policy'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Whether to display link preview if the message contains a hyperlink
-   * @member {Boolean} preview_url
-   * @default true
+   * Language code
+   * @member {String} code
    */
-  exports.prototype['preview_url'] = true;
+  exports.prototype['code'] = undefined;
   /**
-   * Plaintext content for WhatsApp, can contain URLs, emojis and formatting
-   * @member {String} body
+   * Language policy
+   * @member {String} policy
    */
-  exports.prototype['body'] = undefined;
+  exports.prototype['policy'] = undefined;
 
 
 

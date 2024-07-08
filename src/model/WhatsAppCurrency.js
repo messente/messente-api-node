@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ErrorItemNumberLookupError = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppCurrency = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,56 +34,66 @@
 
 
   /**
-   * The ErrorItemNumberLookupError model module.
-   * @module model/ErrorItemNumberLookupError
+   * The WhatsAppCurrency model module.
+   * @module model/WhatsAppCurrency
    * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>ErrorItemNumberLookupError</code>.
-   * Error fields container
-   * @alias module:model/ErrorItemNumberLookupError
+   * Constructs a new <code>WhatsAppCurrency</code>.
+   * Whatsapp currency object.
+   * @alias module:model/WhatsAppCurrency
    * @class
-   * @param description {String} Error description
-   * @param code {Number} Matches the following error title.   This field is a constant  * 101 - Unauthorized * 102 - Invalid arguments or parameters * 103 - Server error * 104 - Crediting error #1 * 105 - Crediting error #2 * 106 - Client error
+   * @param fallbackValue {String} Default text if localization fails.
+   * @param code {String} Currency code as defined in ISO 4217.
+   * @param amount1000 {String} Amount multiplied by 1000.
    */
-  var exports = function(description, code) {
+  var exports = function(fallbackValue, code, amount1000) {
     var _this = this;
 
-    _this['description'] = description;
+    _this['fallback_value'] = fallbackValue;
     _this['code'] = code;
+    _this['amount_1000'] = amount1000;
   };
 
   /**
-   * Constructs a <code>ErrorItemNumberLookupError</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppCurrency</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ErrorItemNumberLookupError} obj Optional instance to populate.
-   * @return {module:model/ErrorItemNumberLookupError} The populated <code>ErrorItemNumberLookupError</code> instance.
+   * @param {module:model/WhatsAppCurrency} obj Optional instance to populate.
+   * @return {module:model/WhatsAppCurrency} The populated <code>WhatsAppCurrency</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('description')) {
-        obj['description'] = ApiClient.convertToType(data['description'], 'String');
+      if (data.hasOwnProperty('fallback_value')) {
+        obj['fallback_value'] = ApiClient.convertToType(data['fallback_value'], 'String');
       }
       if (data.hasOwnProperty('code')) {
-        obj['code'] = ApiClient.convertToType(data['code'], 'Number');
+        obj['code'] = ApiClient.convertToType(data['code'], 'String');
+      }
+      if (data.hasOwnProperty('amount_1000')) {
+        obj['amount_1000'] = ApiClient.convertToType(data['amount_1000'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Error description
-   * @member {String} description
+   * Default text if localization fails.
+   * @member {String} fallback_value
    */
-  exports.prototype['description'] = undefined;
+  exports.prototype['fallback_value'] = undefined;
   /**
-   * Matches the following error title.   This field is a constant  * 101 - Unauthorized * 102 - Invalid arguments or parameters * 103 - Server error * 104 - Crediting error #1 * 105 - Crediting error #2 * 106 - Client error
-   * @member {Number} code
+   * Currency code as defined in ISO 4217.
+   * @member {String} code
    */
   exports.prototype['code'] = undefined;
+  /**
+   * Amount multiplied by 1000.
+   * @member {String} amount_1000
+   */
+  exports.prototype['amount_1000'] = undefined;
 
 
 

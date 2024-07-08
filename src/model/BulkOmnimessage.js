@@ -17,71 +17,63 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/Omnimessage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./Omnimessage'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppDocument = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.BulkOmnimessage = factory(root.MessenteApi.ApiClient, root.MessenteApi.Omnimessage);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, Omnimessage) {
   'use strict';
 
 
 
   /**
-   * The WhatsAppDocument model module.
-   * @module model/WhatsAppDocument
-   * @version 1.5.0
+   * The BulkOmnimessage model module.
+   * @module model/BulkOmnimessage
+   * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppDocument</code>.
-   * A document
-   * @alias module:model/WhatsAppDocument
+   * Constructs a new <code>BulkOmnimessage</code>.
+   * A bulk omnimessage.
+   * @alias module:model/BulkOmnimessage
    * @class
-   * @param content {String} Base64-encoded image
+   * @param messages {Array.<module:model/Omnimessage>} A list of omnimessages.
    */
-  var exports = function(content) {
+  var exports = function(messages) {
     var _this = this;
 
-    _this['content'] = content;
+    _this['messages'] = messages;
   };
 
   /**
-   * Constructs a <code>WhatsAppDocument</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BulkOmnimessage</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppDocument} obj Optional instance to populate.
-   * @return {module:model/WhatsAppDocument} The populated <code>WhatsAppDocument</code> instance.
+   * @param {module:model/BulkOmnimessage} obj Optional instance to populate.
+   * @return {module:model/BulkOmnimessage} The populated <code>BulkOmnimessage</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('caption')) {
-        obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
-      }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('messages')) {
+        obj['messages'] = ApiClient.convertToType(data['messages'], [Omnimessage]);
       }
     }
     return obj;
   }
 
   /**
-   * Description for the document
-   * @member {String} caption
+   * A list of omnimessages.
+   * @member {Array.<module:model/Omnimessage>} messages
    */
-  exports.prototype['caption'] = undefined;
-  /**
-   * Base64-encoded image
-   * @member {String} content
-   */
-  exports.prototype['content'] = undefined;
+  exports.prototype['messages'] = undefined;
 
 
 

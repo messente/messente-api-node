@@ -17,91 +17,80 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/WhatsAppComponent', 'model/WhatsAppLanguage'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./WhatsAppComponent'), require('./WhatsAppLanguage'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.GroupResponseFields = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppTemplate = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppComponent, root.MessenteApi.WhatsAppLanguage);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, WhatsAppComponent, WhatsAppLanguage) {
   'use strict';
 
 
 
   /**
-   * The GroupResponseFields model module.
-   * @module model/GroupResponseFields
+   * The WhatsAppTemplate model module.
+   * @module model/WhatsAppTemplate
    * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>GroupResponseFields</code>.
-   * A container for fields of a group
-   * @alias module:model/GroupResponseFields
+   * Constructs a new <code>WhatsAppTemplate</code>.
+   * Whatsapp Cloud API template
+   * @alias module:model/WhatsAppTemplate
    * @class
-   * @param id {String} Id string in UUID format
-   * @param name {String} The name of the group
-   * @param contactsCount {Number} The count of contacts in the group
+   * @param name {String} Name of the template
+   * @param language {module:model/WhatsAppLanguage} 
    */
-  var exports = function(id, name, contactsCount) {
+  var exports = function(name, language) {
     var _this = this;
 
-    _this['id'] = id;
     _this['name'] = name;
-    _this['contactsCount'] = contactsCount;
+    _this['language'] = language;
   };
 
   /**
-   * Constructs a <code>GroupResponseFields</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppTemplate</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GroupResponseFields} obj Optional instance to populate.
-   * @return {module:model/GroupResponseFields} The populated <code>GroupResponseFields</code> instance.
+   * @param {module:model/WhatsAppTemplate} obj Optional instance to populate.
+   * @return {module:model/WhatsAppTemplate} The populated <code>WhatsAppTemplate</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'String');
-      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
-      if (data.hasOwnProperty('createdOn')) {
-        obj['createdOn'] = ApiClient.convertToType(data['createdOn'], 'String');
+      if (data.hasOwnProperty('language')) {
+        obj['language'] = WhatsAppLanguage.constructFromObject(data['language']);
       }
-      if (data.hasOwnProperty('contactsCount')) {
-        obj['contactsCount'] = ApiClient.convertToType(data['contactsCount'], 'Number');
+      if (data.hasOwnProperty('components')) {
+        obj['components'] = ApiClient.convertToType(data['components'], [WhatsAppComponent]);
       }
     }
     return obj;
   }
 
   /**
-   * Id string in UUID format
-   * @member {String} id
-   */
-  exports.prototype['id'] = undefined;
-  /**
-   * The name of the group
+   * Name of the template
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
-   * When the group was created
-   * @member {String} createdOn
+   * @member {module:model/WhatsAppLanguage} language
    */
-  exports.prototype['createdOn'] = undefined;
+  exports.prototype['language'] = undefined;
   /**
-   * The count of contacts in the group
-   * @member {Number} contactsCount
+   * List of template components
+   * @member {Array.<module:model/WhatsAppComponent>} components
    */
-  exports.prototype['contactsCount'] = undefined;
+  exports.prototype['components'] = undefined;
 
 
 

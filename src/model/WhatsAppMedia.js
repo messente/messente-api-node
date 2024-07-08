@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppImage = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppMedia = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,54 +34,68 @@
 
 
   /**
-   * The WhatsAppImage model module.
-   * @module model/WhatsAppImage
-   * @version 1.5.0
+   * The WhatsAppMedia model module.
+   * @module model/WhatsAppMedia
+   * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppImage</code>.
-   * An image
-   * @alias module:model/WhatsAppImage
+   * Constructs a new <code>WhatsAppMedia</code>.
+   * Whatsapp media object.
+   * @alias module:model/WhatsAppMedia
    * @class
-   * @param content {String} Base64-encoded image
    */
-  var exports = function(content) {
+  var exports = function() {
     var _this = this;
 
-    _this['content'] = content;
   };
 
   /**
-   * Constructs a <code>WhatsAppImage</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppMedia</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppImage} obj Optional instance to populate.
-   * @return {module:model/WhatsAppImage} The populated <code>WhatsAppImage</code> instance.
+   * @param {module:model/WhatsAppMedia} obj Optional instance to populate.
+   * @return {module:model/WhatsAppMedia} The populated <code>WhatsAppMedia</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+      if (data.hasOwnProperty('link')) {
+        obj['link'] = ApiClient.convertToType(data['link'], 'String');
+      }
       if (data.hasOwnProperty('caption')) {
         obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
       }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('filename')) {
+        obj['filename'] = ApiClient.convertToType(data['filename'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Description for the image
+   * The media object ID. Do not use this field when message type is set to text.
+   * @member {String} id
+   */
+  exports.prototype['id'] = undefined;
+  /**
+   * The protocol and URL of the media to be sent. Use only with HTTP/HTTPS URLs.       Do not use this field when message type is set to text.
+   * @member {String} link
+   */
+  exports.prototype['link'] = undefined;
+  /**
+   * Media asset caption. Do not use with audio or sticker media.
    * @member {String} caption
    */
   exports.prototype['caption'] = undefined;
   /**
-   * Base64-encoded image
-   * @member {String} content
+   * Describes the filename for the specific document. Use only with document media.
+   * @member {String} filename
    */
-  exports.prototype['content'] = undefined;
+  exports.prototype['filename'] = undefined;
 
 
 

@@ -36,7 +36,7 @@
   /**
    * The NumberToBlacklist model module.
    * @module model/NumberToBlacklist
-   * @version 1.5.0
+   * @version 2.0.0
    */
 
   /**

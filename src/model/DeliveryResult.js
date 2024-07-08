@@ -36,7 +36,7 @@
   /**
    * The DeliveryResult model module.
    * @module model/DeliveryResult
-   * @version 1.5.0
+   * @version 2.0.0
    */
 
   /**

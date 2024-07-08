@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ErrorItemNumberLookupError = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.BulkOmniMessageCreateSuccessResponse = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,56 +34,46 @@
 
 
   /**
-   * The ErrorItemNumberLookupError model module.
-   * @module model/ErrorItemNumberLookupError
+   * The BulkOmniMessageCreateSuccessResponse model module.
+   * @module model/BulkOmniMessageCreateSuccessResponse
    * @version 2.0.0
    */
 
   /**
-   * Constructs a new <code>ErrorItemNumberLookupError</code>.
-   * Error fields container
-   * @alias module:model/ErrorItemNumberLookupError
+   * Constructs a new <code>BulkOmniMessageCreateSuccessResponse</code>.
+   * Response received after successfully created bulk omnimessage.
+   * @alias module:model/BulkOmniMessageCreateSuccessResponse
    * @class
-   * @param description {String} Error description
-   * @param code {Number} Matches the following error title.   This field is a constant  * 101 - Unauthorized * 102 - Invalid arguments or parameters * 103 - Server error * 104 - Crediting error #1 * 105 - Crediting error #2 * 106 - Client error
+   * @param messages {Array.<Object>} List of responses for each Omnimessage in the bulk. These can be errors or successful responses
    */
-  var exports = function(description, code) {
+  var exports = function(messages) {
     var _this = this;
 
-    _this['description'] = description;
-    _this['code'] = code;
+    _this['messages'] = messages;
   };
 
   /**
-   * Constructs a <code>ErrorItemNumberLookupError</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BulkOmniMessageCreateSuccessResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ErrorItemNumberLookupError} obj Optional instance to populate.
-   * @return {module:model/ErrorItemNumberLookupError} The populated <code>ErrorItemNumberLookupError</code> instance.
+   * @param {module:model/BulkOmniMessageCreateSuccessResponse} obj Optional instance to populate.
+   * @return {module:model/BulkOmniMessageCreateSuccessResponse} The populated <code>BulkOmniMessageCreateSuccessResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('description')) {
-        obj['description'] = ApiClient.convertToType(data['description'], 'String');
-      }
-      if (data.hasOwnProperty('code')) {
-        obj['code'] = ApiClient.convertToType(data['code'], 'Number');
+      if (data.hasOwnProperty('messages')) {
+        obj['messages'] = ApiClient.convertToType(data['messages'], [Object]);
       }
     }
     return obj;
   }
 
   /**
-   * Error description
-   * @member {String} description
+   * List of responses for each Omnimessage in the bulk. These can be errors or successful responses
+   * @member {Array.<Object>} messages
    */
-  exports.prototype['description'] = undefined;
-  /**
-   * Matches the following error title.   This field is a constant  * 101 - Unauthorized * 102 - Invalid arguments or parameters * 103 - Server error * 104 - Crediting error #1 * 105 - Crediting error #2 * 106 - Client error
-   * @member {Number} code
-   */
-  exports.prototype['code'] = undefined;
+  exports.prototype['messages'] = undefined;
 
 
 
