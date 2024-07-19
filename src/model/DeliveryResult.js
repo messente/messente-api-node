@@ -81,6 +81,9 @@
       if (data.hasOwnProperty('price_info')) {
         obj['price_info'] = PriceInfo.constructFromObject(data['price_info']);
       }
+      if (data.hasOwnProperty('sender')) {
+        obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
+      }
     }
     return obj;
   }
@@ -116,6 +119,11 @@
    * @member {module:model/PriceInfo} price_info
    */
   exports.prototype['price_info'] = undefined;
+  /**
+   * the sender of the message
+   * @member {String} sender
+   */
+  exports.prototype['sender'] = undefined;
 
 
 
