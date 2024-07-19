@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppLanguage = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.PriceInfo = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,54 +34,66 @@
 
 
   /**
-   * The WhatsAppLanguage model module.
-   * @module model/WhatsAppLanguage
+   * The PriceInfo model module.
+   * @module model/PriceInfo
    * @version 2.1.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppLanguage</code>.
-   * Whatsapp template language
-   * @alias module:model/WhatsAppLanguage
+   * Constructs a new <code>PriceInfo</code>.
+   * Contains price information for the message. This value is *null* if the message is still being processed
+   * @alias module:model/PriceInfo
    * @class
-   * @param code {String} Language code
+   * @param partPrice {String} price per message part - relevant mostly for SMS
+   * @param partsCount {Number} the number of parts the message consists of
+   * @param totalPrice {String} total price for the message
    */
-  var exports = function(code) {
+  var exports = function(partPrice, partsCount, totalPrice) {
     var _this = this;
 
-    _this['code'] = code;
+    _this['part_price'] = partPrice;
+    _this['parts_count'] = partsCount;
+    _this['total_price'] = totalPrice;
   };
 
   /**
-   * Constructs a <code>WhatsAppLanguage</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PriceInfo</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppLanguage} obj Optional instance to populate.
-   * @return {module:model/WhatsAppLanguage} The populated <code>WhatsAppLanguage</code> instance.
+   * @param {module:model/PriceInfo} obj Optional instance to populate.
+   * @return {module:model/PriceInfo} The populated <code>PriceInfo</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('code')) {
-        obj['code'] = ApiClient.convertToType(data['code'], 'String');
+      if (data.hasOwnProperty('part_price')) {
+        obj['part_price'] = ApiClient.convertToType(data['part_price'], 'String');
       }
-      if (data.hasOwnProperty('policy')) {
-        obj['policy'] = ApiClient.convertToType(data['policy'], 'String');
+      if (data.hasOwnProperty('parts_count')) {
+        obj['parts_count'] = ApiClient.convertToType(data['parts_count'], 'Number');
+      }
+      if (data.hasOwnProperty('total_price')) {
+        obj['total_price'] = ApiClient.convertToType(data['total_price'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Language code
-   * @member {String} code
+   * price per message part - relevant mostly for SMS
+   * @member {String} part_price
    */
-  exports.prototype['code'] = undefined;
+  exports.prototype['part_price'] = undefined;
   /**
-   * Language policy
-   * @member {String} policy
+   * the number of parts the message consists of
+   * @member {Number} parts_count
    */
-  exports.prototype['policy'] = undefined;
+  exports.prototype['parts_count'] = undefined;
+  /**
+   * total price for the message
+   * @member {String} total_price
+   */
+  exports.prototype['total_price'] = undefined;
 
 
 

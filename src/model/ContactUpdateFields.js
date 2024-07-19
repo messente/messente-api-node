@@ -36,7 +36,7 @@
   /**
    * The ContactUpdateFields model module.
    * @module model/ContactUpdateFields
-   * @version 2.0.0
+   * @version 2.1.0
    */
 
   /**
