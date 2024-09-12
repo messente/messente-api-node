@@ -8,43 +8,44 @@ Method | HTTP request | Description
 [**sendOmnimessage**](OmnimessageApi.md#sendOmnimessage) | **POST** /omnimessage | Sends an Omnimessage
 
 
-<a name="cancelScheduledMessage"></a>
-# **cancelScheduledMessage**
-> EmptyObject cancelScheduledMessage(omnimessageId)
+
+## cancelScheduledMessage
+
+> Object cancelScheduledMessage(omnimessage_id)
 
 Cancels a scheduled Omnimessage
 
 ### Example
-```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
 
+```javascript
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.OmnimessageApi();
-var omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled omnimessage to be cancelled
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.OmnimessageApi();
+let omnimessage_id = "omnimessage_id_example"; // String | UUID of the scheduled omnimessage to be cancelled
+apiInstance.cancelScheduledMessage(omnimessage_id, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.cancelScheduledMessage(omnimessageId, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **omnimessageId** | **String**| UUID of the scheduled omnimessage to be cancelled | 
+ **omnimessage_id** | **String**| UUID of the scheduled omnimessage to be cancelled | 
 
 ### Return type
 
-[**EmptyObject**](EmptyObject.md)
+**Object**
 
 ### Authorization
 
@@ -52,38 +53,39 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="sendOmnimessage"></a>
-# **sendOmnimessage**
+
+## sendOmnimessage
+
 > OmniMessageCreateSuccessResponse sendOmnimessage(omnimessage)
 
 Sends an Omnimessage
 
 ### Example
-```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
 
+```javascript
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.OmnimessageApi();
-var omnimessage = new MessenteApi.Omnimessage(); // Omnimessage | Omnimessage to be sent
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.OmnimessageApi();
+let omnimessage = new MessenteApi.Omnimessage(); // Omnimessage | Omnimessage to be sent
+apiInstance.sendOmnimessage(omnimessage, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.sendOmnimessage(omnimessage, callback);
+});
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -99,6 +101,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

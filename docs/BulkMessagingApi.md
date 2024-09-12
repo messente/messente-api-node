@@ -7,39 +7,40 @@ Method | HTTP request | Description
 [**sendBulkOmnimessage**](BulkMessagingApi.md#sendBulkOmnimessage) | **POST** /omnimessages | Sends a bulk Omnimessage
 
 
-<a name="sendBulkOmnimessage"></a>
-# **sendBulkOmnimessage**
-> BulkOmniMessageCreateSuccessResponse sendBulkOmnimessage(bulkOmnimessage)
+
+## sendBulkOmnimessage
+
+> BulkOmniMessageCreateSuccessResponse sendBulkOmnimessage(bulk_omnimessage)
 
 Sends a bulk Omnimessage
 
 ### Example
-```javascript
-var MessenteApi = require('messente_api');
-var defaultClient = MessenteApi.ApiClient.instance;
 
+```javascript
+import MessenteApi from 'messente_api';
+let defaultClient = MessenteApi.ApiClient.instance;
 // Configure HTTP basic authorization: basicAuth
-var basicAuth = defaultClient.authentications['basicAuth'];
+let basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-var apiInstance = new MessenteApi.BulkMessagingApi();
-var bulkOmnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
-var callback = function(error, data, response) {
+let apiInstance = new MessenteApi.BulkMessagingApi();
+let bulk_omnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
+apiInstance.sendBulkOmnimessage(bulk_omnimessage, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-apiInstance.sendBulkOmnimessage(bulkOmnimessage, callback);
+});
 ```
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bulkOmnimessage** | [**BulkOmnimessage**](BulkOmnimessage.md)| Bulk Omnimessage to be sent | 
+ **bulk_omnimessage** | [**BulkOmnimessage**](BulkOmnimessage.md)| Bulk Omnimessage to be sent | 
 
 ### Return type
 
@@ -51,6 +52,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

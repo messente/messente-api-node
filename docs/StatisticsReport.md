@@ -1,10 +1,11 @@
 # MessenteApi.StatisticsReport
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**totalMessages** | **Number** | Sum of all messages | 
-**totalPrice** | **String** | Price for all messages | 
+**total_messages** | **Number** | Sum of all messages | 
+**total_price** | **String** | Price for all messages | 
 **country** | **String** | Target country of all messages | 
 
 
