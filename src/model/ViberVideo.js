@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import WhatsAppParameter from './WhatsAppParameter';
 
 /**
  * The ViberVideo model module.
@@ -27,7 +26,7 @@ class ViberVideo {
      * @param url {String} URL pointing to the video resource.
      * @param thumbnail {String} URL pointing to the video thumbnail resource.
      * @param file_size {Number} Size of the video file in bytes. Cannot be larger than 200MB.
-     * @param duration {Array.<module:model/WhatsAppParameter>} Duration of the video in seconds. Cannot be longer than 600 seconds.
+     * @param duration {Number} Duration of the video in seconds. Cannot be longer than 600 seconds.
      */
     constructor(url, thumbnail, file_size, duration) { 
         
@@ -67,7 +66,7 @@ class ViberVideo {
                 obj['file_size'] = ApiClient.convertToType(data['file_size'], 'Number');
             }
             if (data.hasOwnProperty('duration')) {
-                obj['duration'] = ApiClient.convertToType(data['duration'], [WhatsAppParameter]);
+                obj['duration'] = ApiClient.convertToType(data['duration'], 'Number');
             }
         }
         return obj;
@@ -92,16 +91,6 @@ class ViberVideo {
         // ensure the json data is a string
         if (data['thumbnail'] && !(typeof data['thumbnail'] === 'string' || data['thumbnail'] instanceof String)) {
             throw new Error("Expected the field `thumbnail` to be a primitive type in the JSON string but got " + data['thumbnail']);
-        }
-        if (data['duration']) { // data not null
-            // ensure the json data is an array
-            if (!Array.isArray(data['duration'])) {
-                throw new Error("Expected the field `duration` to be an array in the JSON data but got " + data['duration']);
-            }
-            // validate the optional field `duration` (array)
-            for (const item of data['duration']) {
-                WhatsAppParameter.validateJSON(item);
-            };
         }
 
         return true;
@@ -132,7 +121,7 @@ ViberVideo.prototype['file_size'] = undefined;
 
 /**
  * Duration of the video in seconds. Cannot be longer than 600 seconds.
- * @member {Array.<module:model/WhatsAppParameter>} duration
+ * @member {Number} duration
  */
 ViberVideo.prototype['duration'] = undefined;
 
