@@ -1,7 +1,6 @@
 # MessenteApi.PriceInfo
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **part_price** | **String** | price per message part - relevant mostly for SMS | 

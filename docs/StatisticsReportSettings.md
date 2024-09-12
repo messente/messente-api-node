@@ -1,7 +1,6 @@
 # MessenteApi.StatisticsReportSettings
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **start_date** | **Date** | Start date for the report | 

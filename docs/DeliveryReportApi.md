@@ -7,36 +7,35 @@ Method | HTTP request | Description
 [**retrieveDeliveryReport**](DeliveryReportApi.md#retrieveDeliveryReport) | **GET** /omnimessage/{omnimessageId}/status | Retrieves the delivery report for the Omnimessage
 
 
-
-## retrieveDeliveryReport
-
+<a name="retrieveDeliveryReport"></a>
+# **retrieveDeliveryReport**
 > DeliveryReportResponse retrieveDeliveryReport(omnimessage_id)
 
 Retrieves the delivery report for the Omnimessage
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.DeliveryReportApi();
-let omnimessage_id = "omnimessage_id_example"; // String | UUID of the omnimessage to for which the delivery report is to be retrieved
-apiInstance.retrieveDeliveryReport(omnimessage_id, (error, data, response) => {
+var apiInstance = new MessenteApi.DeliveryReportApi();
+var omnimessage_id = "omnimessage_id_example"; // String | UUID of the omnimessage to for which the delivery report is to be retrieved
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.retrieveDeliveryReport(omnimessage_id, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -52,6 +51,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 

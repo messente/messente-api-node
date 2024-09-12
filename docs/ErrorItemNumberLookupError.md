@@ -1,7 +1,6 @@
 # MessenteApi.ErrorItemNumberLookupError
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **String** | Error description | 

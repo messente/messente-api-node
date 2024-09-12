@@ -7,36 +7,35 @@ Method | HTTP request | Description
 [**sendBulkOmnimessage**](BulkMessagingApi.md#sendBulkOmnimessage) | **POST** /omnimessages | Sends a bulk Omnimessage
 
 
-
-## sendBulkOmnimessage
-
+<a name="sendBulkOmnimessage"></a>
+# **sendBulkOmnimessage**
 > BulkOmniMessageCreateSuccessResponse sendBulkOmnimessage(bulk_omnimessage)
 
 Sends a bulk Omnimessage
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.BulkMessagingApi();
-let bulk_omnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
-apiInstance.sendBulkOmnimessage(bulk_omnimessage, (error, data, response) => {
+var apiInstance = new MessenteApi.BulkMessagingApi();
+var bulk_omnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.sendBulkOmnimessage(bulk_omnimessage, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -52,6 +51,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 

@@ -1,7 +1,6 @@
 # MessenteApi.WhatsAppCurrency
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fallback_value** | **String** | Default text if localization fails. | 

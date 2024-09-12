@@ -10,36 +10,35 @@ Method | HTTP request | Description
 [**isBlacklisted**](BlacklistApi.md#isBlacklisted) | **GET** /phonebook/blacklist/{phone} | Checks if a phone number is blacklisted
 
 
-
-## addToBlacklist
-
+<a name="addToBlacklist"></a>
+# **addToBlacklist**
 > addToBlacklist(number_to_blacklist)
 
 Adds a phone number to the blacklist
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.BlacklistApi();
-let number_to_blacklist = {"phoneNumber":"+37251000000"}; // NumberToBlacklist | Phone number to be blacklisted
-apiInstance.addToBlacklist(number_to_blacklist, (error, data, response) => {
+var apiInstance = new MessenteApi.BlacklistApi();
+var number_to_blacklist = {"phoneNumber":"+37251000000"}; // NumberToBlacklist | Phone number to be blacklisted
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.addToBlacklist(number_to_blacklist, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,39 +54,38 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
-
-## deleteFromBlacklist
-
+<a name="deleteFromBlacklist"></a>
+# **deleteFromBlacklist**
 > deleteFromBlacklist(phone)
 
 Deletes a phone number from the blacklist
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.BlacklistApi();
-let phone = "+37251000000"; // String | A phone number
-apiInstance.deleteFromBlacklist(phone, (error, data, response) => {
+var apiInstance = new MessenteApi.BlacklistApi();
+var phone = +37251000000; // String | A phone number
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.deleteFromBlacklist(phone, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -103,38 +101,37 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
-
-## fetchBlacklist
-
+<a name="fetchBlacklist"></a>
+# **fetchBlacklist**
 > FetchBlacklistSuccess fetchBlacklist()
 
 Returns all blacklisted phone numbers
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.BlacklistApi();
-apiInstance.fetchBlacklist((error, data, response) => {
+var apiInstance = new MessenteApi.BlacklistApi();
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.fetchBlacklist(callback);
 ```
 
 ### Parameters
-
 This endpoint does not need any parameter.
 
 ### Return type
@@ -147,39 +144,38 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
-
-## isBlacklisted
-
+<a name="isBlacklisted"></a>
+# **isBlacklisted**
 > isBlacklisted(phone)
 
 Checks if a phone number is blacklisted
 
 ### Example
-
 ```javascript
-import MessenteApi from 'messente_api';
-let defaultClient = MessenteApi.ApiClient.instance;
+var MessenteApi = require('messente_api');
+var defaultClient = MessenteApi.ApiClient.instance;
+
 // Configure HTTP basic authorization: basicAuth
-let basicAuth = defaultClient.authentications['basicAuth'];
+var basicAuth = defaultClient.authentications['basicAuth'];
 basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
-let apiInstance = new MessenteApi.BlacklistApi();
-let phone = "+37251000000"; // String | A phone number
-apiInstance.isBlacklisted(phone, (error, data, response) => {
+var apiInstance = new MessenteApi.BlacklistApi();
+var phone = +37251000000; // String | A phone number
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.isBlacklisted(phone, callback);
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -195,6 +191,6 @@ null (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 

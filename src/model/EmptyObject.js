@@ -26,62 +26,46 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.ErrorTitleOmnichannel = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.EmptyObject = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
-  /**
-   * Enum class ErrorTitleOmnichannel.
-   * @enum {}
-   * @readonly
-   */
-  var exports = {
-    /**
-     * value: "Not found"
-     * @const
-     */
-    "Not found": "Not found",
-    /**
-     * value: "Forbidden"
-     * @const
-     */
-    "Forbidden": "Forbidden",
-    /**
-     * value: "Unauthorized"
-     * @const
-     */
-    "Unauthorized": "Unauthorized",
-    /**
-     * value: "Invalid data"
-     * @const
-     */
-    "Invalid data": "Invalid data",
-    /**
-     * value: "Internal Server Error"
-     * @const
-     */
-    "Internal Server Error": "Internal Server Error",
-    /**
-     * value: "Missing data"
-     * @const
-     */
-    "Missing data": "Missing data",
-    /**
-     * value: "Method not allowed"
-     * @const
-     */
-    "Method not allowed": "Method not allowed"  };
 
   /**
-   * Returns a <code>ErrorTitleOmnichannel</code> enum value from a Javascript object name.
-   * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/ErrorTitleOmnichannel} The enum <code>ErrorTitleOmnichannel</code> value.
+   * The EmptyObject model module.
+   * @module model/EmptyObject
+   * @version 2.1.0
    */
-  exports.constructFromObject = function(object) {
-    return object;
+
+  /**
+   * Constructs a new <code>EmptyObject</code>.
+   * An object containing no properties
+   * @alias module:model/EmptyObject
+   * @class
+   */
+  var exports = function() {
+    var _this = this;
+
+  };
+
+  /**
+   * Constructs a <code>EmptyObject</code> from a plain JavaScript object, optionally creating a new instance.
+   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+   * @param {Object} data The plain JavaScript object bearing properties of interest.
+   * @param {module:model/EmptyObject} obj Optional instance to populate.
+   * @return {module:model/EmptyObject} The populated <code>EmptyObject</code> instance.
+   */
+  exports.constructFromObject = function(data, obj) {
+    if (data) {
+      obj = obj || new exports();
+    }
+    return obj;
   }
+
+
+
 
   return exports;
 }));

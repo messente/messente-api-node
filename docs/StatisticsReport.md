@@ -1,7 +1,6 @@
 # MessenteApi.StatisticsReport
 
 ## Properties
-
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **total_messages** | **Number** | Sum of all messages | 
