@@ -17,7 +17,7 @@ import WhatsAppParameter from './WhatsAppParameter';
 /**
  * The ViberVideo model module.
  * @module model/ViberVideo
- * @version 2.1.0
+ * @version 2.2.0
  */
 class ViberVideo {
     /**

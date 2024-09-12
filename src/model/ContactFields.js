@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ContactFields model module.
  * @module model/ContactFields
- * @version 2.1.0
+ * @version 2.2.0
  */
 class ContactFields {
     /**

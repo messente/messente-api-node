@@ -17,7 +17,7 @@ import StatisticsReport from './StatisticsReport';
 /**
  * The StatisticsReportSuccess model module.
  * @module model/StatisticsReportSuccess
- * @version 2.1.0
+ * @version 2.2.0
  */
 class StatisticsReportSuccess {
     /**

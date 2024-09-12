@@ -22,7 +22,7 @@ import WhatsAppTemplate from './WhatsAppTemplate';
 /**
  * The OmnimessageMessagesInner model module.
  * @module model/OmnimessageMessagesInner
- * @version 2.1.0
+ * @version 2.2.0
  */
 class OmnimessageMessagesInner {
     /**

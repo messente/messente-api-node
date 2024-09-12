@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MobileNetwork model module.
  * @module model/MobileNetwork
- * @version 2.1.0
+ * @version 2.2.0
  */
 class MobileNetwork {
     /**

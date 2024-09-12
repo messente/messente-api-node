@@ -17,7 +17,7 @@ import ErrorItemNumberLookupError from './ErrorItemNumberLookupError';
 /**
  * The ErrorItemNumberLookup model module.
  * @module model/ErrorItemNumberLookup
- * @version 2.1.0
+ * @version 2.2.0
  */
 class ErrorItemNumberLookup {
     /**

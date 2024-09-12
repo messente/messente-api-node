@@ -111,7 +111,7 @@ import StatisticsApi from './api/StatisticsApi';
 * </pre>
 * </p>
 * @module index
-* @version 2.1.0
+* @version 2.2.0
 */
 export {
     /**

@@ -17,7 +17,7 @@ import WhatsAppTemplate from './WhatsAppTemplate';
 /**
  * The WhatsApp model module.
  * @module model/WhatsApp
- * @version 2.1.0
+ * @version 2.2.0
  */
 class WhatsApp {
     /**

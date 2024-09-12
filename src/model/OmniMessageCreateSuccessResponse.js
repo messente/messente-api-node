@@ -17,7 +17,7 @@ import MessageResult from './MessageResult';
 /**
  * The OmniMessageCreateSuccessResponse model module.
  * @module model/OmniMessageCreateSuccessResponse
- * @version 2.1.0
+ * @version 2.2.0
  */
 class OmniMessageCreateSuccessResponse {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FetchBlacklistSuccess model module.
  * @module model/FetchBlacklistSuccess
- * @version 2.1.0
+ * @version 2.2.0
  */
 class FetchBlacklistSuccess {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The NumberToBlacklist model module.
  * @module model/NumberToBlacklist
- * @version 2.1.0
+ * @version 2.2.0
  */
 class NumberToBlacklist {
     /**

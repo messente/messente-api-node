@@ -20,7 +20,7 @@ import SyncNumberLookupSuccess from '../model/SyncNumberLookupSuccess';
 /**
 * NumberLookup service.
 * @module api/NumberLookupApi
-* @version 2.1.0
+* @version 2.2.0
 */
 export default class NumberLookupApi {
 

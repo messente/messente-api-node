@@ -19,7 +19,7 @@ import ErrorOmnichannel from '../model/ErrorOmnichannel';
 /**
 * DeliveryReport service.
 * @module api/DeliveryReportApi
-* @version 2.1.0
+* @version 2.2.0
 */
 export default class DeliveryReportApi {
 
