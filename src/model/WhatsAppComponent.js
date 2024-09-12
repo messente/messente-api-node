@@ -17,7 +17,7 @@ import WhatsAppParameter from './WhatsAppParameter';
 /**
  * The WhatsAppComponent model module.
  * @module model/WhatsAppComponent
- * @version 2.2.0
+ * @version 2.1.0
  */
 class WhatsAppComponent {
     /**

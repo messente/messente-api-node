@@ -18,7 +18,7 @@ import WhatsAppLanguage from './WhatsAppLanguage';
 /**
  * The WhatsAppTemplate model module.
  * @module model/WhatsAppTemplate
- * @version 2.2.0
+ * @version 2.1.0
  */
 class WhatsAppTemplate {
     /**

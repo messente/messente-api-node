@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WhatsAppDatetime model module.
  * @module model/WhatsAppDatetime
- * @version 2.2.0
+ * @version 2.1.0
  */
 class WhatsAppDatetime {
     /**

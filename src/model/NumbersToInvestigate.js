@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The NumbersToInvestigate model module.
  * @module model/NumbersToInvestigate
- * @version 2.2.0
+ * @version 2.1.0
  */
 class NumbersToInvestigate {
     /**

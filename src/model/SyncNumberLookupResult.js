@@ -17,7 +17,7 @@ import MobileNetwork from './MobileNetwork';
 /**
  * The SyncNumberLookupResult model module.
  * @module model/SyncNumberLookupResult
- * @version 2.2.0
+ * @version 2.1.0
  */
 class SyncNumberLookupResult {
     /**

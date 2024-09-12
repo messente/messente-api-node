@@ -63,7 +63,6 @@ import SyncNumberLookupSuccess from './model/SyncNumberLookupSuccess';
 import Telegram from './model/Telegram';
 import TextStore from './model/TextStore';
 import Viber from './model/Viber';
-import ViberVideo from './model/ViberVideo';
 import WhatsApp from './model/WhatsApp';
 import WhatsAppComponent from './model/WhatsAppComponent';
 import WhatsAppCurrency from './model/WhatsAppCurrency';
@@ -111,7 +110,7 @@ import StatisticsApi from './api/StatisticsApi';
 * </pre>
 * </p>
 * @module index
-* @version 2.2.0
+* @version 2.1.0
 */
 export {
     /**
@@ -419,12 +418,6 @@ export {
      * @property {module:model/Viber}
      */
     Viber,
-
-    /**
-     * The ViberVideo model constructor.
-     * @property {module:model/ViberVideo}
-     */
-    ViberVideo,
 
     /**
      * The WhatsApp model constructor.

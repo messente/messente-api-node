@@ -17,7 +17,7 @@ import BulkOmniMessageCreateSuccessResponseMessagesInner from './BulkOmniMessage
 /**
  * The BulkOmniMessageCreateSuccessResponse model module.
  * @module model/BulkOmniMessageCreateSuccessResponse
- * @version 2.2.0
+ * @version 2.1.0
  */
 class BulkOmniMessageCreateSuccessResponse {
     /**

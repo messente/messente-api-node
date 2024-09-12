@@ -15,14 +15,13 @@ import ApiClient from '../ApiClient';
 import SMS from './SMS';
 import Telegram from './Telegram';
 import Viber from './Viber';
-import ViberVideo from './ViberVideo';
 import WhatsApp from './WhatsApp';
 import WhatsAppTemplate from './WhatsAppTemplate';
 
 /**
  * The OmnimessageMessagesInner model module.
  * @module model/OmnimessageMessagesInner
- * @version 2.2.0
+ * @version 2.1.0
  */
 class OmnimessageMessagesInner {
     /**
@@ -205,11 +204,6 @@ OmnimessageMessagesInner.prototype['button_text'] = undefined;
  * @default 'telegram'
  */
 OmnimessageMessagesInner.prototype['channel'] = 'telegram';
-
-/**
- * @member {module:model/ViberVideo} video
- */
-OmnimessageMessagesInner.prototype['video'] = undefined;
 
 /**
  * Defines how non-GSM characters will be treated:    - \"on\" Use replacement settings from the account's [API Auto Replace settings page](https://dashboard.messente.com/api-settings/auto-replace) (default)   - \"full\" All non GSM 03.38 characters will be replaced with suitable alternatives   - \"off\" Message content is not modified in any way

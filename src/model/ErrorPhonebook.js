@@ -17,7 +17,7 @@ import ErrorItemPhonebook from './ErrorItemPhonebook';
 /**
  * The ErrorPhonebook model module.
  * @module model/ErrorPhonebook
- * @version 2.2.0
+ * @version 2.1.0
  */
 class ErrorPhonebook {
     /**

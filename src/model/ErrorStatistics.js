@@ -17,7 +17,7 @@ import ErrorItemStatistics from './ErrorItemStatistics';
 /**
  * The ErrorStatistics model module.
  * @module model/ErrorStatistics
- * @version 2.2.0
+ * @version 2.1.0
  */
 class ErrorStatistics {
     /**

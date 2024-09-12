@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StatisticsReportSettings model module.
  * @module model/StatisticsReportSettings
- * @version 2.2.0
+ * @version 2.1.0
  */
 class StatisticsReportSettings {
     /**

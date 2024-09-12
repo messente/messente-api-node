@@ -20,7 +20,7 @@ import NumberToBlacklist from '../model/NumberToBlacklist';
 /**
 * Blacklist service.
 * @module api/BlacklistApi
-* @version 2.2.0
+* @version 2.1.0
 */
 export default class BlacklistApi {
 

@@ -17,7 +17,7 @@ import GroupResponseFields from './GroupResponseFields';
 /**
  * The GroupListEnvelope model module.
  * @module model/GroupListEnvelope
- * @version 2.2.0
+ * @version 2.1.0
  */
 class GroupListEnvelope {
     /**

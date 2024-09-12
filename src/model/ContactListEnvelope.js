@@ -17,7 +17,7 @@ import ContactResponseFields from './ContactResponseFields';
 /**
  * The ContactListEnvelope model module.
  * @module model/ContactListEnvelope
- * @version 2.2.0
+ * @version 2.1.0
  */
 class ContactListEnvelope {
     /**
