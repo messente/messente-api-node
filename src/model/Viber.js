@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ViberVideo from './ViberVideo';
 
 /**
  * The Viber model module.
@@ -72,6 +73,9 @@ class Viber {
             if (data.hasOwnProperty('channel')) {
                 obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
             }
+            if (data.hasOwnProperty('video')) {
+                obj['video'] = ViberVideo.constructFromObject(data['video']);
+            }
         }
         return obj;
     }
@@ -105,6 +109,10 @@ class Viber {
         // ensure the json data is a string
         if (data['channel'] && !(typeof data['channel'] === 'string' || data['channel'] instanceof String)) {
             throw new Error("Expected the field `channel` to be a primitive type in the JSON string but got " + data['channel']);
+        }
+        // validate the optional field `video`
+        if (data['video']) { // data not null
+          ViberVideo.validateJSON(data['video']);
         }
 
         return true;
@@ -163,6 +171,11 @@ Viber.prototype['button_text'] = undefined;
  * @default 'viber'
  */
 Viber.prototype['channel'] = 'viber';
+
+/**
+ * @member {module:model/ViberVideo} video
+ */
+Viber.prototype['video'] = undefined;
 
 
 

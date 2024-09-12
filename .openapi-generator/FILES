@@ -61,6 +61,7 @@ docs/SyncNumberLookupSuccess.md
 docs/Telegram.md
 docs/TextStore.md
 docs/Viber.md
+docs/ViberVideo.md
 docs/WhatsApp.md
 docs/WhatsAppComponent.md
 docs/WhatsAppCurrency.md
@@ -132,6 +133,7 @@ src/model/SyncNumberLookupSuccess.js
 src/model/Telegram.js
 src/model/TextStore.js
 src/model/Viber.js
+src/model/ViberVideo.js
 src/model/WhatsApp.js
 src/model/WhatsAppComponent.js
 src/model/WhatsAppCurrency.js
