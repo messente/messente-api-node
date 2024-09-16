@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**phoneNumbers** | **[String]** | Array of unique phone numbers | [optional] 
+**phone_numbers** | **[String]** | Array of unique phone numbers | [optional] 
 
 

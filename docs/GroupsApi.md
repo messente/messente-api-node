@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="createGroup"></a>
 # **createGroup**
-> GroupEnvelope createGroup(groupName)
+> GroupEnvelope createGroup(group_name)
 
 Creates a new group with the provided name
 
@@ -28,7 +28,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupName = {"name":"Any group name"}; // GroupName | 
+var group_name = {"name":"Any group name"}; // GroupName | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -36,14 +36,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.createGroup(groupName, callback);
+apiInstance.createGroup(group_name, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupName** | [**GroupName**](GroupName.md)|  | 
+ **group_name** | [**GroupName**](GroupName.md)|  | 
 
 ### Return type
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteGroup"></a>
 # **deleteGroup**
-> deleteGroup(groupId)
+> deleteGroup(group_id)
 
 Deletes a group
 
@@ -75,7 +75,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var group_id = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -83,14 +83,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.deleteGroup(groupId, callback);
+apiInstance.deleteGroup(group_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in UUID format | 
+ **group_id** | **String**| String in UUID format | 
 
 ### Return type
 
@@ -107,7 +107,7 @@ null (empty response body)
 
 <a name="fetchGroup"></a>
 # **fetchGroup**
-> GroupEnvelope fetchGroup(groupId)
+> GroupEnvelope fetchGroup(group_id)
 
 Lists a group
 
@@ -122,7 +122,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var group_id = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -130,14 +130,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.fetchGroup(groupId, callback);
+apiInstance.fetchGroup(group_id, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in UUID format | 
+ **group_id** | **String**| String in UUID format | 
 
 ### Return type
 
@@ -197,7 +197,7 @@ This endpoint does not need any parameter.
 
 <a name="updateGroup"></a>
 # **updateGroup**
-> GroupEnvelope updateGroup(groupId, groupName)
+> GroupEnvelope updateGroup(group_id, group_name)
 
 Updates a group with the provided name
 
@@ -212,8 +212,8 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.GroupsApi();
-var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
-var groupName = {"name":"Any group name"}; // GroupName | 
+var group_id = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var group_name = {"name":"Any group name"}; // GroupName | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -221,15 +221,15 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateGroup(groupId, groupName, callback);
+apiInstance.updateGroup(group_id, group_name, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **groupId** | **String**| String in UUID format | 
- **groupName** | [**GroupName**](GroupName.md)|  | 
+ **group_id** | **String**| String in UUID format | 
+ **group_name** | [**GroupName**](GroupName.md)|  | 
 
 ### Return type
 

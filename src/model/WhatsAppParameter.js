@@ -36,7 +36,7 @@
   /**
    * The WhatsAppParameter model module.
    * @module model/WhatsAppParameter
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**

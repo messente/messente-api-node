@@ -36,7 +36,7 @@
   /**
    * The GroupResponseFields model module.
    * @module model/GroupResponseFields
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -46,14 +46,14 @@
    * @class
    * @param id {String} Id string in UUID format
    * @param name {String} The name of the group
-   * @param contactsCount {Number} The count of contacts in the group
+   * @param contacts_count {Number} The count of contacts in the group
    */
-  var exports = function(id, name, contactsCount) {
+  var exports = function(id, name, contacts_count) {
     var _this = this;
 
     _this['id'] = id;
     _this['name'] = name;
-    _this['contactsCount'] = contactsCount;
+    _this['contactsCount'] = contacts_count;
   };
 
   /**

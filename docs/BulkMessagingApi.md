@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="sendBulkOmnimessage"></a>
 # **sendBulkOmnimessage**
-> BulkOmniMessageCreateSuccessResponse sendBulkOmnimessage(bulkOmnimessage)
+> BulkOmniMessageCreateSuccessResponse sendBulkOmnimessage(bulk_omnimessage)
 
 Sends a bulk Omnimessage
 
@@ -24,7 +24,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.BulkMessagingApi();
-var bulkOmnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
+var bulk_omnimessage = new MessenteApi.BulkOmnimessage(); // BulkOmnimessage | Bulk Omnimessage to be sent
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -32,14 +32,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.sendBulkOmnimessage(bulkOmnimessage, callback);
+apiInstance.sendBulkOmnimessage(bulk_omnimessage, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bulkOmnimessage** | [**BulkOmnimessage**](BulkOmnimessage.md)| Bulk Omnimessage to be sent | 
+ **bulk_omnimessage** | [**BulkOmnimessage**](BulkOmnimessage.md)| Bulk Omnimessage to be sent | 
 
 ### Return type
 

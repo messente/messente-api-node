@@ -34,7 +34,7 @@
   /**
    * NumberLookup service.
    * @module api/NumberLookupApi
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -58,16 +58,16 @@
 
     /**
      * Requests info about phone numbers
-     * @param {module:model/NumbersToInvestigate} numbersToInvestigate Numbers for lookup
+     * @param {module:model/NumbersToInvestigate} numbers_to_investigate Numbers for lookup
      * @param {module:api/NumberLookupApi~fetchInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/SyncNumberLookupSuccess}
      */
-    this.fetchInfo = function(numbersToInvestigate, callback) {
-      var postBody = numbersToInvestigate;
+    this.fetchInfo = function(numbers_to_investigate, callback) {
+      var postBody = numbers_to_investigate;
 
-      // verify the required parameter 'numbersToInvestigate' is set
-      if (numbersToInvestigate === undefined || numbersToInvestigate === null) {
-        throw new Error("Missing the required parameter 'numbersToInvestigate' when calling fetchInfo");
+      // verify the required parameter 'numbers_to_investigate' is set
+      if (numbers_to_investigate === undefined || numbers_to_investigate === null) {
+        throw new Error("Missing the required parameter 'numbers_to_investigate' when calling fetchInfo");
       }
 
 

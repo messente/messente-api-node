@@ -34,7 +34,7 @@
   /**
    * Statistics service.
    * @module api/StatisticsApi
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -58,16 +58,16 @@
 
     /**
      * Requests statistics reports for each country
-     * @param {module:model/StatisticsReportSettings} statisticsReportSettings Settings for statistics report
+     * @param {module:model/StatisticsReportSettings} statistics_report_settings Settings for statistics report
      * @param {module:api/StatisticsApi~createStatisticsReportCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/StatisticsReportSuccess}
      */
-    this.createStatisticsReport = function(statisticsReportSettings, callback) {
-      var postBody = statisticsReportSettings;
+    this.createStatisticsReport = function(statistics_report_settings, callback) {
+      var postBody = statistics_report_settings;
 
-      // verify the required parameter 'statisticsReportSettings' is set
-      if (statisticsReportSettings === undefined || statisticsReportSettings === null) {
-        throw new Error("Missing the required parameter 'statisticsReportSettings' when calling createStatisticsReport");
+      // verify the required parameter 'statistics_report_settings' is set
+      if (statistics_report_settings === undefined || statistics_report_settings === null) {
+        throw new Error("Missing the required parameter 'statistics_report_settings' when calling createStatisticsReport");
       }
 
 

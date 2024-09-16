@@ -34,7 +34,7 @@
   /**
    * DeliveryReport service.
    * @module api/DeliveryReportApi
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -58,21 +58,21 @@
 
     /**
      * Retrieves the delivery report for the Omnimessage
-     * @param {String} omnimessageId UUID of the omnimessage to for which the delivery report is to be retrieved
+     * @param {String} omnimessage_id UUID of the omnimessage to for which the delivery report is to be retrieved
      * @param {module:api/DeliveryReportApi~retrieveDeliveryReportCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/DeliveryReportResponse}
      */
-    this.retrieveDeliveryReport = function(omnimessageId, callback) {
+    this.retrieveDeliveryReport = function(omnimessage_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'omnimessageId' is set
-      if (omnimessageId === undefined || omnimessageId === null) {
-        throw new Error("Missing the required parameter 'omnimessageId' when calling retrieveDeliveryReport");
+      // verify the required parameter 'omnimessage_id' is set
+      if (omnimessage_id === undefined || omnimessage_id === null) {
+        throw new Error("Missing the required parameter 'omnimessage_id' when calling retrieveDeliveryReport");
       }
 
 
       var pathParams = {
-        'omnimessageId': omnimessageId
+        'omnimessageId': omnimessage_id
       };
       var queryParams = {
       };

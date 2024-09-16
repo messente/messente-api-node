@@ -3,6 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fallbackValue** | **String** | Default text. | 
+**fallback_value** | **String** | Default text. | 
 
 

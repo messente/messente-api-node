@@ -34,7 +34,7 @@
   /**
    * Blacklist service.
    * @module api/BlacklistApi
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -58,15 +58,15 @@
 
     /**
      * Adds a phone number to the blacklist
-     * @param {module:model/NumberToBlacklist} numberToBlacklist Phone number to be blacklisted
+     * @param {module:model/NumberToBlacklist} number_to_blacklist Phone number to be blacklisted
      * @param {module:api/BlacklistApi~addToBlacklistCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.addToBlacklist = function(numberToBlacklist, callback) {
-      var postBody = numberToBlacklist;
+    this.addToBlacklist = function(number_to_blacklist, callback) {
+      var postBody = number_to_blacklist;
 
-      // verify the required parameter 'numberToBlacklist' is set
-      if (numberToBlacklist === undefined || numberToBlacklist === null) {
-        throw new Error("Missing the required parameter 'numberToBlacklist' when calling addToBlacklist");
+      // verify the required parameter 'number_to_blacklist' is set
+      if (number_to_blacklist === undefined || number_to_blacklist === null) {
+        throw new Error("Missing the required parameter 'number_to_blacklist' when calling addToBlacklist");
       }
 
 

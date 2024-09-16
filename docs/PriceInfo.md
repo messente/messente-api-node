@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**partPrice** | **String** | price per message part - relevant mostly for SMS | 
-**partsCount** | **Number** | the number of parts the message consists of | 
-**totalPrice** | **String** | total price for the message | 
+**part_price** | **String** | price per message part - relevant mostly for SMS | 
+**parts_count** | **Number** | the number of parts the message consists of | 
+**total_price** | **String** | total price for the message | 
 
 

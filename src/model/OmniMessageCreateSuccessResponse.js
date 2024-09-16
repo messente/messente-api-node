@@ -36,7 +36,7 @@
   /**
    * The OmniMessageCreateSuccessResponse model module.
    * @module model/OmniMessageCreateSuccessResponse
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -46,14 +46,14 @@
    * @class
    * @param messages {Array.<module:model/MessageResult>} List of messages that compose the omnimessage
    * @param to {String} Phone number in e.164 format
-   * @param omnimessageId {String} Unique identifier for the omnimessage
+   * @param omnimessage_id {String} Unique identifier for the omnimessage
    */
-  var exports = function(messages, to, omnimessageId) {
+  var exports = function(messages, to, omnimessage_id) {
     var _this = this;
 
     _this['messages'] = messages;
     _this['to'] = to;
-    _this['omnimessage_id'] = omnimessageId;
+    _this['omnimessage_id'] = omnimessage_id;
   };
 
   /**

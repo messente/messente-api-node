@@ -36,7 +36,7 @@
   /**
    * The MessageResult model module.
    * @module model/MessageResult
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -44,14 +44,14 @@
    * A message part of an omnimessage
    * @alias module:model/MessageResult
    * @class
-   * @param messageId {String} Unique identifier for the message
+   * @param message_id {String} Unique identifier for the message
    * @param channel {module:model/Channel} 
    * @param sender {String} Sender that was used for the message
    */
-  var exports = function(messageId, channel, sender) {
+  var exports = function(message_id, channel, sender) {
     var _this = this;
 
-    _this['message_id'] = messageId;
+    _this['message_id'] = message_id;
     _this['channel'] = channel;
     _this['sender'] = sender;
   };

@@ -36,7 +36,7 @@
   /**
    * The StatisticsReport model module.
    * @module model/StatisticsReport
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -44,15 +44,15 @@
    * Report for one country
    * @alias module:model/StatisticsReport
    * @class
-   * @param totalMessages {Number} Sum of all messages
-   * @param totalPrice {String} Price for all messages
+   * @param total_messages {Number} Sum of all messages
+   * @param total_price {String} Price for all messages
    * @param country {String} Target country of all messages
    */
-  var exports = function(totalMessages, totalPrice, country) {
+  var exports = function(total_messages, total_price, country) {
     var _this = this;
 
-    _this['total_messages'] = totalMessages;
-    _this['total_price'] = totalPrice;
+    _this['total_messages'] = total_messages;
+    _this['total_price'] = total_price;
     _this['country'] = country;
   };
 

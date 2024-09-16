@@ -36,7 +36,7 @@
   /**
    * The DeliveryReportResponse model module.
    * @module model/DeliveryReportResponse
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -46,14 +46,14 @@
    * @class
    * @param statuses {Array.<module:model/DeliveryResult>} Contains the delivery reports for each channel, ordered by send order
    * @param to {String} Phone number in e.164 format
-   * @param omnimessageId {String} Unique identifier for the omnimessage
+   * @param omnimessage_id {String} Unique identifier for the omnimessage
    */
-  var exports = function(statuses, to, omnimessageId) {
+  var exports = function(statuses, to, omnimessage_id) {
     var _this = this;
 
     _this['statuses'] = statuses;
     _this['to'] = to;
-    _this['omnimessage_id'] = omnimessageId;
+    _this['omnimessage_id'] = omnimessage_id;
   };
 
   /**

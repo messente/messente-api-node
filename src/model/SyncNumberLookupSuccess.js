@@ -36,7 +36,7 @@
   /**
    * The SyncNumberLookupSuccess model module.
    * @module model/SyncNumberLookupSuccess
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -44,13 +44,13 @@
    * A container for number lookup response
    * @alias module:model/SyncNumberLookupSuccess
    * @class
-   * @param requestId {String} ID of the request
+   * @param request_id {String} ID of the request
    * @param result {Array.<module:model/SyncNumberLookupResult>} A container for phone number info objects
    */
-  var exports = function(requestId, result) {
+  var exports = function(request_id, result) {
     var _this = this;
 
-    _this['request_id'] = requestId;
+    _this['request_id'] = request_id;
     _this['result'] = result;
   };
 

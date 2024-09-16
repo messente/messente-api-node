@@ -36,7 +36,7 @@
   /**
    * The PriceInfo model module.
    * @module model/PriceInfo
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -44,16 +44,16 @@
    * Contains price information for the message. This value is *null* if the message is still being processed
    * @alias module:model/PriceInfo
    * @class
-   * @param partPrice {String} price per message part - relevant mostly for SMS
-   * @param partsCount {Number} the number of parts the message consists of
-   * @param totalPrice {String} total price for the message
+   * @param part_price {String} price per message part - relevant mostly for SMS
+   * @param parts_count {Number} the number of parts the message consists of
+   * @param total_price {String} total price for the message
    */
-  var exports = function(partPrice, partsCount, totalPrice) {
+  var exports = function(part_price, parts_count, total_price) {
     var _this = this;
 
-    _this['part_price'] = partPrice;
-    _this['parts_count'] = partsCount;
-    _this['total_price'] = totalPrice;
+    _this['part_price'] = part_price;
+    _this['parts_count'] = parts_count;
+    _this['total_price'] = total_price;
   };
 
   /**

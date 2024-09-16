@@ -34,7 +34,7 @@
   /**
    * BulkMessaging service.
    * @module api/BulkMessagingApi
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -58,16 +58,16 @@
 
     /**
      * Sends a bulk Omnimessage
-     * @param {module:model/BulkOmnimessage} bulkOmnimessage Bulk Omnimessage to be sent
+     * @param {module:model/BulkOmnimessage} bulk_omnimessage Bulk Omnimessage to be sent
      * @param {module:api/BulkMessagingApi~sendBulkOmnimessageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/BulkOmniMessageCreateSuccessResponse}
      */
-    this.sendBulkOmnimessage = function(bulkOmnimessage, callback) {
-      var postBody = bulkOmnimessage;
+    this.sendBulkOmnimessage = function(bulk_omnimessage, callback) {
+      var postBody = bulk_omnimessage;
 
-      // verify the required parameter 'bulkOmnimessage' is set
-      if (bulkOmnimessage === undefined || bulkOmnimessage === null) {
-        throw new Error("Missing the required parameter 'bulkOmnimessage' when calling sendBulkOmnimessage");
+      // verify the required parameter 'bulk_omnimessage' is set
+      if (bulk_omnimessage === undefined || bulk_omnimessage === null) {
+        throw new Error("Missing the required parameter 'bulk_omnimessage' when calling sendBulkOmnimessage");
       }
 
 

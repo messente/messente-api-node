@@ -36,7 +36,7 @@
   /**
    * The WhatsAppCurrency model module.
    * @module model/WhatsAppCurrency
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -44,16 +44,16 @@
    * Whatsapp currency object.
    * @alias module:model/WhatsAppCurrency
    * @class
-   * @param fallbackValue {String} Default text if localization fails.
+   * @param fallback_value {String} Default text if localization fails.
    * @param code {String} Currency code as defined in ISO 4217.
-   * @param amount1000 {String} Amount multiplied by 1000.
+   * @param amount_1000 {String} Amount multiplied by 1000.
    */
-  var exports = function(fallbackValue, code, amount1000) {
+  var exports = function(fallback_value, code, amount_1000) {
     var _this = this;
 
-    _this['fallback_value'] = fallbackValue;
+    _this['fallback_value'] = fallback_value;
     _this['code'] = code;
-    _this['amount_1000'] = amount1000;
+    _this['amount_1000'] = amount_1000;
   };
 
   /**

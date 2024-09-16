@@ -36,7 +36,7 @@
   /**
    * The WhatsAppDatetime model module.
    * @module model/WhatsAppDatetime
-   * @version 2.1.0
+   * @version 2.2.0
    */
 
   /**
@@ -44,12 +44,12 @@
    * Whatsapp datetime object.
    * @alias module:model/WhatsAppDatetime
    * @class
-   * @param fallbackValue {String} Default text.
+   * @param fallback_value {String} Default text.
    */
-  var exports = function(fallbackValue) {
+  var exports = function(fallback_value) {
     var _this = this;
 
-    _this['fallback_value'] = fallbackValue;
+    _this['fallback_value'] = fallback_value;
   };
 
   /**
