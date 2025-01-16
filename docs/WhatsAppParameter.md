@@ -10,5 +10,7 @@ Name | Type | Description | Notes
 **image** | [**WhatsAppMedia**](WhatsAppMedia.md) |  | [optional] 
 **document** | [**WhatsAppMedia**](WhatsAppMedia.md) |  | [optional] 
 **video** | [**WhatsAppMedia**](WhatsAppMedia.md) |  | [optional] 
+**coupon_code** | **String** | A coupon code. | [optional] 
+**payload** | **String** | A payload. | [optional] 
 
 

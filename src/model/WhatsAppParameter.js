@@ -83,6 +83,12 @@
       if (data.hasOwnProperty('video')) {
         obj['video'] = WhatsAppMedia.constructFromObject(data['video']);
       }
+      if (data.hasOwnProperty('coupon_code')) {
+        obj['coupon_code'] = ApiClient.convertToType(data['coupon_code'], 'String');
+      }
+      if (data.hasOwnProperty('payload')) {
+        obj['payload'] = ApiClient.convertToType(data['payload'], 'String');
+      }
     }
     return obj;
   }
@@ -117,6 +123,16 @@
    * @member {module:model/WhatsAppMedia} video
    */
   exports.prototype['video'] = undefined;
+  /**
+   * A coupon code.
+   * @member {String} coupon_code
+   */
+  exports.prototype['coupon_code'] = undefined;
+  /**
+   * A payload.
+   * @member {String} payload
+   */
+  exports.prototype['payload'] = undefined;
 
 
 
