@@ -36,7 +36,7 @@
   /**
    * The WhatsApp model module.
    * @module model/WhatsApp
-   * @version 2.2.0
+   * @version 2.3.0
    */
 
   /**

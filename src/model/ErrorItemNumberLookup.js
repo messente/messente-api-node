@@ -36,7 +36,7 @@
   /**
    * The ErrorItemNumberLookup model module.
    * @module model/ErrorItemNumberLookup
-   * @version 2.2.0
+   * @version 2.3.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The BulkOmnimessage model module.
    * @module model/BulkOmnimessage
-   * @version 2.2.0
+   * @version 2.3.0
    */
 
   /**
