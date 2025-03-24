@@ -36,7 +36,7 @@
   /**
    * The EmptyObject model module.
    * @module model/EmptyObject
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**

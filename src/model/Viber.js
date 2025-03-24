@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ViberVideo'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ViberVideo'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.Viber = factory(root.MessenteApi.ApiClient, root.MessenteApi.ViberVideo);
+    root.MessenteApi.Viber = factory(root.MessenteApi.ApiClient);
   }
-}(this, function(ApiClient, ViberVideo) {
+}(this, function(ApiClient) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The Viber model module.
    * @module model/Viber
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**
@@ -86,9 +86,6 @@
       } else {
         obj['channel'] = 'viber';
       }
-      if (data.hasOwnProperty('video')) {
-        obj['video'] = ViberVideo.constructFromObject(data['video']);
-      }
     }
     return obj;
   }
@@ -134,10 +131,6 @@
    * @default 'viber'
    */
   exports.prototype['channel'] = 'viber';
-  /**
-   * @member {module:model/ViberVideo} video
-   */
-  exports.prototype['video'] = undefined;
 
 
   /**

@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Channel', 'model/ErrorCodeOmnichannelMachine', 'model/PriceInfo', 'model/Status'], factory);
+    define(['ApiClient', 'model/Channel', 'model/ErrorCodeOmnichannelMachine', 'model/Status'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./Channel'), require('./ErrorCodeOmnichannelMachine'), require('./PriceInfo'), require('./Status'));
+    module.exports = factory(require('../ApiClient'), require('./Channel'), require('./ErrorCodeOmnichannelMachine'), require('./Status'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.DeliveryResult = factory(root.MessenteApi.ApiClient, root.MessenteApi.Channel, root.MessenteApi.ErrorCodeOmnichannelMachine, root.MessenteApi.PriceInfo, root.MessenteApi.Status);
+    root.MessenteApi.DeliveryResult = factory(root.MessenteApi.ApiClient, root.MessenteApi.Channel, root.MessenteApi.ErrorCodeOmnichannelMachine, root.MessenteApi.Status);
   }
-}(this, function(ApiClient, Channel, ErrorCodeOmnichannelMachine, PriceInfo, Status) {
+}(this, function(ApiClient, Channel, ErrorCodeOmnichannelMachine, Status) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The DeliveryResult model module.
    * @module model/DeliveryResult
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**
@@ -78,12 +78,6 @@
       if (data.hasOwnProperty('timestamp')) {
         obj['timestamp'] = ApiClient.convertToType(data['timestamp'], 'Date');
       }
-      if (data.hasOwnProperty('price_info')) {
-        obj['price_info'] = PriceInfo.constructFromObject(data['price_info']);
-      }
-      if (data.hasOwnProperty('sender')) {
-        obj['sender'] = ApiClient.convertToType(data['sender'], 'String');
-      }
     }
     return obj;
   }
@@ -115,15 +109,6 @@
    * @member {Date} timestamp
    */
   exports.prototype['timestamp'] = undefined;
-  /**
-   * @member {module:model/PriceInfo} price_info
-   */
-  exports.prototype['price_info'] = undefined;
-  /**
-   * the sender of the message
-   * @member {String} sender
-   */
-  exports.prototype['sender'] = undefined;
 
 
 

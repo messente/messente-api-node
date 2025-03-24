@@ -36,7 +36,7 @@
   /**
    * The Telegram model module.
    * @module model/Telegram
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**

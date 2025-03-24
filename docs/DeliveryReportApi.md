@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="retrieveDeliveryReport"></a>
 # **retrieveDeliveryReport**
-> DeliveryReportResponse retrieveDeliveryReport(omnimessage_id)
+> DeliveryReportResponse retrieveDeliveryReport(omnimessageId)
 
 Retrieves the delivery report for the Omnimessage
 
@@ -24,7 +24,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.DeliveryReportApi();
-var omnimessage_id = "omnimessage_id_example"; // String | UUID of the omnimessage to for which the delivery report is to be retrieved
+var omnimessageId = "omnimessageId_example"; // String | UUID of the omnimessage to for which the delivery report is to be retrieved
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -32,14 +32,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.retrieveDeliveryReport(omnimessage_id, callback);
+apiInstance.retrieveDeliveryReport(omnimessageId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **omnimessage_id** | **String**| UUID of the omnimessage to for which the delivery report is to be retrieved | 
+ **omnimessageId** | **String**| UUID of the omnimessage to for which the delivery report is to be retrieved | 
 
 ### Return type
 

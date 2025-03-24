@@ -36,7 +36,7 @@
   /**
    * The StatisticsReportSettings model module.
    * @module model/StatisticsReportSettings
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**
@@ -44,14 +44,14 @@
    * A container for statistics report settings
    * @alias module:model/StatisticsReportSettings
    * @class
-   * @param start_date {Date} Start date for the report
-   * @param end_date {Date} End date for the report
+   * @param startDate {Date} Start date for the report
+   * @param endDate {Date} End date for the report
    */
-  var exports = function(start_date, end_date) {
+  var exports = function(startDate, endDate) {
     var _this = this;
 
-    _this['start_date'] = start_date;
-    _this['end_date'] = end_date;
+    _this['start_date'] = startDate;
+    _this['end_date'] = endDate;
   };
 
   /**

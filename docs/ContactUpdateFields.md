@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **String** | The email of the contact | [optional] 
-**first_name** | **String** | The first name of the contact | [optional] 
-**last_name** | **String** | The last name of the contact | [optional] 
+**firstName** | **String** | The first name of the contact | [optional] 
+**lastName** | **String** | The last name of the contact | [optional] 
 **company** | **String** | The company of the contact | [optional] 
 **title** | **String** | The title of the contact | [optional] 
 **custom** | **String** | The first custom field | [optional] 

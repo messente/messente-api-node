@@ -36,7 +36,7 @@
   /**
    * The GroupName model module.
    * @module model/GroupName
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**

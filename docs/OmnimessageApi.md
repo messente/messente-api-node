@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="cancelScheduledMessage"></a>
 # **cancelScheduledMessage**
-> EmptyObject cancelScheduledMessage(omnimessage_id)
+> EmptyObject cancelScheduledMessage(omnimessageId)
 
 Cancels a scheduled Omnimessage
 
@@ -25,7 +25,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.OmnimessageApi();
-var omnimessage_id = "omnimessage_id_example"; // String | UUID of the scheduled omnimessage to be cancelled
+var omnimessageId = "omnimessageId_example"; // String | UUID of the scheduled omnimessage to be cancelled
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -33,14 +33,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.cancelScheduledMessage(omnimessage_id, callback);
+apiInstance.cancelScheduledMessage(omnimessageId, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **omnimessage_id** | **String**| UUID of the scheduled omnimessage to be cancelled | 
+ **omnimessageId** | **String**| UUID of the scheduled omnimessage to be cancelled | 
 
 ### Return type
 

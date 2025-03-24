@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total_messages** | **Number** | Sum of all messages | 
-**total_price** | **String** | Price for all messages | 
+**totalMessages** | **Number** | Sum of all messages | 
+**totalPrice** | **String** | Price for all messages | 
 **country** | **String** | Target country of all messages | 
 
 

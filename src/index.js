@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BulkOmniMessageCreateSuccessResponse', 'model/BulkOmnimessage', 'model/Channel', 'model/ContactEnvelope', 'model/ContactFields', 'model/ContactListEnvelope', 'model/ContactResponseFields', 'model/ContactUpdateFields', 'model/DeliveryReportResponse', 'model/DeliveryResult', 'model/EmptyObject', 'model/ErrorCodeOmnichannel', 'model/ErrorCodeOmnichannelMachine', 'model/ErrorCodePhonebook', 'model/ErrorCodeStatistics', 'model/ErrorItemNumberLookup', 'model/ErrorItemNumberLookupError', 'model/ErrorItemOmnichannel', 'model/ErrorItemPhonebook', 'model/ErrorItemStatistics', 'model/ErrorNumberLookup', 'model/ErrorOmnichannel', 'model/ErrorPhonebook', 'model/ErrorStatistics', 'model/ErrorTitleOmnichannel', 'model/ErrorTitlePhonebook', 'model/FetchBlacklistSuccess', 'model/GroupEnvelope', 'model/GroupListEnvelope', 'model/GroupName', 'model/GroupResponseFields', 'model/MessageResult', 'model/MobileNetwork', 'model/NumberToBlacklist', 'model/NumbersToInvestigate', 'model/OmniMessageCreateSuccessResponse', 'model/Omnimessage', 'model/PriceInfo', 'model/Priority', 'model/SMS', 'model/StatisticsReport', 'model/StatisticsReportSettings', 'model/StatisticsReportSuccess', 'model/Status', 'model/SyncNumberLookupResult', 'model/SyncNumberLookupSuccess', 'model/Telegram', 'model/TextStore', 'model/Viber', 'model/ViberVideo', 'model/WhatsApp', 'model/WhatsAppComponent', 'model/WhatsAppCurrency', 'model/WhatsAppDatetime', 'model/WhatsAppLanguage', 'model/WhatsAppMedia', 'model/WhatsAppParameter', 'model/WhatsAppTemplate', 'model/WhatsAppText', 'api/BlacklistApi', 'api/BulkMessagingApi', 'api/ContactsApi', 'api/DeliveryReportApi', 'api/GroupsApi', 'api/NumberLookupApi', 'api/OmnimessageApi', 'api/StatisticsApi'], factory);
+    define(['ApiClient', 'model/Channel', 'model/ContactEnvelope', 'model/ContactFields', 'model/ContactListEnvelope', 'model/ContactResponseFields', 'model/ContactUpdateFields', 'model/DeliveryReportResponse', 'model/DeliveryResult', 'model/EmptyObject', 'model/ErrorCodeOmnichannel', 'model/ErrorCodeOmnichannelMachine', 'model/ErrorCodePhonebook', 'model/ErrorCodeStatistics', 'model/ErrorItemNumberLookup', 'model/ErrorItemNumberLookupError', 'model/ErrorItemOmnichannel', 'model/ErrorItemPhonebook', 'model/ErrorItemStatistics', 'model/ErrorNumberLookup', 'model/ErrorOmnichannel', 'model/ErrorPhonebook', 'model/ErrorStatistics', 'model/ErrorTitleOmnichannel', 'model/ErrorTitlePhonebook', 'model/FetchBlacklistSuccess', 'model/GroupEnvelope', 'model/GroupListEnvelope', 'model/GroupName', 'model/GroupResponseFields', 'model/MessageResult', 'model/MobileNetwork', 'model/NumberToBlacklist', 'model/NumbersToInvestigate', 'model/OmniMessageCreateSuccessResponse', 'model/Omnimessage', 'model/Priority', 'model/SMS', 'model/StatisticsReport', 'model/StatisticsReportSettings', 'model/StatisticsReportSuccess', 'model/Status', 'model/SyncNumberLookupResult', 'model/SyncNumberLookupSuccess', 'model/Telegram', 'model/TextStore', 'model/Viber', 'model/WhatsApp', 'model/WhatsAppAudio', 'model/WhatsAppDocument', 'model/WhatsAppImage', 'model/WhatsAppText', 'api/BlacklistApi', 'api/ContactsApi', 'api/DeliveryReportApi', 'api/GroupsApi', 'api/NumberLookupApi', 'api/OmnimessageApi', 'api/StatisticsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/BulkOmniMessageCreateSuccessResponse'), require('./model/BulkOmnimessage'), require('./model/Channel'), require('./model/ContactEnvelope'), require('./model/ContactFields'), require('./model/ContactListEnvelope'), require('./model/ContactResponseFields'), require('./model/ContactUpdateFields'), require('./model/DeliveryReportResponse'), require('./model/DeliveryResult'), require('./model/EmptyObject'), require('./model/ErrorCodeOmnichannel'), require('./model/ErrorCodeOmnichannelMachine'), require('./model/ErrorCodePhonebook'), require('./model/ErrorCodeStatistics'), require('./model/ErrorItemNumberLookup'), require('./model/ErrorItemNumberLookupError'), require('./model/ErrorItemOmnichannel'), require('./model/ErrorItemPhonebook'), require('./model/ErrorItemStatistics'), require('./model/ErrorNumberLookup'), require('./model/ErrorOmnichannel'), require('./model/ErrorPhonebook'), require('./model/ErrorStatistics'), require('./model/ErrorTitleOmnichannel'), require('./model/ErrorTitlePhonebook'), require('./model/FetchBlacklistSuccess'), require('./model/GroupEnvelope'), require('./model/GroupListEnvelope'), require('./model/GroupName'), require('./model/GroupResponseFields'), require('./model/MessageResult'), require('./model/MobileNetwork'), require('./model/NumberToBlacklist'), require('./model/NumbersToInvestigate'), require('./model/OmniMessageCreateSuccessResponse'), require('./model/Omnimessage'), require('./model/PriceInfo'), require('./model/Priority'), require('./model/SMS'), require('./model/StatisticsReport'), require('./model/StatisticsReportSettings'), require('./model/StatisticsReportSuccess'), require('./model/Status'), require('./model/SyncNumberLookupResult'), require('./model/SyncNumberLookupSuccess'), require('./model/Telegram'), require('./model/TextStore'), require('./model/Viber'), require('./model/ViberVideo'), require('./model/WhatsApp'), require('./model/WhatsAppComponent'), require('./model/WhatsAppCurrency'), require('./model/WhatsAppDatetime'), require('./model/WhatsAppLanguage'), require('./model/WhatsAppMedia'), require('./model/WhatsAppParameter'), require('./model/WhatsAppTemplate'), require('./model/WhatsAppText'), require('./api/BlacklistApi'), require('./api/BulkMessagingApi'), require('./api/ContactsApi'), require('./api/DeliveryReportApi'), require('./api/GroupsApi'), require('./api/NumberLookupApi'), require('./api/OmnimessageApi'), require('./api/StatisticsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Channel'), require('./model/ContactEnvelope'), require('./model/ContactFields'), require('./model/ContactListEnvelope'), require('./model/ContactResponseFields'), require('./model/ContactUpdateFields'), require('./model/DeliveryReportResponse'), require('./model/DeliveryResult'), require('./model/EmptyObject'), require('./model/ErrorCodeOmnichannel'), require('./model/ErrorCodeOmnichannelMachine'), require('./model/ErrorCodePhonebook'), require('./model/ErrorCodeStatistics'), require('./model/ErrorItemNumberLookup'), require('./model/ErrorItemNumberLookupError'), require('./model/ErrorItemOmnichannel'), require('./model/ErrorItemPhonebook'), require('./model/ErrorItemStatistics'), require('./model/ErrorNumberLookup'), require('./model/ErrorOmnichannel'), require('./model/ErrorPhonebook'), require('./model/ErrorStatistics'), require('./model/ErrorTitleOmnichannel'), require('./model/ErrorTitlePhonebook'), require('./model/FetchBlacklistSuccess'), require('./model/GroupEnvelope'), require('./model/GroupListEnvelope'), require('./model/GroupName'), require('./model/GroupResponseFields'), require('./model/MessageResult'), require('./model/MobileNetwork'), require('./model/NumberToBlacklist'), require('./model/NumbersToInvestigate'), require('./model/OmniMessageCreateSuccessResponse'), require('./model/Omnimessage'), require('./model/Priority'), require('./model/SMS'), require('./model/StatisticsReport'), require('./model/StatisticsReportSettings'), require('./model/StatisticsReportSuccess'), require('./model/Status'), require('./model/SyncNumberLookupResult'), require('./model/SyncNumberLookupSuccess'), require('./model/Telegram'), require('./model/TextStore'), require('./model/Viber'), require('./model/WhatsApp'), require('./model/WhatsAppAudio'), require('./model/WhatsAppDocument'), require('./model/WhatsAppImage'), require('./model/WhatsAppText'), require('./api/BlacklistApi'), require('./api/ContactsApi'), require('./api/DeliveryReportApi'), require('./api/GroupsApi'), require('./api/NumberLookupApi'), require('./api/OmnimessageApi'), require('./api/StatisticsApi'));
   }
-}(function(ApiClient, BulkOmniMessageCreateSuccessResponse, BulkOmnimessage, Channel, ContactEnvelope, ContactFields, ContactListEnvelope, ContactResponseFields, ContactUpdateFields, DeliveryReportResponse, DeliveryResult, EmptyObject, ErrorCodeOmnichannel, ErrorCodeOmnichannelMachine, ErrorCodePhonebook, ErrorCodeStatistics, ErrorItemNumberLookup, ErrorItemNumberLookupError, ErrorItemOmnichannel, ErrorItemPhonebook, ErrorItemStatistics, ErrorNumberLookup, ErrorOmnichannel, ErrorPhonebook, ErrorStatistics, ErrorTitleOmnichannel, ErrorTitlePhonebook, FetchBlacklistSuccess, GroupEnvelope, GroupListEnvelope, GroupName, GroupResponseFields, MessageResult, MobileNetwork, NumberToBlacklist, NumbersToInvestigate, OmniMessageCreateSuccessResponse, Omnimessage, PriceInfo, Priority, SMS, StatisticsReport, StatisticsReportSettings, StatisticsReportSuccess, Status, SyncNumberLookupResult, SyncNumberLookupSuccess, Telegram, TextStore, Viber, ViberVideo, WhatsApp, WhatsAppComponent, WhatsAppCurrency, WhatsAppDatetime, WhatsAppLanguage, WhatsAppMedia, WhatsAppParameter, WhatsAppTemplate, WhatsAppText, BlacklistApi, BulkMessagingApi, ContactsApi, DeliveryReportApi, GroupsApi, NumberLookupApi, OmnimessageApi, StatisticsApi) {
+}(function(ApiClient, Channel, ContactEnvelope, ContactFields, ContactListEnvelope, ContactResponseFields, ContactUpdateFields, DeliveryReportResponse, DeliveryResult, EmptyObject, ErrorCodeOmnichannel, ErrorCodeOmnichannelMachine, ErrorCodePhonebook, ErrorCodeStatistics, ErrorItemNumberLookup, ErrorItemNumberLookupError, ErrorItemOmnichannel, ErrorItemPhonebook, ErrorItemStatistics, ErrorNumberLookup, ErrorOmnichannel, ErrorPhonebook, ErrorStatistics, ErrorTitleOmnichannel, ErrorTitlePhonebook, FetchBlacklistSuccess, GroupEnvelope, GroupListEnvelope, GroupName, GroupResponseFields, MessageResult, MobileNetwork, NumberToBlacklist, NumbersToInvestigate, OmniMessageCreateSuccessResponse, Omnimessage, Priority, SMS, StatisticsReport, StatisticsReportSettings, StatisticsReportSuccess, Status, SyncNumberLookupResult, SyncNumberLookupSuccess, Telegram, TextStore, Viber, WhatsApp, WhatsAppAudio, WhatsAppDocument, WhatsAppImage, WhatsAppText, BlacklistApi, ContactsApi, DeliveryReportApi, GroupsApi, NumberLookupApi, OmnimessageApi, StatisticsApi) {
   'use strict';
 
   /**
@@ -54,7 +54,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 2.3.0
+   * @version 1.5.0
    */
   var exports = {
     /**
@@ -62,16 +62,6 @@
      * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
-    /**
-     * The BulkOmniMessageCreateSuccessResponse model constructor.
-     * @property {module:model/BulkOmniMessageCreateSuccessResponse}
-     */
-    BulkOmniMessageCreateSuccessResponse: BulkOmniMessageCreateSuccessResponse,
-    /**
-     * The BulkOmnimessage model constructor.
-     * @property {module:model/BulkOmnimessage}
-     */
-    BulkOmnimessage: BulkOmnimessage,
     /**
      * The Channel model constructor.
      * @property {module:model/Channel}
@@ -248,11 +238,6 @@
      */
     Omnimessage: Omnimessage,
     /**
-     * The PriceInfo model constructor.
-     * @property {module:model/PriceInfo}
-     */
-    PriceInfo: PriceInfo,
-    /**
      * The Priority model constructor.
      * @property {module:model/Priority}
      */
@@ -308,50 +293,25 @@
      */
     Viber: Viber,
     /**
-     * The ViberVideo model constructor.
-     * @property {module:model/ViberVideo}
-     */
-    ViberVideo: ViberVideo,
-    /**
      * The WhatsApp model constructor.
      * @property {module:model/WhatsApp}
      */
     WhatsApp: WhatsApp,
     /**
-     * The WhatsAppComponent model constructor.
-     * @property {module:model/WhatsAppComponent}
+     * The WhatsAppAudio model constructor.
+     * @property {module:model/WhatsAppAudio}
      */
-    WhatsAppComponent: WhatsAppComponent,
+    WhatsAppAudio: WhatsAppAudio,
     /**
-     * The WhatsAppCurrency model constructor.
-     * @property {module:model/WhatsAppCurrency}
+     * The WhatsAppDocument model constructor.
+     * @property {module:model/WhatsAppDocument}
      */
-    WhatsAppCurrency: WhatsAppCurrency,
+    WhatsAppDocument: WhatsAppDocument,
     /**
-     * The WhatsAppDatetime model constructor.
-     * @property {module:model/WhatsAppDatetime}
+     * The WhatsAppImage model constructor.
+     * @property {module:model/WhatsAppImage}
      */
-    WhatsAppDatetime: WhatsAppDatetime,
-    /**
-     * The WhatsAppLanguage model constructor.
-     * @property {module:model/WhatsAppLanguage}
-     */
-    WhatsAppLanguage: WhatsAppLanguage,
-    /**
-     * The WhatsAppMedia model constructor.
-     * @property {module:model/WhatsAppMedia}
-     */
-    WhatsAppMedia: WhatsAppMedia,
-    /**
-     * The WhatsAppParameter model constructor.
-     * @property {module:model/WhatsAppParameter}
-     */
-    WhatsAppParameter: WhatsAppParameter,
-    /**
-     * The WhatsAppTemplate model constructor.
-     * @property {module:model/WhatsAppTemplate}
-     */
-    WhatsAppTemplate: WhatsAppTemplate,
+    WhatsAppImage: WhatsAppImage,
     /**
      * The WhatsAppText model constructor.
      * @property {module:model/WhatsAppText}
@@ -362,11 +322,6 @@
      * @property {module:api/BlacklistApi}
      */
     BlacklistApi: BlacklistApi,
-    /**
-     * The BulkMessagingApi service constructor.
-     * @property {module:api/BulkMessagingApi}
-     */
-    BulkMessagingApi: BulkMessagingApi,
     /**
      * The ContactsApi service constructor.
      * @property {module:api/ContactsApi}

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="addContactToGroup"></a>
 # **addContactToGroup**
-> EmptyObject addContactToGroup(group_id, phone)
+> EmptyObject addContactToGroup(groupId, phone)
 
 Adds a contact to a group
 
@@ -31,7 +31,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var group_id = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
 var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
@@ -40,14 +40,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.addContactToGroup(group_id, phone, callback);
+apiInstance.addContactToGroup(groupId, phone, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| String in UUID format | 
+ **groupId** | **String**| String in UUID format | 
  **phone** | **String**| A phone number | 
 
 ### Return type
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="createContact"></a>
 # **createContact**
-> ContactEnvelope createContact(contact_fields)
+> ContactEnvelope createContact(contactFields)
 
 Creates a new contact
 
@@ -80,7 +80,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var contact_fields = {"phoneNumber":"+37251000000","email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactFields | 
+var contactFields = {"phoneNumber":"+37251000000","email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactFields | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -88,14 +88,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.createContact(contact_fields, callback);
+apiInstance.createContact(contactFields, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **contact_fields** | [**ContactFields**](ContactFields.md)|  | 
+ **contactFields** | [**ContactFields**](ContactFields.md)|  | 
 
 ### Return type
 
@@ -269,7 +269,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
 var opts = {
-  'group_ids': ["5792a02a-e5c2-422b-a0a0-0ae65d814663","4792a02a-e5c2-422b-a0a0-0ae65d814662"] // [String] | Optional one or many group id strings in UUID format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
+  'groupIds': ["5792a02a-e5c2-422b-a0a0-0ae65d814663","4792a02a-e5c2-422b-a0a0-0ae65d814662"] // [String] | Optional one or many group id strings in UUID format. For example: \"/contacts?groupIds=group_id_one&groupIds=group_id_two\" 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -285,7 +285,7 @@ apiInstance.fetchContacts(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_ids** | [**[String]**](String.md)| Optional one or many group id strings in UUID format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot;  | [optional] 
+ **groupIds** | [**[String]**](String.md)| Optional one or many group id strings in UUID format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot;  | [optional] 
 
 ### Return type
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 <a name="removeContactFromGroup"></a>
 # **removeContactFromGroup**
-> removeContactFromGroup(group_id, phone)
+> removeContactFromGroup(groupId, phone)
 
 Removes a contact from a group
 
@@ -317,7 +317,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
-var group_id = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
+var groupId = 5792a02a-e5c2-422b-a0a0-0ae65d814663; // String | String in UUID format
 var phone = +37251000000; // String | A phone number
 var callback = function(error, data, response) {
   if (error) {
@@ -326,14 +326,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.removeContactFromGroup(group_id, phone, callback);
+apiInstance.removeContactFromGroup(groupId, phone, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_id** | **String**| String in UUID format | 
+ **groupId** | **String**| String in UUID format | 
  **phone** | **String**| A phone number | 
 
 ### Return type
@@ -351,7 +351,7 @@ null (empty response body)
 
 <a name="updateContact"></a>
 # **updateContact**
-> ContactEnvelope updateContact(phone, contact_update_fields)
+> ContactEnvelope updateContact(phone, contactUpdateFields)
 
 Updates a contact
 
@@ -367,7 +367,7 @@ basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.ContactsApi();
 var phone = +37251000000; // String | A phone number
-var contact_update_fields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactUpdateFields | 
+var contactUpdateFields = {"email":"anyone@messente.com","firstName":"Any","lastName":"One","company":"Messente","title":"Sir","custom":"Any custom","custom2":"Any custom two","custom3":"Any custom three","custom4":"Any custom four"}; // ContactUpdateFields | 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -375,7 +375,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.updateContact(phone, contact_update_fields, callback);
+apiInstance.updateContact(phone, contactUpdateFields, callback);
 ```
 
 ### Parameters
@@ -383,7 +383,7 @@ apiInstance.updateContact(phone, contact_update_fields, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone** | **String**| A phone number | 
- **contact_update_fields** | [**ContactUpdateFields**](ContactUpdateFields.md)|  | 
+ **contactUpdateFields** | [**ContactUpdateFields**](ContactUpdateFields.md)|  | 
 
 ### Return type
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="addToBlacklist"></a>
 # **addToBlacklist**
-> addToBlacklist(number_to_blacklist)
+> addToBlacklist(numberToBlacklist)
 
 Adds a phone number to the blacklist
 
@@ -27,7 +27,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.BlacklistApi();
-var number_to_blacklist = {"phoneNumber":"+37251000000"}; // NumberToBlacklist | Phone number to be blacklisted
+var numberToBlacklist = {"phoneNumber":"+37251000000"}; // NumberToBlacklist | Phone number to be blacklisted
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -35,14 +35,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-apiInstance.addToBlacklist(number_to_blacklist, callback);
+apiInstance.addToBlacklist(numberToBlacklist, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **number_to_blacklist** | [**NumberToBlacklist**](NumberToBlacklist.md)| Phone number to be blacklisted | 
+ **numberToBlacklist** | [**NumberToBlacklist**](NumberToBlacklist.md)| Phone number to be blacklisted | 
 
 ### Return type
 

@@ -36,7 +36,7 @@
   /**
    * The ContactFields model module.
    * @module model/ContactFields
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**
@@ -44,12 +44,12 @@
    * A container for fields of a request body of a contact
    * @alias module:model/ContactFields
    * @class
-   * @param phone_number {String} Phone number in e.164 format
+   * @param phoneNumber {String} Phone number in e.164 format
    */
-  var exports = function(phone_number) {
+  var exports = function(phoneNumber) {
     var _this = this;
 
-    _this['phoneNumber'] = phone_number;
+    _this['phoneNumber'] = phoneNumber;
   };
 
   /**

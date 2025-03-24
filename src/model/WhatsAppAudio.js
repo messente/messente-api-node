@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppDatetime = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppAudio = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,46 @@
 
 
   /**
-   * The WhatsAppDatetime model module.
-   * @module model/WhatsAppDatetime
-   * @version 2.3.0
+   * The WhatsAppAudio model module.
+   * @module model/WhatsAppAudio
+   * @version 1.5.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppDatetime</code>.
-   * Whatsapp datetime object.
-   * @alias module:model/WhatsAppDatetime
+   * Constructs a new <code>WhatsAppAudio</code>.
+   * A sound
+   * @alias module:model/WhatsAppAudio
    * @class
-   * @param fallback_value {String} Default text.
+   * @param content {String} Base64-encoded audio
    */
-  var exports = function(fallback_value) {
+  var exports = function(content) {
     var _this = this;
 
-    _this['fallback_value'] = fallback_value;
+    _this['content'] = content;
   };
 
   /**
-   * Constructs a <code>WhatsAppDatetime</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppAudio</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppDatetime} obj Optional instance to populate.
-   * @return {module:model/WhatsAppDatetime} The populated <code>WhatsAppDatetime</code> instance.
+   * @param {module:model/WhatsAppAudio} obj Optional instance to populate.
+   * @return {module:model/WhatsAppAudio} The populated <code>WhatsAppAudio</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('fallback_value')) {
-        obj['fallback_value'] = ApiClient.convertToType(data['fallback_value'], 'String');
+      if (data.hasOwnProperty('content')) {
+        obj['content'] = ApiClient.convertToType(data['content'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Default text.
-   * @member {String} fallback_value
+   * Base64-encoded audio
+   * @member {String} content
    */
-  exports.prototype['fallback_value'] = undefined;
+  exports.prototype['content'] = undefined;
 
 
 

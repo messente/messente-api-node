@@ -34,7 +34,7 @@
   /**
    * Omnimessage service.
    * @module api/OmnimessageApi
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**
@@ -58,21 +58,21 @@
 
     /**
      * Cancels a scheduled Omnimessage
-     * @param {String} omnimessage_id UUID of the scheduled omnimessage to be cancelled
+     * @param {String} omnimessageId UUID of the scheduled omnimessage to be cancelled
      * @param {module:api/OmnimessageApi~cancelScheduledMessageCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmptyObject}
      */
-    this.cancelScheduledMessage = function(omnimessage_id, callback) {
+    this.cancelScheduledMessage = function(omnimessageId, callback) {
       var postBody = null;
 
-      // verify the required parameter 'omnimessage_id' is set
-      if (omnimessage_id === undefined || omnimessage_id === null) {
-        throw new Error("Missing the required parameter 'omnimessage_id' when calling cancelScheduledMessage");
+      // verify the required parameter 'omnimessageId' is set
+      if (omnimessageId === undefined || omnimessageId === null) {
+        throw new Error("Missing the required parameter 'omnimessageId' when calling cancelScheduledMessage");
       }
 
 
       var pathParams = {
-        'omnimessageId': omnimessage_id
+        'omnimessageId': omnimessageId
       };
       var queryParams = {
       };

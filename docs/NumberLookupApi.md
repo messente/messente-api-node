@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="fetchInfo"></a>
 # **fetchInfo**
-> SyncNumberLookupSuccess fetchInfo(numbers_to_investigate)
+> SyncNumberLookupSuccess fetchInfo(numbersToInvestigate)
 
 Requests info about phone numbers
 
@@ -24,7 +24,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.NumberLookupApi();
-var numbers_to_investigate = {"numbers":["+37251000000","+37251000001"]}; // NumbersToInvestigate | Numbers for lookup
+var numbersToInvestigate = {"numbers":["+37251000000","+37251000001"]}; // NumbersToInvestigate | Numbers for lookup
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -32,14 +32,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.fetchInfo(numbers_to_investigate, callback);
+apiInstance.fetchInfo(numbersToInvestigate, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **numbers_to_investigate** | [**NumbersToInvestigate**](NumbersToInvestigate.md)| Numbers for lookup | 
+ **numbersToInvestigate** | [**NumbersToInvestigate**](NumbersToInvestigate.md)| Numbers for lookup | 
 
 ### Return type
 

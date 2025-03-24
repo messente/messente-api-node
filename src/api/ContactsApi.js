@@ -34,7 +34,7 @@
   /**
    * Contacts service.
    * @module api/ContactsApi
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**
@@ -58,17 +58,17 @@
 
     /**
      * Adds a contact to a group
-     * @param {String} group_id String in UUID format
+     * @param {String} groupId String in UUID format
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~addContactToGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmptyObject}
      */
-    this.addContactToGroup = function(group_id, phone, callback) {
+    this.addContactToGroup = function(groupId, phone, callback) {
       var postBody = null;
 
-      // verify the required parameter 'group_id' is set
-      if (group_id === undefined || group_id === null) {
-        throw new Error("Missing the required parameter 'group_id' when calling addContactToGroup");
+      // verify the required parameter 'groupId' is set
+      if (groupId === undefined || groupId === null) {
+        throw new Error("Missing the required parameter 'groupId' when calling addContactToGroup");
       }
 
       // verify the required parameter 'phone' is set
@@ -78,7 +78,7 @@
 
 
       var pathParams = {
-        'groupId': group_id,
+        'groupId': groupId,
         'phone': phone
       };
       var queryParams = {
@@ -112,16 +112,16 @@
 
     /**
      * Creates a new contact
-     * @param {module:model/ContactFields} contact_fields 
+     * @param {module:model/ContactFields} contactFields 
      * @param {module:api/ContactsApi~createContactCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContactEnvelope}
      */
-    this.createContact = function(contact_fields, callback) {
-      var postBody = contact_fields;
+    this.createContact = function(contactFields, callback) {
+      var postBody = contactFields;
 
-      // verify the required parameter 'contact_fields' is set
-      if (contact_fields === undefined || contact_fields === null) {
-        throw new Error("Missing the required parameter 'contact_fields' when calling createContact");
+      // verify the required parameter 'contactFields' is set
+      if (contactFields === undefined || contactFields === null) {
+        throw new Error("Missing the required parameter 'contactFields' when calling createContact");
       }
 
 
@@ -299,7 +299,7 @@
     /**
      * Returns all contacts
      * @param {Object} opts Optional parameters
-     * @param {Array.<String>} opts.group_ids Optional one or many group id strings in UUID format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot; 
+     * @param {Array.<String>} opts.groupIds Optional one or many group id strings in UUID format. For example: \&quot;/contacts?groupIds&#x3D;group_id_one&amp;groupIds&#x3D;group_id_two\&quot; 
      * @param {module:api/ContactsApi~fetchContactsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContactListEnvelope}
      */
@@ -314,7 +314,7 @@
       };
       var collectionQueryParams = {
         'groupIds': {
-          value: opts['group_ids'],
+          value: opts['groupIds'],
           collectionFormat: 'multi'
         },
       };
@@ -345,16 +345,16 @@
 
     /**
      * Removes a contact from a group
-     * @param {String} group_id String in UUID format
+     * @param {String} groupId String in UUID format
      * @param {String} phone A phone number
      * @param {module:api/ContactsApi~removeContactFromGroupCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.removeContactFromGroup = function(group_id, phone, callback) {
+    this.removeContactFromGroup = function(groupId, phone, callback) {
       var postBody = null;
 
-      // verify the required parameter 'group_id' is set
-      if (group_id === undefined || group_id === null) {
-        throw new Error("Missing the required parameter 'group_id' when calling removeContactFromGroup");
+      // verify the required parameter 'groupId' is set
+      if (groupId === undefined || groupId === null) {
+        throw new Error("Missing the required parameter 'groupId' when calling removeContactFromGroup");
       }
 
       // verify the required parameter 'phone' is set
@@ -364,7 +364,7 @@
 
 
       var pathParams = {
-        'groupId': group_id,
+        'groupId': groupId,
         'phone': phone
       };
       var queryParams = {
@@ -399,21 +399,21 @@
     /**
      * Updates a contact
      * @param {String} phone A phone number
-     * @param {module:model/ContactUpdateFields} contact_update_fields 
+     * @param {module:model/ContactUpdateFields} contactUpdateFields 
      * @param {module:api/ContactsApi~updateContactCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ContactEnvelope}
      */
-    this.updateContact = function(phone, contact_update_fields, callback) {
-      var postBody = contact_update_fields;
+    this.updateContact = function(phone, contactUpdateFields, callback) {
+      var postBody = contactUpdateFields;
 
       // verify the required parameter 'phone' is set
       if (phone === undefined || phone === null) {
         throw new Error("Missing the required parameter 'phone' when calling updateContact");
       }
 
-      // verify the required parameter 'contact_update_fields' is set
-      if (contact_update_fields === undefined || contact_update_fields === null) {
-        throw new Error("Missing the required parameter 'contact_update_fields' when calling updateContact");
+      // verify the required parameter 'contactUpdateFields' is set
+      if (contactUpdateFields === undefined || contactUpdateFields === null) {
+        throw new Error("Missing the required parameter 'contactUpdateFields' when calling updateContact");
       }
 
 

@@ -36,7 +36,7 @@
   /**
    * The Omnimessage model module.
    * @module model/Omnimessage
-   * @version 2.3.0
+   * @version 1.5.0
    */
 
   /**

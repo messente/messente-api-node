@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="createStatisticsReport"></a>
 # **createStatisticsReport**
-> StatisticsReportSuccess createStatisticsReport(statistics_report_settings)
+> StatisticsReportSuccess createStatisticsReport(statisticsReportSettings)
 
 Requests statistics reports for each country
 
@@ -24,7 +24,7 @@ basicAuth.username = 'YOUR USERNAME';
 basicAuth.password = 'YOUR PASSWORD';
 
 var apiInstance = new MessenteApi.StatisticsApi();
-var statistics_report_settings = {"start_date":"2017-01-01","end_date":"2019-06-20","message_types":["sms"]}; // StatisticsReportSettings | Settings for statistics report
+var statisticsReportSettings = {"start_date":"2017-01-01","end_date":"2019-06-20","message_types":["sms"]}; // StatisticsReportSettings | Settings for statistics report
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -32,14 +32,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.createStatisticsReport(statistics_report_settings, callback);
+apiInstance.createStatisticsReport(statisticsReportSettings, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **statistics_report_settings** | [**StatisticsReportSettings**](StatisticsReportSettings.md)| Settings for statistics report | 
+ **statisticsReportSettings** | [**StatisticsReportSettings**](StatisticsReportSettings.md)| Settings for statistics report | 
 
 ### Return type
 
