@@ -34,7 +34,7 @@
   /**
    * Groups service.
    * @module api/GroupsApi
-   * @version 1.5.0
+   * @version 2.3.0
    */
 
   /**
@@ -58,16 +58,16 @@
 
     /**
      * Creates a new group with the provided name
-     * @param {module:model/GroupName} groupName 
+     * @param {module:model/GroupName} group_name 
      * @param {module:api/GroupsApi~createGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}
      */
-    this.createGroup = function(groupName, callback) {
-      var postBody = groupName;
+    this.createGroup = function(group_name, callback) {
+      var postBody = group_name;
 
-      // verify the required parameter 'groupName' is set
-      if (groupName === undefined || groupName === null) {
-        throw new Error("Missing the required parameter 'groupName' when calling createGroup");
+      // verify the required parameter 'group_name' is set
+      if (group_name === undefined || group_name === null) {
+        throw new Error("Missing the required parameter 'group_name' when calling createGroup");
       }
 
 
@@ -104,20 +104,20 @@
 
     /**
      * Deletes a group
-     * @param {String} groupId String in UUID format
+     * @param {String} group_id String in UUID format
      * @param {module:api/GroupsApi~deleteGroupCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteGroup = function(groupId, callback) {
+    this.deleteGroup = function(group_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'groupId' is set
-      if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling deleteGroup");
+      // verify the required parameter 'group_id' is set
+      if (group_id === undefined || group_id === null) {
+        throw new Error("Missing the required parameter 'group_id' when calling deleteGroup");
       }
 
 
       var pathParams = {
-        'groupId': groupId
+        'groupId': group_id
       };
       var queryParams = {
       };
@@ -150,21 +150,21 @@
 
     /**
      * Lists a group
-     * @param {String} groupId String in UUID format
+     * @param {String} group_id String in UUID format
      * @param {module:api/GroupsApi~fetchGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}
      */
-    this.fetchGroup = function(groupId, callback) {
+    this.fetchGroup = function(group_id, callback) {
       var postBody = null;
 
-      // verify the required parameter 'groupId' is set
-      if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling fetchGroup");
+      // verify the required parameter 'group_id' is set
+      if (group_id === undefined || group_id === null) {
+        throw new Error("Missing the required parameter 'group_id' when calling fetchGroup");
       }
 
 
       var pathParams = {
-        'groupId': groupId
+        'groupId': group_id
       };
       var queryParams = {
       };
@@ -237,27 +237,27 @@
 
     /**
      * Updates a group with the provided name
-     * @param {String} groupId String in UUID format
-     * @param {module:model/GroupName} groupName 
+     * @param {String} group_id String in UUID format
+     * @param {module:model/GroupName} group_name 
      * @param {module:api/GroupsApi~updateGroupCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GroupEnvelope}
      */
-    this.updateGroup = function(groupId, groupName, callback) {
-      var postBody = groupName;
+    this.updateGroup = function(group_id, group_name, callback) {
+      var postBody = group_name;
 
-      // verify the required parameter 'groupId' is set
-      if (groupId === undefined || groupId === null) {
-        throw new Error("Missing the required parameter 'groupId' when calling updateGroup");
+      // verify the required parameter 'group_id' is set
+      if (group_id === undefined || group_id === null) {
+        throw new Error("Missing the required parameter 'group_id' when calling updateGroup");
       }
 
-      // verify the required parameter 'groupName' is set
-      if (groupName === undefined || groupName === null) {
-        throw new Error("Missing the required parameter 'groupName' when calling updateGroup");
+      // verify the required parameter 'group_name' is set
+      if (group_name === undefined || group_name === null) {
+        throw new Error("Missing the required parameter 'group_name' when calling updateGroup");
       }
 
 
       var pathParams = {
-        'groupId': groupId
+        'groupId': group_id
       };
       var queryParams = {
       };

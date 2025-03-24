@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppImage = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.BulkOmniMessageCreateSuccessResponse = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,54 +34,46 @@
 
 
   /**
-   * The WhatsAppImage model module.
-   * @module model/WhatsAppImage
-   * @version 1.5.0
+   * The BulkOmniMessageCreateSuccessResponse model module.
+   * @module model/BulkOmniMessageCreateSuccessResponse
+   * @version 2.3.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppImage</code>.
-   * An image
-   * @alias module:model/WhatsAppImage
+   * Constructs a new <code>BulkOmniMessageCreateSuccessResponse</code>.
+   * Response received after successfully created bulk omnimessage.
+   * @alias module:model/BulkOmniMessageCreateSuccessResponse
    * @class
-   * @param content {String} Base64-encoded image
+   * @param messages {Array.<Object>} List of responses for each Omnimessage in the bulk. These can be errors or successful responses
    */
-  var exports = function(content) {
+  var exports = function(messages) {
     var _this = this;
 
-    _this['content'] = content;
+    _this['messages'] = messages;
   };
 
   /**
-   * Constructs a <code>WhatsAppImage</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>BulkOmniMessageCreateSuccessResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppImage} obj Optional instance to populate.
-   * @return {module:model/WhatsAppImage} The populated <code>WhatsAppImage</code> instance.
+   * @param {module:model/BulkOmniMessageCreateSuccessResponse} obj Optional instance to populate.
+   * @return {module:model/BulkOmniMessageCreateSuccessResponse} The populated <code>BulkOmniMessageCreateSuccessResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('caption')) {
-        obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
-      }
-      if (data.hasOwnProperty('content')) {
-        obj['content'] = ApiClient.convertToType(data['content'], 'String');
+      if (data.hasOwnProperty('messages')) {
+        obj['messages'] = ApiClient.convertToType(data['messages'], [Object]);
       }
     }
     return obj;
   }
 
   /**
-   * Description for the image
-   * @member {String} caption
+   * List of responses for each Omnimessage in the bulk. These can be errors or successful responses
+   * @member {Array.<Object>} messages
    */
-  exports.prototype['caption'] = undefined;
-  /**
-   * Base64-encoded image
-   * @member {String} content
-   */
-  exports.prototype['content'] = undefined;
+  exports.prototype['messages'] = undefined;
 
 
 

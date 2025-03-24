@@ -36,7 +36,7 @@
   /**
    * The ErrorStatistics model module.
    * @module model/ErrorStatistics
-   * @version 1.5.0
+   * @version 2.3.0
    */
 
   /**

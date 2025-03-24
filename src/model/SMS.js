@@ -36,7 +36,7 @@
   /**
    * The SMS model module.
    * @module model/SMS
-   * @version 1.5.0
+   * @version 2.3.0
    */
 
   /**
