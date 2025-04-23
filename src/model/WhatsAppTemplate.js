@@ -46,12 +46,14 @@
    * @class
    * @param name {String} Name of the template
    * @param language {module:model/WhatsAppLanguage} 
+   * @param components {Array.<module:model/WhatsAppComponent>} List of template components
    */
-  var exports = function(name, language) {
+  var exports = function(name, language, components) {
     var _this = this;
 
     _this['name'] = name;
     _this['language'] = language;
+    _this['components'] = components;
   };
 
   /**
