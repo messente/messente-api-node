@@ -44,6 +44,11 @@
      */
     "approved": "approved",
     /**
+     * value: "in_appeal"
+     * @const
+     */
+    "in_appeal": "in_appeal",
+    /**
      * value: "rejected"
      * @const
      */
@@ -57,7 +62,27 @@
      * value: "pending_deletion"
      * @const
      */
-    "pending_deletion": "pending_deletion"  };
+    "pending_deletion": "pending_deletion",
+    /**
+     * value: "deleted"
+     * @const
+     */
+    "deleted": "deleted",
+    /**
+     * value: "disabled"
+     * @const
+     */
+    "disabled": "disabled",
+    /**
+     * value: "paused"
+     * @const
+     */
+    "paused": "paused",
+    /**
+     * value: "limit_exceeded"
+     * @const
+     */
+    "limit_exceeded": "limit_exceeded"  };
 
   /**
    * Returns a <code>WhatsappTemplateStatus</code> enum value from a Javascript object name.
