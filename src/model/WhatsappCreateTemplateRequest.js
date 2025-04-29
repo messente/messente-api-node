@@ -74,11 +74,6 @@
       if (data.hasOwnProperty('category')) {
         obj['category'] = WhatsappTemplateCategory.constructFromObject(data['category']);
       }
-      if (data.hasOwnProperty('allow_category_change')) {
-        obj['allow_category_change'] = ApiClient.convertToType(data['allow_category_change'], 'Boolean');
-      } else {
-        obj['allow_category_change'] = false;
-      }
       if (data.hasOwnProperty('language')) {
         obj['language'] = ApiClient.convertToType(data['language'], 'String');
       }
@@ -98,12 +93,6 @@
    * @member {module:model/WhatsappTemplateCategory} category
    */
   exports.prototype['category'] = undefined;
-  /**
-   * Allow category change
-   * @member {Boolean} allow_category_change
-   * @default false
-   */
-  exports.prototype['allow_category_change'] = false;
   /**
    * Language of the template
    * @member {String} language
