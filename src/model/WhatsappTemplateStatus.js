@@ -52,7 +52,12 @@
      * value: "pending"
      * @const
      */
-    "pending": "pending"  };
+    "pending": "pending",
+    /**
+     * value: "pending_deletion"
+     * @const
+     */
+    "pending_deletion": "pending_deletion"  };
 
   /**
    * Returns a <code>WhatsappTemplateStatus</code> enum value from a Javascript object name.

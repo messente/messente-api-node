@@ -61,7 +61,7 @@
     if (data) {
       obj = obj || new exports();
       if (data.hasOwnProperty('header_text')) {
-        obj['header_text'] = ApiClient.convertToType(data['header_text'], [['String']]);
+        obj['header_text'] = ApiClient.convertToType(data['header_text'], ['String']);
       }
       if (data.hasOwnProperty('body_text')) {
         obj['body_text'] = ApiClient.convertToType(data['body_text'], [['String']]);
@@ -72,7 +72,7 @@
 
   /**
    * Example of the templated text for the header
-   * @member {Array.<Array.<String>>} header_text
+   * @member {Array.<String>} header_text
    */
   exports.prototype['header_text'] = undefined;
   /**

@@ -11,4 +11,10 @@
 
 * `url` (value: `"url"`)
 
+* `catalog` (value: `"catalog"`)
+
+* `flow` (value: `"flow"`)
+
+* `copy_code` (value: `"copy_code"`)
+
 

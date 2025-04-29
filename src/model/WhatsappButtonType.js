@@ -57,7 +57,22 @@
      * value: "url"
      * @const
      */
-    "url": "url"  };
+    "url": "url",
+    /**
+     * value: "catalog"
+     * @const
+     */
+    "catalog": "catalog",
+    /**
+     * value: "flow"
+     * @const
+     */
+    "flow": "flow",
+    /**
+     * value: "copy_code"
+     * @const
+     */
+    "copy_code": "copy_code"  };
 
   /**
    * Returns a <code>WhatsappButtonType</code> enum value from a Javascript object name.
