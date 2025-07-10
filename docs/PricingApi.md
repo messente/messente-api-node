@@ -86,7 +86,7 @@ apiUsername.apiKey = 'YOUR API KEY';
 var apiInstance = new MessenteApi.PricingApi();
 var username = "username_example"; // String | The API username
 var password = "password_example"; // String | The API password
-var country = "country_example"; // String | The country code, for which to get the prices
+var country = EE; // String | The country code, for which to get the prices
 var opts = {
   'format': "format_example" // String | The format of the response. Can be either 'json' or 'xml'. If not specified, defaults to 'json'.
 };
