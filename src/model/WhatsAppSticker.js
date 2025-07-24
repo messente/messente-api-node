@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppText = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppSticker = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,57 +34,68 @@
 
 
   /**
-   * The WhatsAppText model module.
-   * @module model/WhatsAppText
+   * The WhatsAppSticker model module.
+   * @module model/WhatsAppSticker
    * @version 2.4.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppText</code>.
-   * A text
-   * @alias module:model/WhatsAppText
+   * Constructs a new <code>WhatsAppSticker</code>.
+   * WhatsApp sticker content. Either \&quot;id\&quot; or \&quot;link\&quot; must be provided, but not both.
+   * @alias module:model/WhatsAppSticker
    * @class
-   * @param body {String} Plaintext content for WhatsApp, can contain URLs, emojis and formatting
    */
-  var exports = function(body) {
+  var exports = function() {
     var _this = this;
 
-    _this['body'] = body;
   };
 
   /**
-   * Constructs a <code>WhatsAppText</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppSticker</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppText} obj Optional instance to populate.
-   * @return {module:model/WhatsAppText} The populated <code>WhatsAppText</code> instance.
+   * @param {module:model/WhatsAppSticker} obj Optional instance to populate.
+   * @return {module:model/WhatsAppSticker} The populated <code>WhatsAppSticker</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('preview_url')) {
-        obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'Boolean');
-      } else {
-        obj['preview_url'] = true;
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('body')) {
-        obj['body'] = ApiClient.convertToType(data['body'], 'String');
+      if (data.hasOwnProperty('mime_type')) {
+        obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
+      }
+      if (data.hasOwnProperty('animated')) {
+        obj['animated'] = ApiClient.convertToType(data['animated'], 'Boolean');
+      }
+      if (data.hasOwnProperty('link')) {
+        obj['link'] = ApiClient.convertToType(data['link'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Whether to display link preview if the message contains a hyperlink
-   * @member {Boolean} preview_url
-   * @default true
+   * Unique identifier for the sticker file.
+   * @member {String} id
    */
-  exports.prototype['preview_url'] = true;
+  exports.prototype['id'] = undefined;
   /**
-   * Plaintext content for WhatsApp, can contain URLs, emojis and formatting
-   * @member {String} body
+   * MIME type of the sticker file.
+   * @member {String} mime_type
    */
-  exports.prototype['body'] = undefined;
+  exports.prototype['mime_type'] = undefined;
+  /**
+   * Indicates whether the sticker is animated.
+   * @member {Boolean} animated
+   */
+  exports.prototype['animated'] = undefined;
+  /**
+   * URL link to the sticker file.
+   * @member {String} link
+   */
+  exports.prototype['link'] = undefined;
 
 
 

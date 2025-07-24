@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/WhatsAppTemplate', 'model/WhatsAppText'], factory);
+    define(['ApiClient', 'model/WhatsAppAudio', 'model/WhatsAppDocument', 'model/WhatsAppImage', 'model/WhatsAppSticker', 'model/WhatsAppTemplate', 'model/WhatsAppText', 'model/WhatsAppVideo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./WhatsAppTemplate'), require('./WhatsAppText'));
+    module.exports = factory(require('../ApiClient'), require('./WhatsAppAudio'), require('./WhatsAppDocument'), require('./WhatsAppImage'), require('./WhatsAppSticker'), require('./WhatsAppTemplate'), require('./WhatsAppText'), require('./WhatsAppVideo'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsApp = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppTemplate, root.MessenteApi.WhatsAppText);
+    root.MessenteApi.WhatsApp = factory(root.MessenteApi.ApiClient, root.MessenteApi.WhatsAppAudio, root.MessenteApi.WhatsAppDocument, root.MessenteApi.WhatsAppImage, root.MessenteApi.WhatsAppSticker, root.MessenteApi.WhatsAppTemplate, root.MessenteApi.WhatsAppText, root.MessenteApi.WhatsAppVideo);
   }
-}(this, function(ApiClient, WhatsAppTemplate, WhatsAppText) {
+}(this, function(ApiClient, WhatsAppAudio, WhatsAppDocument, WhatsAppImage, WhatsAppSticker, WhatsAppTemplate, WhatsAppText, WhatsAppVideo) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The WhatsApp model module.
    * @module model/WhatsApp
-   * @version 2.3.0
+   * @version 2.4.0
    */
 
   /**
@@ -72,13 +72,28 @@
       if (data.hasOwnProperty('template')) {
         obj['template'] = WhatsAppTemplate.constructFromObject(data['template']);
       }
-      if (data.hasOwnProperty('text')) {
-        obj['text'] = WhatsAppText.constructFromObject(data['text']);
-      }
       if (data.hasOwnProperty('channel')) {
         obj['channel'] = ApiClient.convertToType(data['channel'], 'String');
       } else {
         obj['channel'] = 'whatsapp';
+      }
+      if (data.hasOwnProperty('text')) {
+        obj['text'] = WhatsAppText.constructFromObject(data['text']);
+      }
+      if (data.hasOwnProperty('image')) {
+        obj['image'] = WhatsAppImage.constructFromObject(data['image']);
+      }
+      if (data.hasOwnProperty('video')) {
+        obj['video'] = WhatsAppVideo.constructFromObject(data['video']);
+      }
+      if (data.hasOwnProperty('audio')) {
+        obj['audio'] = WhatsAppAudio.constructFromObject(data['audio']);
+      }
+      if (data.hasOwnProperty('document')) {
+        obj['document'] = WhatsAppDocument.constructFromObject(data['document']);
+      }
+      if (data.hasOwnProperty('sticker')) {
+        obj['sticker'] = WhatsAppSticker.constructFromObject(data['sticker']);
       }
     }
     return obj;
@@ -104,15 +119,35 @@
    */
   exports.prototype['template'] = undefined;
   /**
-   * @member {module:model/WhatsAppText} text
-   */
-  exports.prototype['text'] = undefined;
-  /**
    * The channel used to deliver the message
    * @member {module:model/WhatsApp.ChannelEnum} channel
    * @default 'whatsapp'
    */
   exports.prototype['channel'] = 'whatsapp';
+  /**
+   * @member {module:model/WhatsAppText} text
+   */
+  exports.prototype['text'] = undefined;
+  /**
+   * @member {module:model/WhatsAppImage} image
+   */
+  exports.prototype['image'] = undefined;
+  /**
+   * @member {module:model/WhatsAppVideo} video
+   */
+  exports.prototype['video'] = undefined;
+  /**
+   * @member {module:model/WhatsAppAudio} audio
+   */
+  exports.prototype['audio'] = undefined;
+  /**
+   * @member {module:model/WhatsAppDocument} document
+   */
+  exports.prototype['document'] = undefined;
+  /**
+   * @member {module:model/WhatsAppSticker} sticker
+   */
+  exports.prototype['sticker'] = undefined;
 
 
   /**

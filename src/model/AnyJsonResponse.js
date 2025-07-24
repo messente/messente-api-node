@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.WhatsAppText = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.AnyJsonResponse = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,57 +34,36 @@
 
 
   /**
-   * The WhatsAppText model module.
-   * @module model/WhatsAppText
+   * The AnyJsonResponse model module.
+   * @module model/AnyJsonResponse
    * @version 2.4.0
    */
 
   /**
-   * Constructs a new <code>WhatsAppText</code>.
-   * A text
-   * @alias module:model/WhatsAppText
+   * Constructs a new <code>AnyJsonResponse</code>.
+   * Any valid JSON response
+   * @alias module:model/AnyJsonResponse
    * @class
-   * @param body {String} Plaintext content for WhatsApp, can contain URLs, emojis and formatting
    */
-  var exports = function(body) {
+  var exports = function() {
     var _this = this;
 
-    _this['body'] = body;
   };
 
   /**
-   * Constructs a <code>WhatsAppText</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>AnyJsonResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WhatsAppText} obj Optional instance to populate.
-   * @return {module:model/WhatsAppText} The populated <code>WhatsAppText</code> instance.
+   * @param {module:model/AnyJsonResponse} obj Optional instance to populate.
+   * @return {module:model/AnyJsonResponse} The populated <code>AnyJsonResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('preview_url')) {
-        obj['preview_url'] = ApiClient.convertToType(data['preview_url'], 'Boolean');
-      } else {
-        obj['preview_url'] = true;
-      }
-      if (data.hasOwnProperty('body')) {
-        obj['body'] = ApiClient.convertToType(data['body'], 'String');
-      }
     }
     return obj;
   }
 
-  /**
-   * Whether to display link preview if the message contains a hyperlink
-   * @member {Boolean} preview_url
-   * @default true
-   */
-  exports.prototype['preview_url'] = true;
-  /**
-   * Plaintext content for WhatsApp, can contain URLs, emojis and formatting
-   * @member {String} body
-   */
-  exports.prototype['body'] = undefined;
 
 
 

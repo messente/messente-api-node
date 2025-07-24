@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.GroupResponseFields = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.WhatsAppDocument = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,34 +34,28 @@
 
 
   /**
-   * The GroupResponseFields model module.
-   * @module model/GroupResponseFields
+   * The WhatsAppDocument model module.
+   * @module model/WhatsAppDocument
    * @version 2.4.0
    */
 
   /**
-   * Constructs a new <code>GroupResponseFields</code>.
-   * A container for fields of a group
-   * @alias module:model/GroupResponseFields
+   * Constructs a new <code>WhatsAppDocument</code>.
+   * WhatsApp document content. Either \&quot;id\&quot; or \&quot;link\&quot; must be provided, but not both.
+   * @alias module:model/WhatsAppDocument
    * @class
-   * @param id {String} Id string in UUID format
-   * @param name {String} The name of the group
-   * @param contacts_count {Number} The count of contacts in the group
    */
-  var exports = function(id, name, contacts_count) {
+  var exports = function() {
     var _this = this;
 
-    _this['id'] = id;
-    _this['name'] = name;
-    _this['contactsCount'] = contacts_count;
   };
 
   /**
-   * Constructs a <code>GroupResponseFields</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>WhatsAppDocument</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/GroupResponseFields} obj Optional instance to populate.
-   * @return {module:model/GroupResponseFields} The populated <code>GroupResponseFields</code> instance.
+   * @param {module:model/WhatsAppDocument} obj Optional instance to populate.
+   * @return {module:model/WhatsAppDocument} The populated <code>WhatsAppDocument</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -69,39 +63,47 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      if (data.hasOwnProperty('caption')) {
+        obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
       }
-      if (data.hasOwnProperty('createdOn')) {
-        obj['createdOn'] = ApiClient.convertToType(data['createdOn'], 'String');
+      if (data.hasOwnProperty('mime_type')) {
+        obj['mime_type'] = ApiClient.convertToType(data['mime_type'], 'String');
       }
-      if (data.hasOwnProperty('contactsCount')) {
-        obj['contactsCount'] = ApiClient.convertToType(data['contactsCount'], 'Number');
+      if (data.hasOwnProperty('file_name')) {
+        obj['file_name'] = ApiClient.convertToType(data['file_name'], 'String');
+      }
+      if (data.hasOwnProperty('link')) {
+        obj['link'] = ApiClient.convertToType(data['link'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * Id string in UUID format
+   * Unique identifier for the document file.
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
-   * The name of the group
-   * @member {String} name
+   * Caption for the document.
+   * @member {String} caption
    */
-  exports.prototype['name'] = undefined;
+  exports.prototype['caption'] = undefined;
   /**
-   * When the group was created
-   * @member {String} createdOn
+   * MIME type of the document file.
+   * @member {String} mime_type
    */
-  exports.prototype['createdOn'] = undefined;
+  exports.prototype['mime_type'] = undefined;
   /**
-   * The count of contacts in the group
-   * @member {Number} contactsCount
+   * Name of the document file.
+   * @member {String} file_name
    */
-  exports.prototype['contactsCount'] = undefined;
+  exports.prototype['file_name'] = undefined;
+  /**
+   * URL link to the document file.
+   * @member {String} link
+   */
+  exports.prototype['link'] = undefined;
 
 
 
