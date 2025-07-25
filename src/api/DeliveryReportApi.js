@@ -34,7 +34,7 @@
   /**
    * DeliveryReport service.
    * @module api/DeliveryReportApi
-   * @version 2.2.0
+   * @version 2.4.0
    */
 
   /**

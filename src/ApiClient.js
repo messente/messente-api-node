@@ -33,7 +33,7 @@
 
   /**
    * @module ApiClient
-   * @version 2.2.0
+   * @version 2.4.0
    */
 
   /**
@@ -56,6 +56,8 @@
      * @type {Array.<String>}
      */
     this.authentications = {
+      'apiPassword': {type: 'apiKey', 'in': 'query', name: 'password'},
+      'apiUsername': {type: 'apiKey', 'in': 'query', name: 'username'},
       'basicAuth': {type: 'basic'}
     };
     /**

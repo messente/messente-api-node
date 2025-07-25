@@ -1,6 +1,6 @@
 {
   "name": "messente_api",
-  "version": "2.2.0",
+  "version": "2.4.0",
   "description": "Send and receive SMS, Viber, Telegram and WhatsApp messages, blacklist phone numbers to make sure you're not sending any unwanted messages, manage contacts and groups.",
   "license": "Apache-2.0",
   "main": "src/index.js",
