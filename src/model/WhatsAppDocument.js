@@ -36,7 +36,7 @@
   /**
    * The WhatsAppDocument model module.
    * @module model/WhatsAppDocument
-   * @version 2.4.0
+   * @version 2.4.1
    */
 
   /**

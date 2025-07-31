@@ -36,7 +36,7 @@
   /**
    * The WhatsappSupportedApp model module.
    * @module model/WhatsappSupportedApp
-   * @version 2.4.0
+   * @version 2.4.1
    */
 
   /**
