@@ -36,7 +36,7 @@
   /**
    * The WhatsappTemplateExample model module.
    * @module model/WhatsappTemplateExample
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**
