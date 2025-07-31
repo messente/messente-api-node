@@ -36,7 +36,7 @@
   /**
    * The WhatsappListTemplatesResponse model module.
    * @module model/WhatsappListTemplatesResponse
-   * @version 2.4.1
+   * @version 2.4.0
    */
 
   /**

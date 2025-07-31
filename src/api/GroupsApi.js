@@ -34,7 +34,7 @@
   /**
    * Groups service.
    * @module api/GroupsApi
-   * @version 2.4.1
+   * @version 2.4.0
    */
 
   /**

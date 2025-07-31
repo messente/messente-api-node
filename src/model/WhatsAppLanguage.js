@@ -36,7 +36,7 @@
   /**
    * The WhatsAppLanguage model module.
    * @module model/WhatsAppLanguage
-   * @version 2.4.1
+   * @version 2.4.0
    */
 
   /**

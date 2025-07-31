@@ -34,7 +34,7 @@
   /**
    * AccountBalance service.
    * @module api/AccountBalanceApi
-   * @version 2.4.1
+   * @version 2.4.0
    */
 
   /**

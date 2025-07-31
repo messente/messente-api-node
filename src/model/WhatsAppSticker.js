@@ -36,7 +36,7 @@
   /**
    * The WhatsAppSticker model module.
    * @module model/WhatsAppSticker
-   * @version 2.4.1
+   * @version 2.4.0
    */
 
   /**
