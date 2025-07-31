@@ -36,7 +36,7 @@
   /**
    * The StatisticsReport model module.
    * @module model/StatisticsReport
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**

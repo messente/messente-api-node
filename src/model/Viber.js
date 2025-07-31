@@ -36,7 +36,7 @@
   /**
    * The Viber model module.
    * @module model/Viber
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**

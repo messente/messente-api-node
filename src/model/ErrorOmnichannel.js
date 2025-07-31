@@ -36,7 +36,7 @@
   /**
    * The ErrorOmnichannel model module.
    * @module model/ErrorOmnichannel
-   * @version 2.4.1
+   * @version 2.4.2
    */
 
   /**
