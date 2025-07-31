@@ -36,7 +36,7 @@
   /**
    * The WhatsAppVideo model module.
    * @module model/WhatsAppVideo
-   * @version 2.4.0
+   * @version 2.4.1
    */
 
   /**
