@@ -36,7 +36,7 @@
   /**
    * The BulkOmniMessageCreateSuccessResponse model module.
    * @module model/BulkOmniMessageCreateSuccessResponse
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
