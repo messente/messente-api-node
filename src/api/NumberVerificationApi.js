@@ -34,7 +34,7 @@
   /**
    * NumberVerification service.
    * @module api/NumberVerificationApi
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

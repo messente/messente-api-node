@@ -36,7 +36,7 @@
   /**
    * The ViberVideo model module.
    * @module model/ViberVideo
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

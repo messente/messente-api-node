@@ -36,7 +36,7 @@
   /**
    * The PriceInfo model module.
    * @module model/PriceInfo
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
