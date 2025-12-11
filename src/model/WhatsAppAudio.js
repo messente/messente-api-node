@@ -36,7 +36,7 @@
   /**
    * The WhatsAppAudio model module.
    * @module model/WhatsAppAudio
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
