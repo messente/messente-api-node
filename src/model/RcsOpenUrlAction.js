@@ -45,17 +45,13 @@
    * @alias module:model/RcsOpenUrlAction
    * @class
    * @param url {String} The URL to open.
-   * @param description {String} A description of the URL being opened.
    * @param application {module:model/RcsOpenUrlApplication} 
-   * @param webview_view_mode {module:model/RcsWebviewViewMode} 
    */
-  var exports = function(url, description, application, webview_view_mode) {
+  var exports = function(url, application) {
     var _this = this;
 
     _this['url'] = url;
-    _this['description'] = description;
     _this['application'] = application;
-    _this['webview_view_mode'] = webview_view_mode;
   };
 
   /**
