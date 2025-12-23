@@ -36,7 +36,7 @@
   /**
    * The ContactFields model module.
    * @module model/ContactFields
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

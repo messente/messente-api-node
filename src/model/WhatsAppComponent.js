@@ -36,7 +36,7 @@
   /**
    * The WhatsAppComponent model module.
    * @module model/WhatsAppComponent
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
