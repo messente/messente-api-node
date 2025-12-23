@@ -36,7 +36,7 @@
   /**
    * The StatisticsReportSettings model module.
    * @module model/StatisticsReportSettings
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
@@ -88,7 +88,7 @@
    */
   exports.prototype['end_date'] = undefined;
   /**
-   * Optional list of message types (sms, viber, whatsapp, hlr, telegram)
+   * Optional list of message types (sms, viber, whatsapp, rcs, hlr)
    * @member {Array.<String>} message_types
    */
   exports.prototype['message_types'] = undefined;

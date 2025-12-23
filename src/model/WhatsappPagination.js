@@ -36,7 +36,7 @@
   /**
    * The WhatsappPagination model module.
    * @module model/WhatsappPagination
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

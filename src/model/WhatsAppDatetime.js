@@ -36,7 +36,7 @@
   /**
    * The WhatsAppDatetime model module.
    * @module model/WhatsAppDatetime
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The WhatsappTemplateResponse model module.
    * @module model/WhatsappTemplateResponse
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

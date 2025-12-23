@@ -54,10 +54,10 @@
      */
     "whatsapp": "whatsapp",
     /**
-     * value: "telegram"
+     * value: "rcs"
      * @const
      */
-    "telegram": "telegram"  };
+    "rcs": "rcs"  };
 
   /**
    * Returns a <code>Channel</code> enum value from a Javascript object name.

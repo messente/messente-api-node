@@ -36,7 +36,7 @@
   /**
    * The AnyJsonResponse model module.
    * @module model/AnyJsonResponse
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
