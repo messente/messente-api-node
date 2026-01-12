@@ -36,7 +36,7 @@
   /**
    * The ContactListEnvelope model module.
    * @module model/ContactListEnvelope
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**

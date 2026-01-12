@@ -34,7 +34,7 @@
   /**
    * WhatsAppTemplates service.
    * @module api/WhatsAppTemplatesApi
-   * @version 2.4.2
+   * @version 2.5.0
    */
 
   /**
