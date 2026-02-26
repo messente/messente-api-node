@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 
 * `full` (value: `"full"`)
 
-* `on` (value: `"on"`)
+* `true` (value: `"true"`)
 
-* `off` (value: `"off"`)
+* `false` (value: `"false"`)
 
 
 
