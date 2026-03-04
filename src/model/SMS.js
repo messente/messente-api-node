@@ -139,15 +139,15 @@
      */
     "full": "full",
     /**
-     * value: "on"
+     * value: "true"
      * @const
      */
-    "on": "on",
+    "true": "true",
     /**
-     * value: "off"
+     * value: "false"
      * @const
      */
-    "off": "off"  };
+    "false": "false"  };
 
   /**
    * Allowed values for the <code>channel</code> property.

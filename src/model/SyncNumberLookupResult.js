@@ -143,15 +143,15 @@
    */
   exports.StatusEnum = {
     /**
-     * value: "ON"
+     * value: "true"
      * @const
      */
-    "ON": "ON",
+    "true": "true",
     /**
-     * value: "OFF"
+     * value: "false"
      * @const
      */
-    "OFF": "OFF",
+    "false": "false",
     /**
      * value: "INVALID"
      * @const
