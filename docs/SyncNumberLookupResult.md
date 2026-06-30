@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 ## Enum: StatusEnum
 
 
-* `ON` (value: `"ON"`)
+* `true` (value: `"true"`)
 
-* `OFF` (value: `"OFF"`)
+* `false` (value: `"false"`)
 
 * `INVALID` (value: `"INVALID"`)
 
