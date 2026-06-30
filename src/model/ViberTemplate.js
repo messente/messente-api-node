@@ -26,7 +26,7 @@
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.RcsDialAction = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.ViberTemplate = factory(root.MessenteApi.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,46 +34,64 @@
 
 
   /**
-   * The RcsDialAction model module.
-   * @module model/RcsDialAction
+   * The ViberTemplate model module.
+   * @module model/ViberTemplate
    * @version 2.6.0
    */
 
   /**
-   * Constructs a new <code>RcsDialAction</code>.
-   * Action to dial a phone number.
-   * @alias module:model/RcsDialAction
+   * Constructs a new <code>ViberTemplate</code>.
+   * Viber template object.
+   * @alias module:model/ViberTemplate
    * @class
-   * @param phone_number {String} The phone number to dial in E.164 format.
+   * @param id {String} Template ID.
+   * @param lang {String} Template language code.
    */
-  var exports = function(phone_number) {
+  var exports = function(id, lang) {
     var _this = this;
 
-    _this['phone_number'] = phone_number;
+    _this['id'] = id;
+    _this['lang'] = lang;
   };
 
   /**
-   * Constructs a <code>RcsDialAction</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ViberTemplate</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RcsDialAction} obj Optional instance to populate.
-   * @return {module:model/RcsDialAction} The populated <code>RcsDialAction</code> instance.
+   * @param {module:model/ViberTemplate} obj Optional instance to populate.
+   * @return {module:model/ViberTemplate} The populated <code>ViberTemplate</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('phone_number')) {
-        obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+      if (data.hasOwnProperty('lang')) {
+        obj['lang'] = ApiClient.convertToType(data['lang'], 'String');
+      }
+      if (data.hasOwnProperty('params')) {
+        obj['params'] = ApiClient.convertToType(data['params'], {'String': 'String'});
       }
     }
     return obj;
   }
 
   /**
-   * The phone number to dial in E.164 format.
-   * @member {String} phone_number
+   * Template ID.
+   * @member {String} id
    */
-  exports.prototype['phone_number'] = undefined;
+  exports.prototype['id'] = undefined;
+  /**
+   * Template language code.
+   * @member {String} lang
+   */
+  exports.prototype['lang'] = undefined;
+  /**
+   * Optional template parameters as key-value string pairs.
+   * @member {Object.<String, String>} params
+   */
+  exports.prototype['params'] = undefined;
 
 
 
