@@ -17,63 +17,63 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient'], factory);
+    define(['ApiClient', 'model/ViberCarouselItem'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    module.exports = factory(require('../ApiClient'), require('./ViberCarouselItem'));
   } else {
     // Browser globals (root is window)
     if (!root.MessenteApi) {
       root.MessenteApi = {};
     }
-    root.MessenteApi.RcsDialAction = factory(root.MessenteApi.ApiClient);
+    root.MessenteApi.ViberCarousel = factory(root.MessenteApi.ApiClient, root.MessenteApi.ViberCarouselItem);
   }
-}(this, function(ApiClient) {
+}(this, function(ApiClient, ViberCarouselItem) {
   'use strict';
 
 
 
   /**
-   * The RcsDialAction model module.
-   * @module model/RcsDialAction
+   * The ViberCarousel model module.
+   * @module model/ViberCarousel
    * @version 2.6.0
    */
 
   /**
-   * Constructs a new <code>RcsDialAction</code>.
-   * Action to dial a phone number.
-   * @alias module:model/RcsDialAction
+   * Constructs a new <code>ViberCarousel</code>.
+   * Viber carousel object.
+   * @alias module:model/ViberCarousel
    * @class
-   * @param phone_number {String} The phone number to dial in E.164 format.
+   * @param items {Array.<module:model/ViberCarouselItem>} Carousel items. Must contain between 2 and 5 items.
    */
-  var exports = function(phone_number) {
+  var exports = function(items) {
     var _this = this;
 
-    _this['phone_number'] = phone_number;
+    _this['items'] = items;
   };
 
   /**
-   * Constructs a <code>RcsDialAction</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ViberCarousel</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/RcsDialAction} obj Optional instance to populate.
-   * @return {module:model/RcsDialAction} The populated <code>RcsDialAction</code> instance.
+   * @param {module:model/ViberCarousel} obj Optional instance to populate.
+   * @return {module:model/ViberCarousel} The populated <code>ViberCarousel</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('phone_number')) {
-        obj['phone_number'] = ApiClient.convertToType(data['phone_number'], 'String');
+      if (data.hasOwnProperty('items')) {
+        obj['items'] = ApiClient.convertToType(data['items'], [ViberCarouselItem]);
       }
     }
     return obj;
   }
 
   /**
-   * The phone number to dial in E.164 format.
-   * @member {String} phone_number
+   * Carousel items. Must contain between 2 and 5 items.
+   * @member {Array.<module:model/ViberCarouselItem>} items
    */
-  exports.prototype['phone_number'] = undefined;
+  exports.prototype['items'] = undefined;
 
 
 
